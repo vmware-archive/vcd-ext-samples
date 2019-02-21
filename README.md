@@ -30,8 +30,8 @@ An installation of vCloud Director version 9.1.0.2 or above is required to deplo
 
 ### Build ###
 ```bash
-git clone https://github.com/vmware/vcd-ext-sdk.git
-cd vcd-ext-sdk/ui/vcd-plugin-seed
+git clone -b plugin-seed-9.1 --single-branch https://github.com/vmwaresamples/vcd-ext-samples.git
+cd vcd-ext-sdk
 
 # install project dependencies
 npm ci
