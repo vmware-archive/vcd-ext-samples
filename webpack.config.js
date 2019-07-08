@@ -1,8 +1,10 @@
 // This is the webpack configuration used for creating plugins.
 const webpack = require("webpack");
 const path = require("path");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Happypack = require('happypack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const ZipPlugin = require('zip-webpack-plugin');
 
 // All paths are relative to the `webpack.config.js` directory
 const basePath = path.resolve(__dirname);
@@ -181,6 +183,9 @@ module.exports = {
 
         // Show progress.
         new webpack.ProgressPlugin(),
+
+        new CopyWebpackPlugin([{from: 'src/public'}]),
+        new ZipPlugin({filename: 'plugin.zip'}),
     ],
 
     // Configure minimizer to not interfere with DI as much as possible
