@@ -1,0 +1,6 @@
+{
+  "username": "administrator",
+  "org": "System",
+  "password": "P@$$w0rd",
+  "vcdUrlBase": "https://vmware.example.com"
+}

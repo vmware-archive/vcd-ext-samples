@@ -1,19 +1,44 @@
 
 
-# Extensibility Samples for vCloud Director
+# Python Script for vCD Plugin Management
 
 ## Overview
-This repository contains example plugins for integrating with, and extending vCloud Director capabilities.
+This script provides basic plugin management capabilities for registering and unregistering plugins, and for viewing current plugin registrations.
 
-## UI Seed Plugin
-The seed plugin ([source code](../../tree/plugin-seed-9.1)) is a fully functional UI plugin that can be deployed to a vCloud Director installation. It showcases the basic use cases of a UI plugin including:
-* Overall project structure and required libraries
-* Definition of plugin manifest (metadata for the plugin)
-* Registration of a top level navigation menu
-* Basic I18N
-* Leveraging host-provided data
-* Referencing assets embedded in the plugin
+## Prerequisites
+The script requires Python 3.4+. It also requires the `requests` Python library.
 
-## Contributing
+## Usage
+Before the script can be used a configuration file must be created to configure access to a vCloud Director instance. Copy the `manage_plugin.json.template` file to `manage_plugin.json` (in the same directory as the Python script) and modify the values as appropriate:
 
-The vcd-ext-samples project team welcomes contributions from the community. Before you start working with vcd-ext-samples, please read our [Developer Certificate of Origin](https://cla.vmware.com/dco). All contributions to this repository must be signed as described on that page. Your signature certifies that you wrote the patch or have the right to pass it on as an open-source patch. For more detailed information, refer to [CONTRIBUTING.md](CONTRIBUTING.md).
+```json
+{
+  "username": "administrator",
+  "org": "System",
+  "password": "P@$$w0rd",
+  "vcdUrlBase": "https://vmware.example.com"
+}
+```
+
+The script can be executed from a command line as `python manage_plugin.py`:
+```bash
+usage: manage_plugin.py [-h] {register,list,unregister} ...
+
+Manage plugins for a vCloud Director instance
+
+positional arguments:
+  {register,list,unregister}
+    register            Registers a plugin
+    list                Lists all registered plugins
+    unregister          Removes a plugin registration
+
+optional arguments:
+  -h, --help            show this help message and exit
+```
+The following actions can be performed:
+* register: registers and uploads a UI plugin
+  * requires a plugin directory to be specified, and the plugin to already be built and available in the `dist/` folder
+* unregister: removes a plugin
+  * requires an id to be specified, corresponding to the id of an existing registered plugin
+* list: provides a summary of currently registered plugins
+  * requires no additional parameters
