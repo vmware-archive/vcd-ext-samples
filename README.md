@@ -24,7 +24,7 @@ The vCloud Director UI plugin system allows for integration of custom modules di
 This seed project works with version 9.1.0.2, 9.5.x and 9.7.x of vCloud Director.  This specific version of 9.1 is required because it contains a patch to allow Angular's `HttpClient` class to be used.
 
 ### Prerequisites ###
-It is recommended that developers be familiar with Angular 4 coding (including modules and component resolution), and have the appropriate tooling installed.  This document assumes NPM 5+ as the package manager.
+It is recommended that developers be familiar with Angular 4 coding (including modules and component resolution), and have the appropriate tooling installed.  This document assumes NPM 5+ as the package manager, as well as NodeJS 8.x or 10.x. NodeJS 12.x has known incompatibilities.
 
 An installation of vCloud Director version 9.1.0.2 or above is required to deploy the plugin.
 
@@ -46,16 +46,7 @@ At this point, there will be a `plugin.zip` in the `dist/` folder.
 A service provider admin account is necessary to install the plugin into vCloud Director.  
 
 #### Automated Deploy Method ####
-A Python script is available that will automatically deploy a plugin to the associated vCD environment.  It uses various settings from the manifest.json file to define the plugin.  
-
-The first time it is run for a name/version, it creates the extension definition, defines the plugin, uploads the plugin and publishes the plugin for all organizations.  For subsequent runs, it removes the existing plugin, and then uploads the new plugin.
-
-To use the automated deploy method, you first need to copy the manage_plugin.ini.template to manage_plugin.ini and update the configuration settings to match your environment.
-
-To run:
-```bash
-py manage_plugin.py deploy
-```
+A Python script is available [here](https://github.com/vmware-samples/vcd-ext-samples/tree/plugin-manager) that will automatically deploy a plugin to the associated vCD environment.  It uses various settings from the manifest.json file to define the plugin.  Usage is detailed in the [README](https://github.com/vmware-samples/vcd-ext-samples/blob/plugin-manager/README.md) for the script.
 
 #### Manual Method ####
 `SERVER` in the following example refers to the server endpoint of the vCD installation, and `TOKEN` is the `x-vcloud-authorization` header value returned by the initial session creation request.
