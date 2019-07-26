@@ -1,0 +1,15 @@
+<div class="backdrop backdrop-{{ size }}">
+    <div class="spinner-wrapper">
+        <span class="spinner spinner-{{ size }}" *ngIf="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.loading' | translate }}
+        </span>
+            <span class="spinner-label" *ngIf="labelKey">
+            {{ labelKey | translate }}
+        </span>
+    </div>
+
+    <div>
+        <ng-content></ng-content>
+    </div>
+</div>
+

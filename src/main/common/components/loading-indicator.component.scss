@@ -1,0 +1,62 @@
+:host {
+  display: block;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+:host-context(.vcd-ext-no-scrolling) {
+  overflow: hidden;
+}
+
+.backdrop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+
+  &.backdrop-sm {
+    min-height: .75rem;
+    min-width: .75rem;
+  }
+
+  &.backdrop-md {
+    min-height: 1.5rem;
+    min-width: 1.5rem;
+  }
+
+  &.backdrop-lg {
+    min-height: 3rem;
+    min-width: 3rem;
+  }
+}
+
+:host-context(.vcd-ext-no-scrolling) .backdrop::after {
+  background-color: rgba(#FFF, 0.9);
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.spinner-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.spinner {
+  flex: none;
+}
+
+.spinner-label {
+  padding-left: 10px;
+}
