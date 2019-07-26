@@ -1,0 +1,44 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="!isLoading">
+    <h3 class="modal-title">{{ 'com.vmware.plugin-lifecycle.themes.publish.title' | translate }}</h3>
+    <div class="modal-body">
+        <clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
+            <div class="alert-item">
+        <span class="alert-text">
+            {{ errorMessage }}
+        </span>
+            </div>
+        </clr-alert>
+
+        <loading-indicator [isLoading]="isLoading" [labelKey]="loadingMessageKey">
+            <form [formGroup]="form">
+                <section class="form-block">
+                    <div class="form-group">
+                        <label>{{ 'com.vmware.plugin-lifecycle.themes.publish.scopeTo' | translate }}</label>
+                        <div class="checkbox">
+                            <input id="provider-scoped" type="checkbox" [formControlName]="controlNames.Provider">
+                            <label for="provider-scoped">{{ 'com.vmware.plugin-lifecycle.themes.publish.providers' | translate }}</label>
+                        </div>
+                        <div class="checkbox">
+                            <input id="all-tenants" type="checkbox" [formControlName]="controlNames.AllTenants">
+                            <label for="all-tenants">{{ 'com.vmware.plugin-lifecycle.themes.publish.allTenants' | translate }}</label>
+                        </div>
+                        <div class="tenants-list" [formArrayName]="controlNames.Tenants">
+                            <div class="checkbox" *ngFor="let tenant of form.controls[controlNames.Tenants].controls; let i = index">
+                                <input id="tenant-{{ i }}" type="checkbox" [formControlName]="i">
+                                <label for="tenant-{{ i }}">{{ tenants[i]?.name }}</label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </loading-indicator>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="close()" [disabled]="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.themes.cancelBtn' | translate }}
+        </button>
+        <button type="button" class="btn btn-primary" (click)="publish()" [disabled]="isLoading || form.invalid">
+            {{ 'com.vmware.plugin-lifecycle.themes.publish' | translate }}
+        </button>
+    </div>
+</clr-modal>

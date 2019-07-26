@@ -1,0 +1,42 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="!isLoading">
+    <h3 class="modal-title">{{ 'com.vmware.plugin-lifecycle.themes.rename.title' | translate }}</h3>
+    <div class="modal-body">
+        <clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
+            <div class="alert-item">
+                <span class="alert-text">
+                    {{ errorMessage }}
+                </span>
+            </div>
+        </clr-alert>
+        <loading-indicator [isLoading]="isLoading" [labelKey]="loadingMessageKey">
+            <form [formGroup]="renameFormGroup">
+                <!-- Name -->
+                <section class="form-block">
+                    <div class="form-group name-form-group">
+                        <label class="required">
+                            <label>
+                                {{ 'com.vmware.plugin-lifecycle.themes.nameLabel' | translate }}
+                            </label>
+                        </label>
+                        <div>
+                            <label for="nameInput" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-top-left" [ngClass]="{'invalid': (renameFormGroup.get('name').invalid && renameFormGroup.get(controlNames.Name).dirty)}">
+                                <input #renameInput type="text" id="nameInput" [formControlName]="controlNames.Name" class="name-input" (keyup.enter)="onOK()">
+                                <span class="tooltip-content">
+                                This field cannot be empty!
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </loading-indicator>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="close()" [disabled]="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.themes.discardBtn' | translate }}
+        </button>
+        <button type="button" class="btn btn-primary" (click)="onOK()" [disabled]="isLoading || renameFormGroup.invalid">
+            {{ 'com.vmware.plugin-lifecycle.themes.rename' | translate }}
+        </button>
+    </div>
+</clr-modal>

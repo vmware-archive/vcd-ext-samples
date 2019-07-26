@@ -1,0 +1,44 @@
+<clr-datagrid [clrDgLoading]="isLoading" [(clrDgSingleSelected)]="selectedTheme">
+    <clr-dg-action-bar>
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-link" [disabled]="isLoading" (click)="openRegisterModal()">
+                {{ 'com.vmware.plugin-lifecycle.themes.registerNewTheme' | translate }}
+            </button>
+
+            <!-- Disabled for Built-in themes -->
+            <button *ngIf="true" type="button" class="btn btn-sm btn-link" (click)="openRenameModal()" [disabled]="!selectedTheme || themeType.BUILT_IN === themeType[selectedTheme.themeType] || isLoading">
+                {{ 'com.vmware.plugin-lifecycle.themes.rename' | translate }}
+            </button>
+
+            <!-- Disabled for Built-in themes -->
+            <button *ngIf="true" type="button" class="btn btn-sm btn-link" (click)="openRemoveModal()" [disabled]="!selectedTheme || themeType.BUILT_IN === themeType[selectedTheme.themeType] || isLoading">
+                {{ 'com.vmware.plugin-lifecycle.themes.remove' | translate }}
+            </button>
+
+            <!-- TODO: Disable/Enable based on the permissions -->
+            <button type="button" class="btn btn-sm btn-link" (click)="openPublishModal()" [disabled]="false" [disabled]="!selectedTheme || isLoading">
+                {{ 'com.vmware.plugin-lifecycle.themes.publish' | translate }}
+            </button>
+
+            <button type="button" class="btn btn-sm btn-link" [disabled]="isLoading" (click)="refreshThemes()">
+                {{ 'com.vmware.plugin-lifecycle.themes.refresh' | translate }}
+            </button>
+        </div>
+    </clr-dg-action-bar>
+
+    <clr-dg-placeholder>
+        {{ 'com.vmware.plugin-lifecycle.themes.nothemes.placeholder' | translate }}
+    </clr-dg-placeholder>
+
+    <clr-dg-column [clrDgField]="'name'" [clrDgSortOrder]="sortOrder">
+        {{ 'com.vmware.plugin-lifecycle.themes.themeName' | translate }}
+    </clr-dg-column>
+    <clr-dg-column>
+        {{ 'com.vmware.plugin-lifecycle.themes.themeType' | translate }}
+    </clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let theme of themes" [clrDgItem]="theme">
+        <clr-dg-cell>{{ theme.name }}</clr-dg-cell>
+        <clr-dg-cell>{{ themeType[theme.themeType] }}</clr-dg-cell>
+    </clr-dg-row>
+</clr-datagrid>

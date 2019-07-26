@@ -1,7 +1,5 @@
 import {Injectable} from "@angular/core";
-import {QueryResultRecordsType} from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 import {VcdApiClient} from "@vcd/sdk/client";
-import {Query} from "@vcd/sdk/query";
 import {Observable} from "rxjs";
 import {
     ApiPlugin,
@@ -13,11 +11,12 @@ import {
     toPluginSpec, toPluginSpecs,
     toPluginTenantSpecs
 } from "./plugin.model";
+import {OrganizationService} from "../common/services/organization.service";
 
 @Injectable()
 export class PluginService {
 
-    constructor(private client: VcdApiClient) {
+    constructor(private client: VcdApiClient, private organizationService: OrganizationService) {
     }
 
     public getPlugins(): Observable<PluginSpec[]> {
@@ -53,18 +52,7 @@ export class PluginService {
     }
 
     public getAllTenants(): Observable<PluginTenantSpec[]> {
-        return this.client
-            .query<QueryResultRecordsType>(
-                Query.Builder
-                    .ofType("organization")
-                    .format("idrecords")
-                    .sort({field: "name", reverse: false})
-            )
-            .expand((pageResponse: QueryResultRecordsType) => (!this.client.hasNextPage(pageResponse)
-                ? Observable.empty()
-                : this.client.nextPage(pageResponse)))
-            .map((pageResponse: QueryResultRecordsType) => pageResponse.record as ApiPluginTenant[])
-            .reduce((accumulator: ApiPluginTenant[], next: ApiPluginTenant[]) => [...accumulator, ...next])
+        return this.organizationService.getAllTenants()
             .map((results) => toPluginTenantSpecs(results));
     }
 

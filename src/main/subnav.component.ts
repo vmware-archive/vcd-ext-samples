@@ -12,6 +12,12 @@ export class SubnavComponent {
             iconShape: "cog",
             labelKey: "com.vmware.plugin-lifecycle.subnav.plugins.label",
             descriptionKey: "com.vmware.plugin-lifecycle.subnav.plugins.description"
-        }
+        },
+        {
+            routerLink: "./themes",
+            iconShape: "moon",
+            labelKey: "com.vmware.plugin-lifecycle.subnav.themes.label",
+            descriptionKey: "com.vmware.plugin-lifecycle.subnav.themes.description"
+        },
     ];
 }
