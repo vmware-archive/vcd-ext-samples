@@ -1,0 +1,8 @@
+{
+    "en": {
+        "com.vmware.plugin-lifecycle.nav.label": "Customize Portal",
+        "com.vmware.plugin-lifecycle.nav.description": "Customize Portal",
+        "com.vmware.plugin-lifecycle.subnav.plugins.label": "Manage Plugins",
+        "com.vmware.plugin-lifecycle.subnav.plugins.description": "Mange Plugins"
+    }
+}

@@ -1,0 +1,58 @@
+<clr-alert *ngIf="activityError" clrAlertType="danger">
+    <div class="alert-item">
+        <span class="alert-text">
+            {{activityError}}
+        </span>
+    </div>
+</clr-alert>
+
+<form *ngIf="!loading; else spinner">
+    <section class="form-block">
+        <div class="form-group">
+            <label>Scope to:</label>
+            <div class="checkbox">
+                <input id="provider-scoped" type="checkbox"
+                       [formControl]="form.controls.providerScoped.controls.selected"
+                       [indeterminate]="form.controls.providerScoped.value.indeterminate">
+                <label for="provider-scoped">Service Providers</label>
+            </div>
+            <div class="checkbox">
+                <input id="tenant-scoped" type="checkbox"
+                       [formControl]="form.controls.tenantScoped.controls.selected"
+                       [indeterminate]="form.controls.tenantScoped.value.indeterminate">
+                <label for="tenant-scoped">Tenants</label>
+            </div>
+        </div>
+    </section>
+
+    <section *ngIf="showTenants" class="form-block">
+        <div class="form-group">
+            <label>Publish to:</label>
+            <input type="text" placeholder="Filter tenants..." [formControl]="filterControl">
+            <div class="checkbox">
+                <input id="tenant-all" type="checkbox"
+                       [checked]="allTenantsChecked"
+                       (click)="setAllTenantsSelectedTo(!allTenantsChecked)">
+                <label (click)="setAllTenantsSelectedTo(!allTenantsChecked)">
+                    All tenants
+                </label>
+            </div>
+            <ng-container *ngFor="let control of form.controls.publishToTenants.controls">
+                <div *ngIf="isFilterMatching(control.value.tenantId)" class="checkbox">
+                    <input [id]="'tenant-' + control.value.tenantId" type="checkbox"
+                           [formControl]="control.controls.selected"
+                           [indeterminate]="control.value.indeterminate">
+                    <label [for]="'tenant-' + control.value.tenantId">
+                        {{tenantsById.get(control.value.tenantId).name}}
+                    </label>
+                </div>
+            </ng-container>
+        </div>
+    </section>
+</form>
+
+<ng-template #spinner>
+    <div class="spinner spinner-inline">
+    </div>
+    Please wait...
+</ng-template>

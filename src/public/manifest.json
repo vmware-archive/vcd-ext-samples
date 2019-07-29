@@ -1,0 +1,14 @@
+{
+    "urn": "vmware:vcloud:customizePortal",
+    "name": "Portal Customization",
+    "containerVersion": "9.1.0",
+    "version": "2.0.1",
+    "scope": ["service-provider"],
+    "permissions": [],
+    "description": "A plugin for customizing various aspects of the UI portals.",
+    "vendor": "VMware",
+    "license": "BSD-2-Clause",
+    "link": "http://www.vmware.com",
+    "module": "ExtensionModule",
+    "route": "customize-portal"
+}

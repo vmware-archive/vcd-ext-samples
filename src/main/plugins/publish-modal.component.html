@@ -1,0 +1,25 @@
+<clr-modal [(clrModalOpen)]="opened" class="fixed-height">
+    <h3 class="modal-title">
+        Publish
+    </h3>
+    <div class="modal-body">
+        <clr-alert *ngIf="activityError" clrAlertType="danger">
+            <div class="alert-item">
+                <span class="alert-text">
+                    {{activityError}}
+                </span>
+            </div>
+        </clr-alert>
+        <vcd-ext-publish-form #publishForm (published)="onPublishFormPublished($event)">
+        </vcd-ext-publish-form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn" (click)="onCancelClick()">
+            Cancel
+        </button>
+        <button [disabled]="!canSave" type="button" class="btn btn-primary" (click)="onSaveClick()">
+            Save
+        </button>
+    </div>
+</clr-modal>
+

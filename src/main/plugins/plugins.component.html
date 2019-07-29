@@ -1,0 +1,85 @@
+<h1>Plugins</h1>
+<clr-alert *ngIf="activityError" clrAlertType="danger">
+    <div class="alert-item">
+        <span class="alert-text">
+            {{activityError}}
+        </span>
+    </div>
+</clr-alert>
+<clr-datagrid [(clrDgSelected)]="selectedPlugins" [clrDgLoading]="loading">
+    <clr-dg-action-bar>
+        <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-link" [disabled]="!canUpload" (click)="onUploadClick()">
+                Upload
+            </button>
+            <ng-container *ngIf="selectedPlugins.length > 0">
+                <button *ngIf="canDisableSelected" type="button" class="btn btn-sm btn-link" (click)="onDisableSelectedClick()">
+                    Disable
+                </button>
+                <button *ngIf="canEnableSelected" type="button" class="btn btn-sm btn-link" (click)="onEnableSelectedClick()">
+                    Enable
+                </button>
+                <button type="button" class="btn btn-sm btn-link" [disabled]="!canDeleteSelected" (click)="onDeleteClick()">
+                    Delete
+                </button>
+                <button type="button" class="btn btn-sm btn-link" [disabled]="!canPublishSelected" (click)="onPublishSelectedClick()">
+                    Publish
+                </button>
+            </ng-container>
+        </div>
+    </clr-dg-action-bar>
+
+    <clr-dg-placeholder>
+        No plugins found
+    </clr-dg-placeholder>
+
+    <clr-dg-column>Name</clr-dg-column>
+    <clr-dg-column>Vendor</clr-dg-column>
+    <clr-dg-column>Version</clr-dg-column>
+    <clr-dg-column>Description</clr-dg-column>
+    <clr-dg-column>Tenant scoped?</clr-dg-column>
+    <clr-dg-column>Provider scoped?</clr-dg-column>
+    <clr-dg-column>Enabled?</clr-dg-column>
+
+    <clr-dg-row *clrDgItems="let plugin of plugins" [clrDgItem]="plugin">
+        <clr-dg-cell>{{ plugin.name }}</clr-dg-cell>
+        <clr-dg-cell>{{ plugin.vendor }}</clr-dg-cell>
+        <clr-dg-cell>{{ plugin.version }}</clr-dg-cell>
+        <clr-dg-cell>{{ plugin.description }}</clr-dg-cell>
+        <clr-dg-cell>
+            <clr-icon *ngIf="plugin.tenantScoped" shape="check"></clr-icon>
+            <clr-icon *ngIf="!plugin.tenantScoped" shape="times"></clr-icon>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <clr-icon *ngIf="plugin.providerScoped" shape="check"></clr-icon>
+            <clr-icon *ngIf="!plugin.providerScoped" shape="times"></clr-icon>
+        </clr-dg-cell>
+        <clr-dg-cell>
+            <clr-icon *ngIf="plugin.enabled" shape="check"></clr-icon>
+            <clr-icon *ngIf="!plugin.enabled" shape="times"></clr-icon>
+        </clr-dg-cell>
+    </clr-dg-row>
+</clr-datagrid>
+
+<vcd-ext-upload-wizard #uploadWizard (uploaded)="onPluginUploaded($event)">
+</vcd-ext-upload-wizard>
+
+<vcd-ext-publish-modal #publishModal (published)="onPluginsPublished($event)">
+</vcd-ext-publish-modal>
+
+<clr-modal [(clrModalOpen)]="deleteModalOpened">
+    <h3 class="modal-title">
+        Delete
+    </h3>
+    <div class="modal-body">
+        Are you sure you wish to delete {{selectedPlugins?.length}} plugin(s)?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn" (click)="onDeleteModalCancelClick()">
+            Cancel
+        </button>
+        <button [disabled]="!canDeleteSelected" type="button" class="btn btn-danger" (click)="onDeleteModalDeleteClick()">
+            Save
+        </button>
+    </div>
+</clr-modal>

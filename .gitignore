@@ -1,0 +1,5 @@
+.awcache/
+node_modules/
+dist/
+manage_plugin.json
+manage_plugin.py
