@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 
-import {Observable, Subject} from "rxjs";
+import {Observable} from "rxjs";
 
 import {UiBranding, UiTheme} from "@vcd/bindings/vcloud/rest/openapi/model";
 
-import { VcdApiClient } from "@vcd/sdk";
-import {TransferProgress, TransferResult, VcdTransferClient} from "@vcd/sdk/client/vcd.transfer.client";
-import {catchError, switchMap, take} from "rxjs/operators";
+import {VcdApiClient} from "@vcd/sdk";
+import {TransferResult, VcdTransferClient} from "@vcd/sdk/client/vcd.transfer.client";
+import {catchError, map, switchMap, take} from "rxjs/operators";
 import {ErrorType} from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 
 const BRANDING_BASE_URL = "cloudapi/branding";
@@ -21,6 +21,16 @@ const THEMES_BASE_URL = `${BRANDING_BASE_URL}/themes`;
 @Injectable()
 export class BrandingService {
     constructor(private client: VcdApiClient) {}
+
+    uploadThemeContent(theme: UiTheme, file: File): Observable<TransferResult> {
+        return this.client.startTransfer(`${THEMES_BASE_URL}/${theme.name}/contents`, {
+                "fileName": file.name,
+                "size": file.size,
+            })
+            .pipe(
+                switchMap((vcdTransferClient: VcdTransferClient) => vcdTransferClient.upload(file))
+            );
+    }
 
     getBranding(tenant?: string): Observable<UiBranding> {
         return this.client
@@ -54,25 +64,28 @@ export class BrandingService {
             );
     }
 
-    registerTheme(newTheme: UiTheme, file: File) {
+    registerTheme(newTheme: UiTheme, file: File): Observable<UiTheme> {
         return this.client
             .createSync(`${THEMES_BASE_URL}`, newTheme)
             .pipe(
                 take(1),
-                switchMap((theme: UiTheme) => this.client.startTransfer(`${THEMES_BASE_URL}/${theme.name}/contents`, {
-                    "fileName": file.name,
-                    "size": file.size,
-                })),
-                switchMap((vcdTransferClient: VcdTransferClient) => vcdTransferClient.upload(file)),
+                switchMap((theme: UiTheme) => this.uploadThemeContent(theme, file).pipe(map(() => theme))),
                 catchError((error: ErrorType) => Observable.throw(error.message))
             );
     }
 
-    renameTheme(themeName: string, newUITheme: UiTheme) {
+    update(themeName: string, newUITheme: UiTheme, file?: File): Observable<UiTheme> {
         return this.client
             .updateSync<UiTheme>(`${THEMES_BASE_URL}/${themeName}`, newUITheme)
             .pipe(
                 take(1),
+                switchMap((uiTheme: UiTheme) => {
+                    if (file) {
+                        return this.uploadThemeContent(uiTheme, file).pipe(map(() => uiTheme));
+                    } else {
+                        return Observable.of(uiTheme);
+                    }
+                }),
                 catchError((error) => Observable.throw(error))
             );
     };

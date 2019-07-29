@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {BrandingService} from "../../common/services/branding.service";
 import {ErrorType} from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 import {ThemeType} from "../themes-grid.component";
+import {UiTheme} from "@vcd/bindings/vcloud/rest/openapi/model";
+import {Observable} from "rxjs";
 
 export enum ControlNames {
     Name = "name",
@@ -15,15 +17,17 @@ export enum ControlNames {
     styleUrls: ["../common/theme.common.scss", "./register_theme.component.scss"]
 })
 export class RegisterThemeModalComponent {
+    isEditing = false;
     controlNames = ControlNames;
     errorMessage = "";
     isLoading = false;
     loadingMessageKey = "";
     opened = false;
     selectedFileName = "";
+    selectedTheme: UiTheme;
     registerThemeFormGroup = new FormGroup({
         [ControlNames.Name]: new FormControl("", Validators.required),
-        [ControlNames.CSS]: new FormControl(null, Validators.required)
+        [ControlNames.CSS]: new FormControl(null)
     });
 
     @Output() registered = new EventEmitter();
@@ -37,8 +41,22 @@ export class RegisterThemeModalComponent {
         this.opened = false;
     }
 
-    open() {
-        this.registerThemeFormGroup.reset();
+    open(uiTheme?: UiTheme) {
+        this.isEditing = !!uiTheme;
+        this.selectedTheme = uiTheme;
+
+        this.clearSelectedFile();
+
+        this.registerThemeFormGroup.reset({
+            [ControlNames.Name]: uiTheme ? uiTheme.name : ""
+        });
+        if (uiTheme) {
+            this.registerThemeFormGroup.get(ControlNames.CSS).clearValidators();
+        } else {
+            this.registerThemeFormGroup.get(ControlNames.CSS).setValidators(Validators.required);
+        }
+        this.registerThemeFormGroup.get(ControlNames.CSS).updateValueAndValidity();
+
         this.opened = true;
     }
 
@@ -57,14 +75,28 @@ export class RegisterThemeModalComponent {
 
     register() {
         this.isLoading = true;
-        this.loadingMessageKey = "com.vmware.plugin-lifecycle.themes.register.loadingMessage";
+        this.loadingMessageKey = this.isEditing ? "com.vmware.plugin-lifecycle.themes.edit.loadingMessage" :
+                                    "com.vmware.plugin-lifecycle.themes.register.loadingMessage";
         this.errorMessage = "";
-        this.brandingService
-            .registerTheme({
-                name: this.registerThemeFormGroup.get(ControlNames.Name).value,
-                themeType: ThemeType.CUSTOM
-            }, this.registerThemeFormGroup.get(ControlNames.CSS).value)
-            .subscribe(() => {
+
+        const name = this.registerThemeFormGroup.get(ControlNames.Name).value;
+        const file = this.registerThemeFormGroup.get(ControlNames.CSS).value;
+
+        let observable: Observable<UiTheme>; // Register/Update observable
+        if (this.isEditing) {
+            observable = this.brandingService.update(this.selectedTheme.name, {
+                ...this.selectedTheme,
+                name: name
+            }, file);
+        } else {
+            observable = this.brandingService
+                .registerTheme({
+                    name: name,
+                    themeType: ThemeType.CUSTOM
+                }, file);
+        }
+
+        observable.subscribe(() => {
                 this.isLoading = false;
                 this.loadingMessageKey = "";
                 this.close();

@@ -1,5 +1,7 @@
 <clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="!isLoading">
-    <h3 class="modal-title">{{ 'com.vmware.plugin-lifecycle.themes.registerNewTheme' | translate }}</h3>
+    <h3 class="modal-title">
+        {{ (isEditing ? 'com.vmware.plugin-lifecycle.themes.edit.title' : 'com.vmware.plugin-lifecycle.themes.registerNewTheme') | translate }}
+    </h3>
     <div class="modal-body">
         <clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
             <div class="alert-item">
@@ -41,7 +43,12 @@
                     </label>
                     <clr-icon shape="window-close" size="12" *ngIf="selectedFileName" (click)="clearSelectedFile()"></clr-icon>
                 </div>
-                <small>{{ 'com.vmware.plugin-lifecycle.themes.publish.info' | translate }}</small>
+                <small>{{ 'com.vmware.plugin-lifecycle.themes.publish.info' | translate }}</small><br>
+                <small>
+                    <a href="https://github.com/vmware/vcd-ext-sdk/tree/master/ui/theme-generator" target="_blank">
+                        https://github.com/vmware/vcd-ext-sdk/tree/master/ui/theme-generator
+                    </a>
+                </small>
             </form>
         </loading-indicator>
     </div>
@@ -50,7 +57,7 @@
             {{ 'com.vmware.plugin-lifecycle.themes.discardBtn' | translate }}
         </button>
         <button type="button" class="btn btn-primary" (click)="register()" [disabled]="registerThemeFormGroup.invalid || isLoading">
-            {{ 'com.vmware.plugin-lifecycle.themes.registerNewTheme' | translate }}
+            {{ (isEditing ? 'com.vmware.plugin-lifecycle.themes.edit' : 'com.vmware.plugin-lifecycle.themes.registerNewTheme') | translate }}
         </button>
     </div>
 </clr-modal>

@@ -6,8 +6,8 @@
             </button>
 
             <!-- Disabled for Built-in themes -->
-            <button *ngIf="true" type="button" class="btn btn-sm btn-link" (click)="openRenameModal()" [disabled]="!selectedTheme || themeType.BUILT_IN === themeType[selectedTheme.themeType] || isLoading">
-                {{ 'com.vmware.plugin-lifecycle.themes.rename' | translate }}
+            <button *ngIf="true" type="button" class="btn btn-sm btn-link" (click)="openEditModal()" [disabled]="!selectedTheme || themeType.BUILT_IN === themeType[selectedTheme.themeType] || isLoading">
+                {{ 'com.vmware.plugin-lifecycle.themes.edit' | translate }}
             </button>
 
             <!-- Disabled for Built-in themes -->

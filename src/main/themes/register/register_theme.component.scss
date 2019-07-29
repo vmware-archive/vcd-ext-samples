@@ -9,6 +9,14 @@
   flex-direction: row;
   align-items: center;
 
+  > label {
+    position: relative;
+  }
+
+  input[type="file"] {
+    position: absolute;
+  }
+
   .selectedFileLabel {
     overflow: hidden;
     text-overflow: ellipsis;

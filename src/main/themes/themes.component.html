@@ -14,7 +14,7 @@
     (publishTheme)="openPublishModal($event)"
     (registerTheme)="openRegisterModal()"
     (removeTheme)="openRemoveModal($event)"
-    (renameTheme)="openRenameModal($event)"
+    (editTheme)="openRegisterModal($event)"
     (themesRefresh)="refreshThemes()"
 ></vcd-ext-themes-grid>
 
@@ -23,9 +23,6 @@
 
 <!-- Register new theme modal -->
 <vcd-ext-register-theme #registerModal (registered)="refreshThemes()"></vcd-ext-register-theme>
-
-<!--Rename existing theme modal -->
-<vcd-ext-rename-theme #renameModal (renamed)="refreshThemes()"></vcd-ext-rename-theme>
 
 <!-- Remove existing theme modal -->
 <vcd-ext-remove-theme #removeModal (removed)="refreshThemes()"></vcd-ext-remove-theme>

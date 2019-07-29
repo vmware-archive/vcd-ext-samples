@@ -8,7 +8,6 @@ import {UiTheme} from "@vcd/bindings/vcloud/rest/openapi/model";
 import {BrandingService} from "../common/services/branding.service";
 
 import {RegisterThemeModalComponent} from "./register/register_theme.component";
-import {RenameThemeComponent} from "./rename/rename_theme.component";
 import {RemoveThemeModalComponent} from "./remove/remove_theme.component";
 import {PublishThemeComponent} from "./publish/publish_theme.component";
 
@@ -29,7 +28,6 @@ export class ThemesComponent implements OnInit {
 
     @ViewChild("publishModal") publishModal: PublishThemeComponent;
     @ViewChild("registerModal") registerModal: RegisterThemeModalComponent;
-    @ViewChild("renameModal") renameModal: RenameThemeComponent;
     @ViewChild("removeModal") removeModal: RemoveThemeModalComponent;
 
     constructor(private brandingService: BrandingService) {}
@@ -42,12 +40,8 @@ export class ThemesComponent implements OnInit {
         this.publishModal.open(selectedTheme);
     }
 
-    openRegisterModal() {
-        this.registerModal.open();
-    }
-
-    openRenameModal(selectedTheme: UiTheme) {
-        this.renameModal.open(selectedTheme);
+    openRegisterModal(uiTheme?: UiTheme) {
+        this.registerModal.open(uiTheme);
     }
 
     openRemoveModal(selectedTheme: UiTheme) {

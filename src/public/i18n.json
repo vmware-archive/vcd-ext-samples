@@ -15,7 +15,7 @@
         "com.vmware.plugin-lifecycle.subnav.themes.description": "Manage Themes",
         "com.vmware.plugin-lifecycle.themes.nothemes.placeholder": "No themes found",
         "com.vmware.plugin-lifecycle.themes.registerNewTheme": "Register New Theme",
-        "com.vmware.plugin-lifecycle.themes.rename": "Rename",
+        "com.vmware.plugin-lifecycle.themes.edit": "Edit",
         "com.vmware.plugin-lifecycle.themes.remove": "Remove",
         "com.vmware.plugin-lifecycle.themes.publish": "Publish",
         "com.vmware.plugin-lifecycle.themes.refresh": "Refresh",
@@ -29,8 +29,8 @@
         "com.vmware.plugin-lifecycle.themes.register.uploadBtnlabel":  "Upload css file",
         "com.vmware.plugin-lifecycle.themes.register.okBtn":  "Register",
 
-        "com.vmware.plugin-lifecycle.themes.rename.loadingMessage":  "Please wait. Renaming theme...",
-        "com.vmware.plugin-lifecycle.themes.rename.title":  "Rename Theme",
+        "com.vmware.plugin-lifecycle.themes.edit.loadingMessage":  "Please wait. Editing theme...",
+        "com.vmware.plugin-lifecycle.themes.edit.title":  "Edit Theme",
 
         "com.vmware.plugin-lifecycle.themes.delete.loadingMessage":  "Please wait. Deleting theme...",
         "com.vmware.plugin-lifecycle.themes.delete.title": "Delete Theme",
@@ -43,7 +43,8 @@
         "com.vmware.plugin-lifecycle.themes.publish.tenants": "Tenants",
         "com.vmware.plugin-lifecycle.themes.publish.allTenants": "All Tenants",
         "com.vmware.plugin-lifecycle.themes.publish.loadingTenants": "Loading Tenants...",
-        "com.vmware.plugin-lifecycle.themes.publish.info": "Theme styles can be generated using the VCD SDK https://github.com/vmware/vcd-ext-sdk/tree/master/ui/theme-generator",
+        "com.vmware.plugin-lifecycle.themes.publish.info": "Theme styles can be generated using the VCD SDK:",
+        "com.vmware.plugin-lifecycle.themes.publish.ext-repo": "",
         "com.vmware.plugin-lifecycle.themes.publish.loadingMessage": "Please wait. Applying theme...",
 
 
