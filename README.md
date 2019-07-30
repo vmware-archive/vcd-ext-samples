@@ -58,7 +58,7 @@ SERVER="vcloud.example.com" curl --header 'Accept: application/*+xml;version=30.
 SERVER="vcloud.example.com" TOKEN="c2f4258224ce4489b4e4474e4e34db15" curl --header 'Accept: application/json' --header 'Content-Type: application/json' --header "x-vcloud-authorization: $TOKEN" --insecure --verbose https://$SERVER/cloudapi/extensions/ui --data '{"pluginName": "Stub plugin", "vendor": "VMware", "description": "", "version": "1.0.0", "license": "BSD-2", "link": "http://vcloud.example.com", "provider_scoped": true, "enabled": true}'
 
 # enable upload on the newly registered plugin (endpoint is in the Location header of previous response)
-# size is the plugin.zip's size in KB
+# size is the plugin.zip's size in bytes
 SERVER="vcloud.example.com" TOKEN="c2f4258224ce4489b4e4474e4e34db15" PLUGIN="urn:vcloud:uiPlugin:1e634a62-a98a-46c0-b9dd-7e2c5a9e8688" curl --header 'Accept: application/json' --header 'Content-Type: application/json' --header "x-vcloud-authorization: $TOKEN" --insecure --verbose https://$SERVER/cloudapi/extensions/ui/$PLUGIN/plugin --data '{"fileName": "plugin.zip", "size": 56623}'
 
 # Upload plugin.zip to vCloud Director
