@@ -7,7 +7,6 @@ import {UiBranding, UiTheme} from "@vcd/bindings/vcloud/rest/openapi/model";
 import {VcdApiClient} from "@vcd/sdk";
 import {TransferResult, VcdTransferClient} from "@vcd/sdk/client/vcd.transfer.client";
 import {catchError, map, switchMap, take} from "rxjs/operators";
-import {ErrorType} from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 
 const BRANDING_BASE_URL = "cloudapi/branding";
 const THEMES_BASE_URL = `${BRANDING_BASE_URL}/themes`;
@@ -49,7 +48,7 @@ export class BrandingService {
                 .get<UiTheme[]>(THEMES_BASE_URL)
                 .pipe(
                     take(1),
-                    catchError((error) => Observable.throw(error))
+                    catchError((error) => Observable.throw(error.error || error))
                 );
     };
 
@@ -70,7 +69,7 @@ export class BrandingService {
             .pipe(
                 take(1),
                 switchMap((theme: UiTheme) => this.uploadThemeContent(theme, file).pipe(map(() => theme))),
-                catchError((error: ErrorType) => Observable.throw(error.message))
+                catchError((error) => Observable.throw(error.error || error))
             );
     }
 
@@ -86,7 +85,7 @@ export class BrandingService {
                         return Observable.of(uiTheme);
                     }
                 }),
-                catchError((error) => Observable.throw(error))
+                catchError((error) => Observable.throw(error.error || error))
             );
     };
 
@@ -95,7 +94,7 @@ export class BrandingService {
             .deleteSync(`${THEMES_BASE_URL}/${themeName}`)
             .pipe(
                 take(1),
-                catchError((error) => Observable.throw(error))
+                catchError((error) => Observable.throw(error.error || error))
             );
     };
 }
