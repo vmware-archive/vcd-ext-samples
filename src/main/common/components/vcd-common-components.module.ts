@@ -19,4 +19,4 @@ import {LoadingIndicatorComponent} from "./loading-indicator.component";
         LoadingIndicatorComponent
     ]
 })
-export class CommonComponentsModule {}
+export class VcdCommonComponentsModule {}

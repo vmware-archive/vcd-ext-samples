@@ -9,4 +9,4 @@ import {OrganizationService} from "./organization.service";
         OrganizationService
     ]
 })
-export class VcdExCommonServicesModule {}
+export class VcdCommonServicesModule {}

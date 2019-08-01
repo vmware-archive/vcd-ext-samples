@@ -7,7 +7,7 @@
         "com.vmware.plugin-lifecycle.nav.label": "Customize Portal",
         "com.vmware.plugin-lifecycle.nav.description": "Customize Portal",
         "com.vmware.plugin-lifecycle.subnav.plugins.label": "Manage Plugins",
-        "com.vmware.plugin-lifecycle.subnav.plugins.description": "Mange Plugins",
+        "com.vmware.plugin-lifecycle.subnav.plugins.description": "Manage Plugins",
 
 
 
@@ -36,7 +36,7 @@
         "com.vmware.plugin-lifecycle.themes.delete.title": "Delete Theme",
         "com.vmware.plugin-lifecycle.themes.delete.confirmation": "Are you sure you wish to delete \"{0}\" theme?",
 
-        "com.vmware.plugin-lifecycle.themes.publish.title": "Publish theme",
+        "com.vmware.plugin-lifecycle.themes.publish.title": "Publish Theme",
         "com.vmware.plugin-lifecycle.themes.publish.scopeTo": "Scope to:",
         "com.vmware.plugin-lifecycle.themes.publish.publishTo": "Publish to:",
         "com.vmware.plugin-lifecycle.themes.publish.providers": "Service Providers",
@@ -44,7 +44,6 @@
         "com.vmware.plugin-lifecycle.themes.publish.allTenants": "All Tenants",
         "com.vmware.plugin-lifecycle.themes.publish.loadingTenants": "Loading Tenants...",
         "com.vmware.plugin-lifecycle.themes.publish.info": "Theme styles can be generated using the VCD SDK:",
-        "com.vmware.plugin-lifecycle.themes.publish.ext-repo": "",
         "com.vmware.plugin-lifecycle.themes.publish.loadingMessage": "Please wait. Applying theme...",
 
 

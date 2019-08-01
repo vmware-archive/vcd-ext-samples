@@ -6,11 +6,11 @@ import {ClarityModule} from "clarity-angular";
 
 import {VcdSdkModule} from "@vcd/sdk";
 
-import {VcdExCommonServicesModule} from "../common/services/common.services.module";
+import {VcdCommonServicesModule} from "../common/services/common.services.module";
 import {ThemesComponent} from "./themes.component";
 import {RegisterThemeModalComponent} from "./register/register_theme.component";
 import {RemoveThemeModalComponent} from "./remove/remove_theme.component";
-import {CommonComponentsModule} from "../common/components/common.components.module";
+import {VcdCommonComponentsModule} from "../common/components/vcd-common-components.module";
 import {PublishThemeComponent} from "./publish/publish_theme.component";
 import {ThemesGridComponent} from "./themes-grid.component";
 
@@ -29,8 +29,8 @@ import {ThemesGridComponent} from "./themes-grid.component";
         // VCD Modules
         VcdSdkModule,
 
-        VcdExCommonServicesModule,
-        CommonComponentsModule
+        VcdCommonServicesModule,
+        VcdCommonComponentsModule
     ],
 
     declarations: [

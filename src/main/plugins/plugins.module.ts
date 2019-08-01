@@ -15,7 +15,7 @@ import {PluginsComponent} from "./plugins.component";
 import {PublishFormComponent} from "./publish-form.component";
 import {PublishModalComponent} from "./publish-modal.component";
 import {UploadWizardComponent} from "./upload-wizard.component";
-import {VcdExCommonServicesModule} from "../common/services/common.services.module";
+import {VcdCommonServicesModule} from "../common/services/common.services.module";
 
 @NgModule({
     imports: [
@@ -24,7 +24,7 @@ import {VcdExCommonServicesModule} from "../common/services/common.services.modu
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        VcdExCommonServicesModule
+        VcdCommonServicesModule
     ],
     declarations: [
         PluginsComponent,
