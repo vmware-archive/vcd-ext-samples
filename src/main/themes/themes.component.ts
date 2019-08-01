@@ -9,8 +9,6 @@ import {BrandingService} from "../common/services/branding.service";
 
 import {RegisterThemeModalComponent} from "./register/register_theme.component";
 import {RemoveThemeModalComponent} from "./remove/remove_theme.component";
-import {PublishThemeComponent} from "./publish/publish_theme.component";
-
 
 
 
@@ -26,7 +24,6 @@ export class ThemesComponent implements OnInit {
     isLoading = true;
     themes: UiTheme[] = [];
 
-    @ViewChild("publishModal") publishModal: PublishThemeComponent;
     @ViewChild("registerModal") registerModal: RegisterThemeModalComponent;
     @ViewChild("removeModal") removeModal: RemoveThemeModalComponent;
 
@@ -34,10 +31,6 @@ export class ThemesComponent implements OnInit {
 
     ngOnInit() {
         this.refreshThemes();
-    }
-
-    openPublishModal(selectedTheme: UiTheme) {
-        this.publishModal.open(selectedTheme);
     }
 
     openRegisterModal(uiTheme?: UiTheme) {

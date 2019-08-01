@@ -15,11 +15,6 @@
                 {{ 'com.vmware.plugin-lifecycle.themes.remove' | translate }}
             </button>
 
-            <!-- TODO: Disable/Enable based on the permissions -->
-            <button type="button" class="btn btn-sm btn-link" (click)="openPublishModal()" [disabled]="false" [disabled]="!selectedTheme || isLoading">
-                {{ 'com.vmware.plugin-lifecycle.themes.publish' | translate }}
-            </button>
-
             <button type="button" class="btn btn-sm btn-link" [disabled]="isLoading" (click)="refreshThemes()">
                 {{ 'com.vmware.plugin-lifecycle.themes.refresh' | translate }}
             </button>

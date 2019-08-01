@@ -25,16 +25,11 @@ export class ThemesGridComponent {
 
     @Output() themesRefresh = new EventEmitter();
     @Output() registerTheme = new EventEmitter();
-    @Output() publishTheme = new EventEmitter<UiTheme>();
     @Output() editTheme = new EventEmitter<UiTheme>();
     @Output() removeTheme = new EventEmitter<UiTheme>();
 
     openEditModal() {
         this.editTheme.emit(ObjectHelper.clone(this.selectedTheme));
-    }
-
-    openPublishModal() {
-        this.publishTheme.emit(ObjectHelper.clone(this.selectedTheme));
     }
 
     openRegisterModal() {

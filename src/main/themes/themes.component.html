@@ -11,15 +11,11 @@
 <vcd-ext-themes-grid
     [isLoading]="isLoading"
     [themes]="themes"
-    (publishTheme)="openPublishModal($event)"
     (registerTheme)="openRegisterModal()"
     (removeTheme)="openRemoveModal($event)"
     (editTheme)="openRegisterModal($event)"
     (themesRefresh)="refreshThemes()"
 ></vcd-ext-themes-grid>
-
-<!-- Publish theme modal -->
-<vcd-ext-publish-theme #publishModal (published)="refreshThemes()"></vcd-ext-publish-theme>
 
 <!-- Register new theme modal -->
 <vcd-ext-register-theme #registerModal (registered)="refreshThemes()"></vcd-ext-register-theme>

@@ -11,7 +11,6 @@ import {ThemesComponent} from "./themes.component";
 import {RegisterThemeModalComponent} from "./register/register_theme.component";
 import {RemoveThemeModalComponent} from "./remove/remove_theme.component";
 import {VcdCommonComponentsModule} from "../common/components/vcd-common-components.module";
-import {PublishThemeComponent} from "./publish/publish_theme.component";
 import {ThemesGridComponent} from "./themes-grid.component";
 
 
@@ -38,7 +37,6 @@ import {ThemesGridComponent} from "./themes-grid.component";
         ThemesGridComponent,
         RegisterThemeModalComponent,
         RemoveThemeModalComponent,
-        PublishThemeComponent
     ],
 
     entryComponents: [
