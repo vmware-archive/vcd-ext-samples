@@ -1,0 +1,18 @@
+:host {
+  .name-form-group {
+    display: block;
+    padding-left: 0;
+  }
+
+  ::ng-deep .form-group.name-form-group > label:first-child {
+    position: static;
+  }
+
+  .tooltip {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+  }
+}

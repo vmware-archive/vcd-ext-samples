@@ -1,0 +1,23 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="!isLoading">
+    <h3 class="modal-title">{{ 'com.vmware.plugin-lifecycle.themes.delete.title' | translate }}</h3>
+    <div class="modal-body">
+        <clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
+            <div class="alert-item">
+                <span class="alert-text">
+                    {{ errorMessage }}
+                </span>
+            </div>
+        </clr-alert>
+        <loading-indicator [isLoading]="isLoading"  [labelKey]="loadingMessageKey">
+                {{ 'com.vmware.plugin-lifecycle.themes.delete.confirmation' | translate:themeName }}
+        </loading-indicator>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="onDiscard()" [disabled]="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.themes.cancelBtn' | translate }}
+        </button>
+        <button #deleteBtn type="button" class="btn btn-danger" (click)="delete()" [disabled]="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.themes.remove' | translate }}
+        </button>
+    </div>
+</clr-modal>

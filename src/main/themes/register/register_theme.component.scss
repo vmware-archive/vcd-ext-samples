@@ -1,0 +1,34 @@
+:host input[type="file"] {
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+
+.upload-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  > label {
+    position: relative;
+  }
+
+  input[type="file"] {
+    position: absolute;
+  }
+
+  .selectedFileLabel {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  clr-icon {
+    flex: none;
+    margin-left: 10px;
+    &:hover {
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+  }
+}

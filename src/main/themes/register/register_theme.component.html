@@ -1,0 +1,63 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="!isLoading">
+    <h3 class="modal-title">
+        {{ (isEditing ? 'com.vmware.plugin-lifecycle.themes.edit.title' : 'com.vmware.plugin-lifecycle.themes.registerNewTheme') | translate }}
+    </h3>
+    <div class="modal-body">
+        <clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
+            <div class="alert-item">
+                <span class="alert-text">
+                    {{ errorMessage }}
+                </span>
+            </div>
+        </clr-alert>
+
+        <loading-indicator [isLoading]="isLoading" [labelKey]="loadingMessageKey">
+            <form [formGroup]="registerThemeFormGroup">
+                <!-- Name -->
+                <section class="form-block">
+                    <div class="form-group name-form-group">
+                        <label class="required">
+                            <label>
+                                {{ 'com.vmware.plugin-lifecycle.themes.nameLabel' | translate }}
+                            </label>
+                        </label>
+                        <div>
+                            <label for="nameInput" aria-haspopup="true" role="tooltip" class="tooltip tooltip-validation tooltip-top-left" [ngClass]="{'invalid': (registerThemeFormGroup.get('name').invalid && registerThemeFormGroup.get('name').dirty)}">
+                                <input type="text" id="nameInput" [formControlName]="controlNames.Name" class="name-input">
+                                <span class="tooltip-content">
+                                This field cannot be empty!
+                            </span>
+                            </label>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upload Btn -->
+                <div class="upload-row">
+                    <label for="upload-input" class="btn btn-outline" title="{{ 'com.vmware.plugin-lifecycle.themes.register.uploadBtnlabel' | translate }}">
+                        {{ 'com.vmware.plugin-lifecycle.themes.register.uploadBtnlabel' | translate }}
+                        <input #file type="file" accept="text/css" id="upload-input" (change)="onFileChange($event)">
+                    </label>
+                    <label *ngIf="selectedFileName" title="{{ selectedFileName }}" class="selectedFileLabel">
+                        {{ selectedFileName }}
+                    </label>
+                    <clr-icon shape="window-close" size="12" *ngIf="selectedFileName" (click)="clearSelectedFile()"></clr-icon>
+                </div>
+                <small>{{ 'com.vmware.plugin-lifecycle.themes.publish.info' | translate }}</small><br>
+                <small>
+                    <a href="https://github.com/vmware/vcd-ext-sdk/tree/master/ui/theme-generator" target="_blank">
+                        https://github.com/vmware/vcd-ext-sdk/tree/master/ui/theme-generator
+                    </a>
+                </small>
+            </form>
+        </loading-indicator>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="close()" [disabled]="isLoading">
+            {{ 'com.vmware.plugin-lifecycle.themes.discardBtn' | translate }}
+        </button>
+        <button type="button" class="btn btn-primary" (click)="register()" [disabled]="registerThemeFormGroup.invalid || isLoading">
+            {{ (isEditing ? 'com.vmware.plugin-lifecycle.themes.edit' : 'com.vmware.plugin-lifecycle.themes.registerNewTheme') | translate }}
+        </button>
+    </div>
+</clr-modal>

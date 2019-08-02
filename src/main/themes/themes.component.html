@@ -1,0 +1,24 @@
+<h1>{{ 'com.vmware.plugin-lifecycle.subnav.themes.label' | translate }}</h1>
+
+<clr-alert [clrAlertType]="'alert-danger'" [clrAlertClosable]="false" *ngIf="errorMessage">
+    <div class="alert-item">
+        <span class="alert-text">
+            {{ errorMessage }}
+        </span>
+    </div>
+</clr-alert>
+
+<vcd-ext-themes-grid
+    [isLoading]="isLoading"
+    [themes]="themes"
+    (registerTheme)="openRegisterModal()"
+    (removeTheme)="openRemoveModal($event)"
+    (editTheme)="openRegisterModal($event)"
+    (themesRefresh)="refreshThemes()"
+></vcd-ext-themes-grid>
+
+<!-- Register new theme modal -->
+<vcd-ext-register-theme #registerModal (registered)="refreshThemes()"></vcd-ext-register-theme>
+
+<!-- Remove existing theme modal -->
+<vcd-ext-remove-theme #removeModal (removed)="refreshThemes()"></vcd-ext-remove-theme>

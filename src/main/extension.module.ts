@@ -10,6 +10,8 @@ import {ClarityModule} from "clarity-angular";
 import {PluginsComponent} from "./plugins/plugins.component";
 import {PluginsModule} from "./plugins/plugins.module";
 import {SubnavComponent} from "./subnav.component";
+import {ThemesModule} from "./themes/themes.module";
+import {ThemesComponent} from "./themes/themes.component";
 
 const ROUTES: Routes = [
     {
@@ -17,7 +19,8 @@ const ROUTES: Routes = [
         component: SubnavComponent,
         children: [
             {path: "", redirectTo: "plugins", pathMatch: "full"},
-            {path: "plugins", component: PluginsComponent}
+            {path: "plugins", component: PluginsComponent},
+            {path: "themes", component: ThemesComponent}
         ]
     }
 ];
@@ -28,7 +31,8 @@ const ROUTES: Routes = [
         CommonModule,
         PluginsModule,
         VcdSdkModule,
-        RouterModule.forChild(ROUTES)
+        RouterModule.forChild(ROUTES),
+        ThemesModule,
     ],
     declarations: [
         SubnavComponent

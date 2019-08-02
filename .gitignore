@@ -1,5 +1,6 @@
 .awcache/
 node_modules/
 dist/
+.idea/
 manage_plugin.json
 manage_plugin.py
