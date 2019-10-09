@@ -17,6 +17,11 @@ class PluginManager:
 
     def register(self, pluginDir):
         manifest = json.load(open(os.path.join(pluginDir,'dist','manifest.json'), 'r'))
+        pluginId = self.findPluginId(manifest)
+        
+        if pluginId:
+            self.unregister(pluginId, pluginDir)
+
         registerRequest = json.dumps({
             'pluginName': manifest['name'],
             'vendor': manifest['vendor'],
@@ -56,8 +61,21 @@ class PluginManager:
             print('- {} by {}\n    Version: {}\n    ID: {}'.format(plugin['pluginName'], plugin['vendor'], plugin['version'], plugin['id']))
 
         return
+    
+    def findPluginId(self, manifest):        
+        response = self._session.get('{}/cloudapi/extensions/ui'.format(self.vcdUrlBase))
+        eid = None
+        for plugin in response.json():
+            if manifest['name'] == plugin['pluginName'] and manifest['version'] == plugin['version']:
+                eid = plugin['id']
+                break
+        return eid
 
-    def unregister(self, id):
+    def unregister(self, id, pluginDir):
+        if not id:
+            manifest = json.load(open(os.path.join(pluginDir,'dist','manifest.json'), 'r'))
+            id = self.findPluginId(manifest)
+        
         response = self._session.delete('{}/cloudapi/extensions/ui/{}'.format(self.vcdUrlBase, id))
         response.raise_for_status()
         print('Removed plugin with id of {}'.format(id))
@@ -93,7 +111,7 @@ def main():
         sys.exit(1)
 
     try:
-        pluginManager = PluginManager();
+        pluginManager = PluginManager()
     except KeyError as err:
         print('Missing configuration parameter', err)
         sys.exit(1)
@@ -111,7 +129,7 @@ def listPlugins(args, pluginManager):
     pluginManager.list()
 
 def unregisterPlugin(args, pluginManager):
-    pluginManager.unregister(args.id)
+    pluginManager.unregister(args.id, args.pluginDir)
 
 def registerPlugin(args, pluginManager):
     pluginManager.register(args.pluginDir)
@@ -125,7 +143,8 @@ def processCommandLine():
     listParser = subparsers.add_parser('list', help='Lists all registered plugins')
     listParser.set_defaults(func=listPlugins)
     unregisterParser = subparsers.add_parser('unregister', help='Removes a plugin registration')
-    unregisterParser.add_argument('id', help='vCD identifier of plugin to remove')
+    unregisterParser.add_argument('id', help='vCD identifier of plugin to remove', nargs='?')
+    unregisterParser.add_argument('pluginDir', type=DirType(), default='.', help='root directory of a plugin', nargs='?')
     unregisterParser.set_defaults(func=unregisterPlugin)
 
     args = parser.parse_args()
@@ -136,4 +155,3 @@ def processCommandLine():
     return args
 
 main()
-

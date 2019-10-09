@@ -38,7 +38,11 @@ optional arguments:
 The following actions can be performed:
 * register: registers and uploads a UI plugin
   * requires a plugin directory to be specified, and the plugin to already be built and available in the `dist/` folder
+    * _if not specified, the directory where the script was executed is used_
 * unregister: removes a plugin
   * requires an id to be specified, corresponding to the id of an existing registered plugin
+    * _if not specified, the id is then discovered prior to plugin removal_
+  * requires a plugin directory to be specified, and the plugin to already be built and available in the `dist/` folder
+    * _if not specified, the directory where the script was executed is used_
 * list: provides a summary of currently registered plugins
   * requires no additional parameters
