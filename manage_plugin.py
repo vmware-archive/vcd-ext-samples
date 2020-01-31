@@ -52,6 +52,12 @@ class PluginManager:
         time.sleep(3)
         response = self._session.get('{}/cloudapi/extensions/ui/{}'.format(self.vcdUrlBase, pluginId), data=registerRequest)
         print('Plugin status: {}'.format(response.json()['plugin_status']))
+
+        if "tenant" in manifest['scope']:
+            print('Publishing plugin to all tenants...')
+            response = self._session.post('{}/cloudapi/extensions/ui/{}/tenants/publishAll'.format(self.vcdUrlBase, pluginId))
+            print('Plugin published to {} Tenants'.format(len(response.json())))
+
         return
 
     def list(self):
