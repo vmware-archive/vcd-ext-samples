@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { environment } from 'src/environments/environment';
+import { CONTAINER_BRANDING } from './branding';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ClarityModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    { provide: CONTAINER_BRANDING, useValue: environment.branding }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
