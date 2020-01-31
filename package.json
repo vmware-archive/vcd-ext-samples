@@ -1,0 +1,22 @@
+{
+  "name": "vcd-development-workspace",
+  "version": "1.0.0-alpha",
+  "description": "This repository contains example plugins for integrating with, and extending vCloud Director capabilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmware-samples/vcd-ext-samples.git"
+  },
+  "author": "VMware, Inc.",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/vmware-samples/vcd-ext-samples/issues"
+  },
+  "homepage": "https://github.com/vmware-samples/vcd-ext-samples#readme",
+  "dependencies": {
+    "@angular/cli": "6.2.9"
+  }
+}
