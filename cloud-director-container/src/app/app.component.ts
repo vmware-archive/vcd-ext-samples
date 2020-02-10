@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { CONTAINER_BRANDING, Branding } from './branding';
+import { CONTAINER_BRANDING, Branding } from '../environments/branding';
 
 @Component({
   selector: 'app-root',

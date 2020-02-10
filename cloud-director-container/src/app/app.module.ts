@@ -5,8 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { environment } from 'src/environments/environment';
-import { CONTAINER_BRANDING } from './branding';
+import { environment } from '../environments/environment';
+import { CONTAINER_BRANDING } from '../environments/branding';
 
 @NgModule({
   declarations: [
