@@ -6,8 +6,16 @@
         <span class="title">{{branding.headerTitle}}</span>
       </a>
     </div>
+    <div>
+      <clr-dropdown class="dropdown">
+        <button class="nav-link nav-text" class="hamburger-button" clrDropdownTrigger>
+          <clr-icon class="is-inverse" shape="bars" size="24"></clr-icon>
+        </button>
+        <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
   </clr-header>
-
   <div class="content-wrapper">
     <main class="content">
       <router-outlet></router-outlet>
