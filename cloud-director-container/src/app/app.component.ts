@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { CONTAINER_BRANDING, Branding } from '../environments/branding';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,9 @@ import { CONTAINER_BRANDING, Branding } from '../environments/branding';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(@Inject(CONTAINER_BRANDING) private branding: Branding) {}
+  constructor(@Inject(CONTAINER_BRANDING) private branding: Branding, private title: Title) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.title.setTitle(this.branding.headerTitle);
+  }
 }
