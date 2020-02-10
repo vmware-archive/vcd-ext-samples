@@ -1,4 +1,4 @@
-import { Branding } from "src/app/branding";
+import { Branding } from "./branding";
 
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
