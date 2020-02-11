@@ -5,4 +5,4 @@ export class Branding {
     headerLogo?: string;
 }
 
-export const CONTAINER_BRANDING = new InjectionToken<Branding>("White labaling data");
+export const CONTAINER_BRANDING = new InjectionToken<Branding>("White labeling data");
