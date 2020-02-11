@@ -12,6 +12,9 @@
           <clr-icon class="is-inverse" shape="bars" size="24"></clr-icon>
         </button>
         <clr-dropdown-menu clrPosition="bottom-left" *clrIfOpen>
+          <ng-container *ngFor="let pluginRegistration of pluginRegistrations">
+            <a [routerLink]="pluginRegistration.path" routerLinkActive="active" clrDropdownItem>{{pluginRegistration.label}}</a>
+          </ng-container>
         </clr-dropdown-menu>
       </clr-dropdown>
     </div>
