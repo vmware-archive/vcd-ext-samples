@@ -12,7 +12,7 @@ import { PLUGINS } from 'src/plugins';
 import { API_ROOT_URL } from 'src/environments/container-registrations';
 import { AppConfigService } from './app-config.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CONTAINER_CREDENTIALS } from 'src/environments/access';
+import { CONTAINER_CREDENTIALS, Credentials } from 'src/environments/access';
 
 @NgModule({
   declarations: [
@@ -27,8 +27,8 @@ import { CONTAINER_CREDENTIALS } from 'src/environments/access';
     StoreModule.forRoot({})
   ],
   providers: [
-    { provide: CONTAINER_BRANDING, useValue: environment.branding },
-    // { provide: CONTAINER_CREDENTIALS, useValue: environment.credentials },
+    { provide: CONTAINER_BRANDING, useValue: environment["branding"] },
+    { provide: CONTAINER_CREDENTIALS, useValue: environment["credentials"] },
     { provide: API_ROOT_URL, useValue: "" },
     { provide: APP_INITIALIZER, useFactory: bootstrapApplication, multi: true, deps: [AppConfigService] },
   ],
