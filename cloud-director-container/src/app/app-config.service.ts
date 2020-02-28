@@ -38,7 +38,7 @@ export class AppConfigService {
     console.groupEnd();
     return this.http.post("api/sessions", null, {
       observe: "response",
-      headers: { "Authorization": `Basic ${auth}`, "Accept": "application/*+json;version=34.0", "Content-Type": "application/*+json" }
+      headers: { "Authorization": `Basic ${auth}`, "Accept": "application/*+json;version=32.0", "Content-Type": "application/*+json" }
     }).toPromise().then((response: HttpResponse<SessionType>) => {
       return `${response.headers.get('x-vmware-vcloud-token-type')} ${response.headers.get('x-vmware-vcloud-access-token')}`;
     });
