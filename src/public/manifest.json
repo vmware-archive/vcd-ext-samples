@@ -1,0 +1,35 @@
+{
+    "urn": "vmware:vcloud:plugin:showcase",
+    "name": "Showcase plugin",
+    "containerVersion": "9.5.0",
+    "version": "1.0.0",
+    "scope": ["service-provider", "tenant"],
+    "permissions": [],
+    "description": "An example plugin that showcases various extension points.",
+    "vendor": "VMware",
+    "license": "BSD-2-Clause",
+    "link": "http://www.vmware.com/support",
+    "module": "SubnavPluginModule",
+    "route": "showcase",
+    "extensionPoints": [{
+        "urn": "vmware:vcloud:vm-action:backup",
+        "type": "vm-action",
+        "name": "VM Backup Action",
+        "description": "Example of adding an action to VMs",
+        "component": "VmBackupActionComponent"
+    },
+    {
+        "urn": "vmware:vcloud:vapp-action:restore",
+        "type": "vapp-action",
+        "name": "vApp Restore Action",
+        "description": "Example of adding an action to vApps",
+        "component": "VappRestoreActionComponent"
+    },
+    {
+        "urn": "vmware:vcloud:datacenter:sample",
+        "type": "datacenter-overview",
+        "name": "Custom Datacenters",
+        "description": "Display custom information in the Datacenter Overview",
+        "component": "DatacenterContainerComponent"
+    }]
+}
