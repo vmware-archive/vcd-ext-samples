@@ -1,7 +1,24 @@
 # Showcase Plugin
 
 ## Overview
-This branch soon will be updated with plugin which will be example how to write plugin for various extension points supported by vCloud Director.
+
+This plugin is an example how to build extension which will bootstrap one or more actions to:
+
+- Organization VDCs
+- VMs / vApp(s)
+
+## Build
+
+```bash
+git clone -b showcase-plugin --single-branch https://github.com/vmware-samples/vcd-ext-samples.git
+cd vcd-ext-sdk
+
+# install project dependencies
+npm ci
+
+# build plugin
+npm run build
+```
 
 ## Contributing
 
