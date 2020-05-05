@@ -1,0 +1,462 @@
+@import "../variables/variables";
+
+%vm-non-compliant-icon {
+    .vm-non-compliant-icon {
+        color: $clr-color-warning-600;
+        flex: none;
+        margin-right: 5px;
+    }
+}
+
+vcd-vapps-card-container, vcd-vms-card-container {
+    display: block;
+    position: relative;
+    > .clr-row, > vcd-loading-indicator > .clr-row {
+        margin: 0;
+        &.card-loading {
+            // Prevent from jumping cards when loading data
+            padding-top: 1.05rem;
+        }
+    }
+    vcd-vapps-card, vcd-vms-card {
+        margin-right: $vcd-padding-1;
+    }
+
+    > vcd-loading-indicator {
+        min-height: 30vh;
+        > .indicator-container {
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            padding-top: 30vh;
+        }
+        > .not-found-container {
+            padding-top: 20vh;
+        }
+        clr-signpost-content {
+            vcd-loading-indicator {
+                min-height: 7rem;
+                .indicator-container {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+vcd-vapps-card, vcd-vms-card {
+    min-height: 5rem;
+    flex: 0 0 15rem;
+    max-width: 15rem;
+
+    clr-checkbox-wrapper {
+        position: absolute !important;
+        top: 0.25rem;
+        right: 0.25rem;
+    }
+
+    .disabled_link {
+        color: currentColor !important;
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+    }
+
+    @extend %vm-non-compliant-icon;
+}
+
+
+.vapp_card_selected, .vm_card_selected  {
+    background-color: $clr-color-action-100;
+    border-color: $clr-color-action-600;
+    box-shadow: 0 0.123rem 0 0 $clr-color-action-600;
+}
+
+.vapp-card, .vm-card {
+    a:visited {
+        color: $clr-action-blue;
+    }
+    margin-top: $vcd-padding-0-5;
+    margin-bottom: $vcd-padding-0-5;
+    .card-header {
+        border-bottom: none;
+        padding: $vcd-padding-0-75 $vcd-card-content-padding $vcd-padding-0-25 $vcd-card-content-padding;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .card-block {
+        font-size: .48rem;
+        line-height: .9rem;
+        padding: 0 $vcd-card-content-padding;
+    }
+    .card-footer {
+        padding-left: $vcd-card-content-padding;
+        > .clr-row {
+            margin-left: 0;
+            margin-right: 0;
+            > [class*="clr-col"] {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.vapps-icon-tab, .vm-icon-tab {
+    > .nav {
+        justify-content: flex-end;
+        box-shadow: none;
+        .nav-link {
+            min-width: 1.8rem;
+            color: $clr-color-neutral-500;
+            &.active, &:hover{
+                box-shadow: none;
+                color: $clr-nav-link-active-color;
+            }
+        }
+        .nav-item {
+            margin-right: 0;
+        }
+    }
+}
+
+.vapp-status, .vm-status {
+    font-weight: 600;
+    color: $clr-toggle-bg-color-off;
+    &.vapp-status-danger,  &.error {
+        color: $clr-red-light-midtone;
+    }
+
+    &.vapp-status-success, &.success {
+        color: $clr-green-dark-midtone;
+    }
+
+    &.vapp-status-warning, &.warning {
+        color: $clr-yellow-dark-midtone;
+    }
+
+    &.vapp-status-info, &.info {
+        color: $clr-blue;
+    }
+}
+
+.card-btn-link {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-appearance: none!important;
+    border: none;
+    color: $clr-action-blue;
+    background: transparent;
+    white-space: nowrap;
+    padding: 0;
+    &:disabled {
+        color: $clr-btn-default-disabled-color;
+        cursor: not-allowed;
+        opacity: .4;
+    }
+}
+
+.vapp-card-unit-details, .vm-card-unit-details {
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    .signpost-trigger {
+        vertical-align: text-top;
+        &.active {
+            color: $clr-action-blue;
+        }
+    }
+    > span {
+        display: flex;
+    }
+}
+
+.vapp-card-date-owned,
+.vapp-card-vm-manage,
+.vapp-card-unit-details-container,
+.vm-card-date-owned,
+.vm-card-vm-manage,
+.vm-card-unit-details-container,
+.vapp-card-badges,
+.vm-card-badges{
+    padding-top: $details-container-padding-top-bottom;
+    padding-bottom: $details-container-padding-top-bottom;
+    border-top: 1px solid $clr-card-border-color;
+    &.clr-row, > .clr-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    > [class*="clr-col"], > .clr-row > [class*="clr-col"] {
+        padding: 0;
+    }
+}
+
+.vapp-card-unit-details-container, .vm-card-unit-details-container {
+    &.clr-row > [class*="clr-col"] {
+        padding-right: $vcd-padding-0-25;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+
+@media only screen and (max-width: map-get($clr-grid-breakpoints, md)) {
+    vcd-vapps-card, vcd-vms-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+        min-width: 15rem;
+    }
+
+    vcd-vapps-card-container, vcd-vms-card-container {
+        vcd-vapps-card, vcd-vms-card {
+            margin-right: 0;
+        }
+    }
+}
+
+.signpost-vm-consoles, .nics-signpost {
+    padding-right: $vcd-padding-0-5;
+}
+
+vcd-vm-console, vcd-vm-nics-signpost {
+    display: block;
+    min-width: 13rem;
+    position: relative;
+    h4 {
+        margin-top: 0;
+        margin-bottom: $vcd-padding-1;
+    }
+    vcd-loading-indicator {
+        min-height: 7rem;
+        .overlay {
+            margin: 0 !important;
+            background-color: $clr-white !important;
+        }
+    }
+}
+
+vcd-vm-nics-signpost h4 {
+    margin-bottom: 0;
+}
+
+.search-entity-input {
+    margin: $vcd-padding-0-75 $vcd-padding-0-5 $vcd-padding-0-75 0;
+    position: relative;
+    .clr-input {
+        padding-left: $vcd-padding-1;
+        width: 100%;
+    }
+    clr-icon {
+        position: absolute;
+        top: 3px;
+        left: 0;
+    }
+}
+
+.vapp-vm-consoles-items, .nics-signpost-items, .snapshot-signpost-items {
+    max-height: 14rem;
+    overflow-y: auto;
+}
+
+.signpost-vm-console .signpost-content-body,
+.nics-signpost .signpost-content-body,
+.snapshot-signpost .signpost-content-body {
+    padding-right: $vcd-padding-0-5;
+}
+
+.nics-signpost-item, .snapshot-signpost-item {
+    margin-right: $vcd-padding-0-5;
+    font-weight: 400;
+    > div {
+        padding: $vcd-padding-0-25 0;
+        &:first-child {
+            font-weight: 600;
+            margin-top: $vcd-padding-0-5;
+            margin-bottom: $vcd-padding-0-25;
+            padding-bottom: $vcd-padding-0-25;
+            border-bottom: 1px solid $clr-card-border-color;
+        }
+    }
+    label, span, strong {
+        display: block;
+    }
+    label {
+        font-weight: 600;
+    }
+    span, strong {
+        color: $clr-color-neutral-500;
+    }
+}
+
+.storage-details clr-signpost-content h4 {
+    margin-top: 0;
+}
+
+.vapp-vm-consoles-item {
+    padding: $vcd-padding-0-25 0;
+    border-bottom: 1px solid $clr-card-border-color;
+    margin-right: $vcd-padding-0-5;
+    font-weight: 600;
+    line-height: .9rem;
+    white-space: nowrap;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    -ms-grid-columns: 1fr min-content;
+    -ms-grid-rows: min-content min-content;
+    .tooltip {
+        grid-row: 1;
+        -ms-grid-row: 1;
+        grid-column: 1;
+        -ms-grid-column: 1;
+    }
+    .card-btn-link {
+        grid-row: 2;
+        -ms-grid-row: 2;
+        grid-column: 2;
+        -ms-grid-column: 2;
+    }
+    .vapp-status {
+        grid-row: 2;
+        -ms-grid-row: 2;
+        grid-column: 1;
+        -ms-grid-column: 1;
+    }
+}
+
+.vapp-vm-list-item {
+    white-space: nowrap;
+}
+
+.vapp-vm-list-status-item {
+    .vapp-status {
+        flex: 1 1 auto;
+    }
+
+    span.spinner {
+        margin-right: 5px;
+    }
+}
+
+.vm-card-status-item {
+    display: flex;
+    .vm-status {
+        flex: 1 1 auto;
+    }
+}
+
+.vapp-cards-list-empty, .vm-cards-list-empty {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    clr-icon {
+        margin-top: 96px;
+        width: 96px;
+        height: 96px;
+        flex: 0 1 auto;
+        align-self: center;
+        opacity: .5;
+    }
+
+    span.container {
+        opacity: 0.5;
+        align-self: center;
+        align-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            align-self: center;
+            height: 50%;
+        }
+
+        .description {
+            align-self: center;
+        }
+
+    }
+
+    :last-child {
+        align-self: center;
+    }
+
+}
+
+.vapp-card-badges, .vm-card-badges {
+    display: flex;
+
+    .card-tags {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        button {
+            margin-right: 0;
+            border: 0;
+            padding: 0;
+        }
+
+        clr-signpost {
+            clr-icon {
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+
+.vapp_cards_tags_disable, .vm_cards_tags_disable {
+    color: inherit;
+    opacity: 0.5;
+}
+
+.card-tag-red {
+    color: $clr-color-danger-700;
+}
+
+.card-tag-green {
+    color: $clr-color-success-700;
+}
+
+.card-tag-orange {
+    color: $clr-color-warning-500;
+}
+
+.card-tag-blue {
+    color: $clr-color-action-600;
+}
+
+.card-tag-magenta {
+    color: $clr-color-secondary-action-500;
+}
+
+.card-tag-flex-none {
+    flex: none;
+}
+
+.workload-location {
+    fill: $clr-color-action-600;
+    opacity: 0.5;
+}
+
+.workload-location-grid {
+    flex: none;
+    fill: $clr-color-action-600;
+    opacity: 0.5;
+}
+
+.vm-name-with-location-icon,
+.vapp-name-with-location-icon {
+    display: flex;
+    align-items: center;
+
+    @extend %vm-non-compliant-icon;
+
+    .name-tooltip {
+        flex: 1 1 auto;
+        margin-right: $vcd-padding-0-5;
+    }
+}

@@ -1,0 +1,22 @@
+/**
+ * `_header.clarity.scss` contains mixins and styles definitions.
+ * Avoid style duplication by defining a `header.clarity` here
+ * and then importing the `_header.clarity.scss` file. In that way
+ * we can reuse mixins/variables/function defined in `_header.clarity.scss`
+ * file and avoid re-importing of the header styles.
+ */
+@include exports('header.clarity') {}
+@import "../../node_modules/@clr/ui/src/layout/nav/header.clarity";
+
+/**
+ * `header-section-divider()` mixins add header's separators to ::after/::before
+ * pseudo-elements, but it does not adds `content` style declaration which is required
+ * for ::after/::before pseudo-elements. The purpose of this mixin is to add the missing
+ * style declarations in order to reuse the `header-section-divider()` mixin.
+ */
+@mixin vcd-header-section-divider() {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  @include header-section-divider();
+}

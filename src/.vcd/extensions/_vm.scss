@@ -1,0 +1,369 @@
+@import "../mixins/fill_height";
+@import "../variables/variables";
+@import '../mixins/ellipsis';
+
+vcd-vms-container,
+vcd-vms-guest-properties,
+vcd-vms-details-container,
+vcd-vms-general-details,
+vcd-vms-hardware,
+vcd-vms-metadata,
+vcd-vms-hard-disks,
+vcd-vms-nics {
+    @include fillHeight();
+}
+
+vcd-vms-details-container {
+    clr-alert.vm-compliance-warning .alert-item {
+        line-height: 1.4rem;
+    }
+    .section-content-container {
+        vcd-vms-nics, 
+        vcd-metadata-grid,
+        vcd-all-tasks,
+        vcd-all-events {
+            padding: 0;
+            clr-datagrid .datagrid-action-bar {
+                margin-top: 0;
+            }
+        }
+        vcd-vms-nics > clr-datagrid {
+            @include fillHeight();
+        }
+    }
+} 
+vcd-vms-container {
+    position: relative;
+    clr-tabs {
+        @include fillHeight();
+        section.tab-content {
+            @include fillHeight();
+        }
+    }
+    .vm-icon-tab {
+        > .nav {
+            width: auto;
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    > .filter-container {
+        margin-right: 3.5rem;
+    }
+
+    &.content-area {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        vcd-global-list-site-navigator {
+            margin-bottom: $vcd-padding-0-75;
+        }
+        .filter-container, .card-result-count-labels {
+            padding-right: $vcd-padding-1;
+            padding-left: $vcd-padding-1;
+            margin-bottom: 0;
+        }
+        .vm-icon-tab {
+            > .nav {
+                top: 2.5rem;
+                right: 0.5rem;
+            }
+        }
+    }
+}
+
+vcd-vms-grid {
+    @include fillHeight();
+    .status-cell {
+        white-space: nowrap;
+    }
+    clr-datagrid {
+        flex: 1 1 auto;
+        max-height: calc(100% - 1rem);
+    }
+
+    .datagrid-head {
+        clr-dg-column {
+            .datagrid-column-title {
+                white-space: nowrap;
+            }
+        }
+    }
+    .datagrid-action-bar {
+        margin-top: 0;
+    }
+    .datagrid-table {
+        position: static;
+        .datagrid-column .datagrid-column-separator {
+            left: 0.4rem;
+        }
+    }
+    .datagrid .datagrid-cell {
+        .dropdown-menu {
+            font-size: $clr-p1-font-size;
+            line-height: $clr-p1-line-height;
+            margin-left: $vcd-padding-0-75;
+            .dropdown-menu {
+                margin-left: 0;
+            }
+        }
+        .dropdown-toggle.active {
+            color: $clr-link-color;
+        }
+    }
+
+    .nics-signpost-dg-cell .tooltip,
+    .snapshot-signpost-dg-cell span {
+        max-width: 4rem;
+        display: inline-block !important;
+        vertical-align: middle;
+        margin-right: $vcd-padding-0-25;
+    }
+
+    .datagrid-column.datagrid-select clr-checkbox-wrapper {
+        visibility: hidden;
+    }
+}
+
+vcd-vms-guest-properties {
+    vcd-error-banner {
+        display: block;
+        margin: 0 -15px 1rem -15px;
+    }
+
+    .stack-view {
+        .guest-property-content {
+            .stack-block-label, .stack-block-content {
+                background-color: $clr-color-neutral-0;
+                padding-left: .8rem;
+            }
+        }
+
+        .guest-property-label {
+            background-color: $clr-global-selection-color;
+            .stack-block-label {
+                background-color: $clr-global-selection-color;
+                color: $clr-color-neutral-1000;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+vcd-vms-metadata {
+    vcd-metadata-grid {
+    @include fillHeight();
+        clr-datagrid {
+            @include fillHeight();
+        }
+    }
+}
+
+vcd-vms-hard-disks {
+    @include fillHeight();
+    clr-datagrid {
+        @include fillHeight();
+    }
+}
+
+vcd-vms-hard-disks-edit-form {
+    vcd-vm-hard-disks-grid {
+        clr-datagrid {
+            clr-dg-cell.datagrid-cell {
+                display: flex;
+                align-items: center;
+            }
+            .hard-disk-size-input {
+                .clr-subtext {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+vcd-vms-monitoring-chart {
+    display: block;
+    margin: 0 auto;
+
+    .chart-wrapper {
+        max-width: 1000px;
+        min-width: 200px;
+        margin: 0 auto 15px;
+    }
+
+    .select-label {
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+}
+
+vcd-vms-general-details {
+    .vm-os-alert {
+        margin: .2rem 0 0 8rem;
+    }
+
+    vcd-form-select {
+        .form-group {
+            margin-bottom: 1rem;
+        }
+    }
+    .input-vm-operating-system {
+        .form-group {
+            margin-bottom: 0;
+        }
+    }
+
+    /**
+        * The icon is large so we need to correct the width
+        * otherwise it doesn't align properly with the other icons
+        */
+
+    clr-icon.vm-storage-icon {
+        width: 20px !important;
+    }
+}
+
+vcd-vms-hard-disks-edit-form {
+    vcd-vm-hard-disks-grid {
+        h5 {
+            display: none;
+        }
+    }
+}
+
+
+vcd-vm-nics-form clr-datagrid{
+    vcd-form-select{
+        min-width: 5rem;
+    }
+
+    vcd-form-input{
+        min-width: 6rem;
+    }
+
+    vcd-form-checkbox .clr-control-container {
+        display: flex;
+    }
+}
+
+vcd-vm-details-guest-os {
+    vcd-form-checkbox {
+        footer {
+            padding: 0;
+        }
+
+        .clr-form-control {
+            .clr-subtext {
+                display: none;
+            }
+        }
+    }
+
+    vcd-form-checkbox.enable-guest-customization-checkbox {
+        footer {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+vcd-edit-vms-guest-customization {
+    vcd-vm-details-guest-os {
+        div.row > div {
+            flex: none !important;
+            max-width: 100% !important;
+        }
+    }
+}
+
+vcd-vms-hardware {
+    .vm-edit-button {
+        float: right;
+    }
+}
+
+vcd-vms-memory-cpu {
+    .compute-policies-modal {
+        vcd-loading-indicator {
+            margin-top: 1rem;
+        }
+        .modal-body{
+            overflow: visible;
+        }
+    }
+}
+
+vcd-vms-advanced-edit-form aside vcd-number-with-unit-form-input {
+    .clr-input-wrapper {
+        width: 2.5rem;
+        input[type=number] {
+            width: 2rem;
+        }
+    }
+}
+
+.top-vm-main-list-multisite {
+    padding: 0 1rem 0 1rem;
+}
+
+.top-vm-main-list {
+    padding: 1rem 1rem 0 1rem;
+}
+
+vcd-vms-card-container {
+    vcd-loading-indicator {
+        min-height: 200px;
+    }
+}
+
+.edit-vm-nics-form-grid {
+    .cell-form-text {
+        display: block;
+        margin-top: $vcd-padding-0-25;
+        @include ellipsisOverflow;
+    }
+    .datagrid-cell {
+        vcd-form-select, vcd-form-input, vcd-form-checkbox {
+            div.clr-form-control {
+                margin-top: 0;
+            }
+        }
+        vcd-form-select {
+            .clr-control-container {
+                width: 100%;
+                + .clr-subtext {
+                    display: none;
+                }
+            }
+        }
+        vcd-form-input {
+            .clr-control-container {
+                .clr-subtext {
+                    display: none;
+                }
+                &.clr-error {
+                    .clr-subtext {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .datagrid-select {
+        .clr-radio-wrapper {
+            display: block;
+            margin-top: $vcd-padding-0-25;
+        }
+    }
+    .datagrid-column, .datagrid-cell {
+        min-width: 7rem;
+        &.vm-nics-form-connection-index {
+            min-width: 2rem;
+        }
+        &.vm-nics-form-adapter-type {
+            min-width: 4rem;
+        }
+    }
+}

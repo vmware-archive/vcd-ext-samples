@@ -1,0 +1,53 @@
+@import '../mixins/fill_height';
+@import '../mixins/host_grid';
+
+vcd-vapp-templates-rest {
+    @include fillHeight();
+    .vapp-templates-datagrid {
+        @include fillHeight();
+    }
+}
+
+vcd-vapp-template-details-container {
+    @include fillHeight();
+    vcd-vapp-template-vm-list, vcd-vapp-template-shadow-vm-list{
+        @include fillHeight();
+        .vapp-template-virtual-machines-datagrid, .vapp-template-shadow-vm-datagrid {
+            @include fillHeight();
+        }
+    }
+}
+
+vcd-vapp-template-vm-list {
+    .datagrid-action-bar {
+        margin-top: 0;
+    }
+}
+
+vcd-vapp-template-general-details  {
+    .vapp-template-general-header-actions {
+        float: right;
+
+        .vapp-template-general-edit-btn {
+            text-align: right;
+            padding-right: 0;
+            margin-top: 0;
+        }
+    }
+
+    .vapp-template-owner-header-actions {
+        float: right;
+
+        .vapp-template-change-owner-btn {
+            text-align: right;
+            padding-right: 0;
+            margin-top: 0;
+        }
+    }
+}
+
+vcd-vapps-general-details {
+    .vapp-edit-btn {
+        float: right;
+    }
+}

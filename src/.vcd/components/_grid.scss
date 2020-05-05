@@ -1,0 +1,116 @@
+@import "../mixins/flexbox";
+@import "../mixins/_clr-icon.scss";
+
+clr-datagrid {
+    &.flex-grid {
+        .datagrid-cell {
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+
+            &.center-content {
+                @include align-items(center);
+            }
+
+            &.modal-editable {
+                @include flex-direction(row);
+                @include align-items(center);
+                @include flex-wrap(nowrap);
+                @include justify-content(space-between);
+
+                > span {
+                    flex: 1 1 auto;
+                    word-break: break-all;
+                }
+
+                .icon-container {
+                    display: inline-flex;
+                }
+
+                clr-icon {
+                    flex: 0 0 auto;
+                    margin-left: 5px;
+
+                    @extend %clr-icon-pencil;
+
+                    &[shape="error-standard"] {
+                        color: $clr-red;
+                    }
+                }
+            }
+        }
+    }
+
+    &.datagrid-disabled {
+        .datagrid {
+            position: relative;
+            @extend .disable-selection;
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: transparentize($clr-light-gray, 0.5);
+                display: block;
+                top:0;
+                left:0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                cursor: not-allowed;
+            }
+            a, button {
+                pointer-events: none;
+                text-decoration: none;
+                color: $clr-dark-gray;
+                &:hover {
+                    text-decoration: none;
+                    color: currentColor;
+                }
+            }
+
+            label[for] {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .datagrid-overlay-wrapper {
+        .datagrid-spinner {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .datagrid {
+        .datagrid-column {
+            .datagrid-column-title {
+                align-items: flex-start;
+                align-self: flex-start;
+                .sort-icon {
+                    flex: none;
+                }
+            }
+            .datagrid-filter-toggle {
+                margin-top: -2px;
+            }
+            .datagrid-column-separator {
+                .datagrid-column-handle {
+                    right: -1px;
+                }
+            }
+        }
+        .datagrid-cell {
+            .clr-subtext {
+                white-space: normal;
+            }
+        }
+    }
+
+}
+
+.disable-selection {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

@@ -1,0 +1,434 @@
+@import "variables/variables";
+
+// VCD Mixins
+@import "mixins/flexbox";
+@import "mixins/ellipsis";
+@import "mixins/grid";
+@import "mixins/colors";
+
+// VCD Variables
+@import "variables/variables";
+
+// Components
+@import "components/forms";
+@import "components/grid";
+@import "components/stack-view";
+@import "components/tooltip";
+
+// Compatibility
+@import "compat/grid";
+
+// Extensions
+@import "extensions/network-pools";
+@import "extensions/vapp-templates";
+@import "extensions/vm";
+@import "extensions/vapps";
+@import "extensions/vapp-vm-cards";
+@import "extensions/advanced-filtering";
+
+// Common
+@import "common/common";
+
+/**
+ Styles for the VCD application.
+ This should be imported to theme files so that our custom styles match the themes.
+ */
+
+/**
+ Remove once Clarity fix the bug on forcing capitalization for nav-link button's text.
+*/
+
+.nav-link.btn {
+    text-transform: none;
+}
+
+/**
+ Common styles for our form components.
+ */
+.form-group ::ng-deep aside {
+    display: flex;
+}
+
+.form-group-description {
+    font-size: 0.9em;
+    color: #747474;
+}
+
+.form-group ::ng-deep footer, .form-group-description {
+    line-height: 1.2em;
+}
+
+.clr-control-label.hide-label {
+    width: 0 !important;
+}
+
+.clr-radio-wrapper span.clr-subtext {
+    white-space: pre-line;
+    padding-left: 24px;
+    padding-bottom: 10px;
+}
+
+/**
+ Allow checkboxes to look like radios.
+ */
+@include exports("../../node_modules/@clr/ui/src/forms/_radio.clarity") {
+    .radio,
+    .radio-inline {
+        // Hide the default radio
+        input[type="checkbox"] {
+            @include checkbox-radio-input-styles($clr-forms-checkbox-height);
+        }
+
+        // Radio button base
+        input[type="checkbox"] + label::before {
+            @include checkbox-radio-shared-inactive($clr-forms-checkbox-height, $clr-forms-checkbox-top, 0, $clr-forms-border-color);
+            border-radius: 50%;
+        }
+
+        // Checked Radio Styles
+        input[type="checkbox"]:checked + label::before {
+            box-shadow: inset 0 0 0 $clr_baselineRem_0_25 $clr-forms-checkbox-background-color;
+            border: none;
+        }
+
+        // Outline color for unchecked radios
+        input[type="checkbox"]:focus + label::before {
+            outline: 0;
+            box-shadow: 0 0 $clr-outline-blur $clr-outline-spread $clr-outline-color;
+        }
+
+        // Outline color for checked radios
+        input[type="checkbox"]:focus:checked + label::before {
+            outline: 0;
+            box-shadow: inset 0 0 0 $clr_baselineRem_0_25 $clr-forms-checkbox-background-color,
+            0 0 $clr-outline-blur $clr-outline-spread $clr-outline-color;
+        }
+
+        &.disabled {
+            input[type="checkbox"]:checked + label::before {
+                background-color: $clr-form-disabled-background-color;
+                box-shadow: inset 0 0 0 $clr_baselineRem_0_25 $clr-forms-checkbox-background-color;
+            }
+        }
+    }
+}
+
+// Make grid cells show ellipsis instead of spill over into other cells
+clr-dg-cell {
+    @include ellipsisOverflow;
+
+    &.datagrid-row-actions {
+        text-overflow: clip;
+    }
+}
+
+// Prevent datagrid from shifting vertically when buttons are displayed vs when it's not displayed.
+clr-dg-action-bar {
+    height: 24px;
+}
+
+// Hack to remove the little menu tip
+vcd-dg-action-overflow {
+    & .datagrid-action-overflow::before {
+        display: none;
+    }
+    & .datagrid-action-overflow::after {
+        display: none;
+    }
+}
+
+// Fix Clarity & Edge stack-bock overflow bug
+clr-stack-block .stack-children {
+    overflow: hidden;
+}
+
+// Fix Firefox native 'a11y' tooltip auto popup
+clr-icon svg {
+    pointer-events: none;
+}
+
+//Variables
+$icon-color: $clr-dark-gray;
+
+// Hack to prevent Wizard styles from messing up nested modal styles
+.clr-wizard-page {
+    @import "../../node_modules/@clr/ui/src/modal/modal.clarity";
+    .modal-footer {
+        height: unset;
+        min-height: unset;
+        max-height: unset;
+        flex: 0 0 auto;
+    }
+}
+
+.main-container .content-container .content-area {
+    position: relative;
+    @include flexbox();
+    @include flex-direction(column);
+}
+
+.main-container .content-area h3 {
+    margin-top: 0;
+ }
+
+.flex-container {
+    @include flexbox();
+}
+
+$horizontalPadding: ($clr-datagrid-fixed-column-size - 1.25rem) / 2;
+
+.table {
+    .table-expandable-caret {
+        padding: calc(0.125rem - #{$clr-default-borderwidth}) $horizontalPadding 0.125rem;
+        text-align: center;
+
+        .table-expandable-caret-button {
+            @include clr-no-styles-button();
+            cursor: pointer;
+            height: 1.25rem;
+            width: 1.25rem;
+        }
+
+        .table-expandable-caret-icon {
+            color: $clr-dark-gray;
+            // nudge down for vertical alignment...
+            margin-top: 0.125rem;
+            svg {
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+
+        .spinner {
+            margin-top: 0.25rem;
+        }
+
+        &.table-column {
+            padding: $clr-table-topcellpadding $clr-table-cellpadding $clr-table-bottomcellpadding;
+        }
+    }
+}
+
+/**
+ This is added here because, sticky header has a background color to overlay on top of the content that
+ might scroll below it. And since the background color has to be changed according to the theme selected,
+ this is added here.
+ */
+.sticky-header {
+    position: sticky;
+    top: -25px;
+    z-index: 100;
+}
+
+// This is used to keep the spinner in the center of the view.
+.loading-wrapper {
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// todo-ng-upgrade @tsvetan Please test removal after upgrade
+
+// VDU-3603 - Set higher z-index to the Column switch Menu.
+// This issue is fixed in Clarity v0.12. Remove once we upgrade Clarity
+//.datagrid-foot .column-switch-wrapper .column-switch {
+//    z-index: 1001;
+//}
+
+// NOTE: Time-picker does not support time-zones - it always shows `UTC`. So, hide it as it is not correct behaviour.
+vmw-time-picker {
+    .footer {
+        .right {
+            display: none;
+        }
+    }
+}
+
+// Use this for the wizard's ready to complete page.
+.review-layout-wrapper {
+    margin-top: 1rem;
+
+    table {
+        table-layout: fixed;
+
+        tr > td {
+            padding: .25rem .5rem;
+            vertical-align: top;
+        }
+        th, td {
+            text-align: left;
+        }
+
+        &.table-noborder .description-background {
+            padding-left: $vcd-padding-0-5;
+            width: 33%;
+        }
+    }
+
+    .description-background {
+        background: $clr-near-white;
+        padding-left: $vcd-padding-0-5;
+    }
+}
+vcd-routable-tabs {
+    @include flex-direction(column);
+}
+vcd-routable-tabs,
+.routable-tabs {
+    @include flex(1 1 auto);
+    @include flexbox();
+    overflow: hidden;
+}
+
+.routable-tabs {
+    &.horizontal {
+        @include flex(1 1 auto);
+        @include flex-direction(column);
+
+        > .section-nav-container {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &.vertical {
+
+        .sidenav {
+            max-width: 8rem;
+            min-width: 6rem;
+
+            .nav-link {
+                margin-left: 0;
+
+                &.top-level {
+                    margin-top: 0.75rem;
+                    padding-left: 0;
+                }
+            }
+
+            .nav-group {
+                margin-top: 0.75rem;
+            }
+
+            .nav-group .nav-list, .nav-group label {
+                padding-left: 0;
+            }
+        }
+
+        > .section-content-container {
+            padding-left: 0.5rem;
+            padding-top: 0.75rem;
+        }
+    }
+
+    > .section-content-container {
+        @include flex(1 1 auto);
+        @include flexbox();
+        @include flex-direction(column);
+        overflow: auto;
+        padding: 0 15px 0 0;
+    }
+
+    vcd-error-banner {
+        flex: 0 0 auto;
+    }
+}
+
+// The tabs nav-items are underlied by .active Clarity class. However, the class is
+// managed by a clrDropdownTrigger directive, thus we can really override the behavior if we want.
+// And we need to have such capability, as to set programatically which is the active tab.
+.active-overflow-nav-item {
+    box-shadow: 0 -3px 0 $clr-nav-active-box-shadow-color inset;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.clr-control-container {
+    flex: 1 1 auto;
+
+    &.clr-control-inline {
+        .clr-radio-wrapper {
+            flex: 1 1 auto;
+            width: auto;
+        }
+
+        + aside {
+            flex: none;
+        }
+    }
+
+    div {
+        width: 100%;
+
+        input, textarea, select {
+            width: 100%;
+        }
+    }
+    .clr-input-wrapper, clr-textarea-wrapper {
+        display: flex;
+        input, textarea, select {
+            width: auto;
+            flex: 1 1 auto;
+        }
+    }
+
+    .clr-textarea {
+        max-width: 100%;
+    }
+
+    .clr-validate-icon {
+        flex: none;
+    }
+
+    + aside {
+        margin-left: 10px;
+        flex: none;
+        .clr-form-control {
+            margin-top: 0;
+        }
+    }
+}
+
+.clr-subtext-wrapper {
+    footer {
+        flex: 1 1 auto;
+    }
+}
+
+div.clr-form-control {
+    margin-top: 5px;
+    width: 100%
+}
+
+vcd-form-checkbox footer {
+    padding-left: 8rem
+}
+
+form {
+    @extend .clr-form-horizontal
+}
+
+.required-field:after {
+    content: "*";
+    color: red;
+    padding-left: 5px;
+}
+
+.fieldset {
+    border: none !important;
+    padding: 0;
+    margin: 0 0 1.4rem 0;
+}
+
+/** TODO: Clarity made fix, which broke our task details in IE 11. This change reverts their fix.
+     Clarity fix: https://github.com/vmware/clarity/pull/3750
+ */
+@include fixForIE11AndUp {
+    .tab-content {
+        display: inline !important;
+    }
+}

@@ -1,0 +1,29 @@
+/**
+    Truncate text and show ellipsis if text does not fit.
+
+    NOTE:   This class definition is a copy from the Clarity's styles.
+            In Clarity 0.11+, `clr-tooltip` overrides `overflow: hidden` defined
+            by `.text-truncate` because `.text-truncate` is defined before `clr-tooltip`
+            styles.
+            Declaring `.text-truncate` in vcd styles will apply correct style definitions
+            because these styles will be loaded after Clarity's styles.
+
+    NOTE:
+        For some reason these styles are not applied last as it is supposed to be.
+        Having more specific selector will apply them with priority, but we have to fix our
+        style architecture in future.
+ */
+[vcdTooltip].tooltip {
+    // Set overflow hidden for tooltips that use vcdTooltip directive only.
+    overflow: hidden;
+}
+
+.text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+clr-tooltip-content {
+    word-break: break-all;
+}

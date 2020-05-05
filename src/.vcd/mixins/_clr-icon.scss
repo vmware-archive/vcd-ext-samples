@@ -1,0 +1,15 @@
+
+/* SASS pseudo-class for setting icon margin-right which is the most common case */
+%clr-icon-spacing {
+    clr-icon {
+        margin-right: 0.25rem; // 6px
+    }
+}
+
+
+%clr-icon-pencil {
+    &[shape="pencil"] {
+        color: $clr-action-blue;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,9 @@
+/**
+    Ellipsis overflow mixin
+ */
+
+@mixin ellipsisOverflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

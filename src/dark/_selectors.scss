@@ -1,0 +1,11 @@
+// BEGIN 'Do Not Remove'
+.login-group {
+    .username, .password {
+        @extend .clr-input;
+    }
+}
+
+.review-layout-wrapper table tr > td:nth-child(1) {
+    background: transparent !important;
+}
+// END 'Do Not Remove'

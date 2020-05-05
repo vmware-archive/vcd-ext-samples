@@ -1,0 +1,20 @@
+
+@mixin grid {
+    display: -ms-grid;
+    display: grid;
+}
+
+@mixin grid-row($row) {
+    -ms-grid-row: $row;
+    grid-row: $row;
+}
+
+@mixin grid-column($column) {
+    -ms-grid-column: $column;
+    grid-column: $column;
+}
+
+@mixin grid-template-columns($columns){
+    -ms-grid-columns: 1fr;
+    grid-template-columns: $columns;
+}

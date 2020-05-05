@@ -1,0 +1,13 @@
+@mixin make-col($size, $columns) {
+    flex: 0 0 percentage($size / $columns);
+    -ms-flex: 0 0 percentage($size / $columns);    
+    max-width: percentage($size / $columns);
+}
+
+@mixin col-list($columns, $name) {
+    @for $i from 1 through $columns {
+        .col-#{$name}-#{$i} {
+            @include make-col($i, $columns);
+        }
+    }
+}

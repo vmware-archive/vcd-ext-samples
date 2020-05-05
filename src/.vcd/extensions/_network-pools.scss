@@ -1,0 +1,178 @@
+@import '../mixins/fill_height';
+@import '../mixins/dg_uncollapsible_actions';
+@import '../mixins/ellipsis';
+@import '../mixins/host_grid';
+
+.network-pool-wizard {
+    vcd-form-radio-button .form-group {
+        padding-left: 0;
+    }
+
+    .review-layout-wrapper {
+        margin-top: 1rem;
+        table { 
+            width: 100%;
+            tr > td {
+                padding: .25rem .5rem;
+                vertical-align: top;
+    
+                &:nth-child(1) {
+                    width: 33%;
+                }
+            }
+        }
+        .description-background {
+            background: $clr-near-white;
+            font-weight: bold;
+        }
+        .backing-details {
+            width: 100%;
+            height: auto;
+        }
+        clr-stack-view {
+            width: 100%;
+            & > dl.stack-view {
+                height: auto;
+            }
+        }
+    }
+    
+    .backing-stack, 
+    .configuration-stack {
+        padding-bottom: 0.5rem;
+        .stack-view {
+            height: 100%;
+            background-color: transparent;
+        }
+    }
+
+    .clr-wizard {
+        .modal-body {
+            main.clr-wizard-content {
+                @include fillHeight();
+                height: 100%;
+    
+                clr-datagrid {
+                    @include fillHeight();
+                    height: 100%;
+                }
+            }
+        }
+        vcd-loading-indicator .spinner:not(.spinner-inline):not(.clr-treenode-spinner) {
+            position: static;
+        }
+        .clr-wizard-page:not([aria-hidden=true]) {
+            @include fillHeight();
+            height: 100%;
+            padding-bottom: 1rem;
+        }
+    } 
+
+    vcd-loading-indicator {
+        @include fillHeight();    
+    }
+
+    vcd-port-groups-page {
+        height: auto;
+    }
+
+    vcd-network-pool-wizard-port-group-page {
+        @include fillHeight();
+        height: 100%;        
+    }
+
+    clr-alert .alert {
+        margin-left: 0px;
+    }
+}
+
+vcd-network-pools-datagrid {
+    @include vcdDgUncollapsibleActions();
+    clr-dg-cell {
+        @include ellipsisOverflow;
+        clr-tooltip {
+            span.tooltip-trigger {
+                display: inline;
+            }
+        }
+    }
+}
+
+vcd-network-pool-wizard-port-group-page,
+vcd-network-pool-org-vdc {
+    @include fillHeight();
+    height: 100%;        
+}
+
+vcd-network-pool-wizard-provider-page, 
+vcd-network-pool-wizard-review-page, 
+vcd-vcenters-list,
+vcd-network-pool-wizard-nsxt-transport-zone-page, 
+vcd-network-pool-wizard-dv-switch-page, 
+vcd-nsxt-managers-list, 
+vcd-network-pool-wizard-transport-zone-page,
+vcd-network-pool-wizard-backing-type-page {
+    height: 100%;
+}
+
+.network-pool-general-header-actions, 
+.network-pool-type-header-actions {
+    float: right;
+}
+
+.action-general-edit-btn,
+.action-pool-type-edit-btn {
+    text-align: right;
+    padding-right: 0;
+    margin-top: 0px;
+}
+
+.network-pool-type {
+    float: left;
+}
+
+vcd-network-pool-details-container {
+    @include fillHeight();
+    vcd-org-vdc-list {
+        @include fillHeight();
+        height: 100%;
+        clr-datagrid {
+            flex: 1 1 auto;
+            min-height: 0;
+            .datagrid-overlay-wrapper {
+                flex: 1 1 auto;
+                min-height: 0;
+            }
+        }
+    }
+    vcd-entity-details-container {
+        @include fillHeight();
+        height: 100%;
+        clr-datagrid {
+            flex: 1 1 auto;
+            min-height: 0;
+            .datagrid-overlay-wrapper {
+                flex: 1 1 auto;
+                min-height: 0;
+            }
+        }
+        vcd-routable-tabs {
+            ng-component {
+                @include fillHeight();
+            }
+        }
+    }
+}
+
+vcd-network-pools-datagrid {
+    @include fillHeight();
+    height: 100%;
+    clr-datagrid {
+        flex: 1 1 auto;
+        min-height: 0;
+        .datagrid-overlay-wrapper {
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+    }
+}

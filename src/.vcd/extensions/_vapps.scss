@@ -1,0 +1,331 @@
+@import "../mixins/fill_height";
+
+$vcd-card-content-padding: 1rem;
+$details-container-padding-top-bottom: 0.25rem;
+
+vcd-vapps-container,
+vcd-vapps-details-container,
+vcd-vapps-general-details,
+vcd-vapps-vms-container{
+    @include fillHeight();
+}
+
+vcd-vapps-details-container {
+    vcd-vapps-vms-container {
+        > vcd-vms-grid .datagrid-host{
+            position: static;
+            max-height: initial;
+        }
+    }
+    .section-content-container {
+        vcd-metadata-grid,
+        vcd-vapp-start-stop-order,
+        vcd-all-tasks,
+        vcd-all-events {
+            padding: 0;
+            clr-datagrid .datagrid-action-bar {
+                margin-top: 0;
+            }
+        }
+        vcd-vapp-metadata,
+        vcd-metadata-grid,
+        vcd-metadata-grid > clr-datagrid {
+            @include fillHeight();
+        }
+    }
+}
+
+vcd-vapps-container {
+    position: relative;
+    clr-tabs {
+        @include fillHeight();
+        section.tab-content {
+            @include fillHeight();
+        }
+    }
+    .vapps-icon-tab {
+        > .nav {
+            width: auto;
+            position: absolute;
+            top: 1.5rem;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    > .filter-container {
+        margin-right: 3.5rem;
+    }
+
+    &.content-area {
+        height: 100%;
+        position: relative;
+        overflow-y: auto;
+        vcd-global-list-site-navigator {
+            margin-bottom: $vcd-padding-0-75;
+        }
+        .filter-container, .card-result-count-labels {
+            padding-right: $vcd-padding-1;
+            padding-left: $vcd-padding-1;
+            margin-bottom: 0;
+        }
+        .vapps-icon-tab {
+            > .nav {
+                top: 2.5rem;
+                right: 0.5rem;
+            }
+        }
+    }
+}
+
+vcd-vapps-grid {
+    @include fillHeight();
+
+    clr-datagrid {
+        flex: 1 1 auto;
+        max-height: calc(100% - 1rem);
+    }
+    .datagrid-head {
+        clr-dg-column {
+            .datagrid-column-title {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .datagrid-action-bar {
+        margin-top: 0;
+    }
+
+    .datagrid-table {
+        position: static;
+        .datagrid-column .datagrid-column-separator {
+            left: 0.4rem;
+        }
+    }
+
+    .datagrid .datagrid-cell {
+        .dropdown-menu {
+            font-size: $clr-p1-font-size;
+            line-height: $clr-p1-line-height;
+            margin-left: $vcd-padding-0-75;
+            .dropdown-menu {
+                margin-left: 0;
+            }
+        }
+        .dropdown-toggle.active {
+            color: $clr-action-blue;
+        }
+    }
+
+    .datagrid-signpost-trigger {
+        text-overflow: unset;
+        > span {
+            min-width: 1.2rem;
+            display: inline-block;
+        }
+    }
+
+    .datagrid-column.datagrid-select clr-checkbox-wrapper {
+        visibility: hidden;
+    }
+
+}
+
+.vapps-grid-btn-group-multisite {
+    display: flex;
+
+    .btn-group {
+        flex: 1 1 auto;
+    }
+}
+
+vcd-vapp-shared, vcd-vapp-start-stop-order {
+    @include fillHeight();
+    .vapp-shared-datagrid {
+        @include fillHeight();
+        .column-icon {
+            text-overflow: inherit;
+        }
+    }
+
+    .vapp-start-stop-order-datagrid {
+        @include fillHeight();
+    }
+}
+
+vcd-vapps-guest-properties {
+    vcd-error-banner {
+        display: block;
+        margin: 0 -15px 1rem -15px;
+    }
+
+    .stack-view {
+        .guest-property-content {
+            .stack-block-label, .stack-block-content {
+                background-color: $clr-color-neutral-0;
+                padding-left: .8rem;
+            }
+        }
+
+        .guest-property-label {
+            background-color: $clr-global-selection-color;
+            .stack-block-label {
+                background-color: $clr-global-selection-color;
+                color: $clr-color-neutral-1000;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+vcd-vapps-card-container {
+    display: block;
+
+    vcd-loading-indicator {
+        > .clr-row {
+            margin: 0;
+        }
+        vcd-vapps-card {
+            margin-right: $vcd-padding-1;
+        }
+    }
+}
+
+.top-vapp-main-list {
+    padding: 1rem 1rem 0 1rem
+}
+
+.top-vapp-main-list-multisite {
+    padding: 0 1rem 0 1rem
+}
+
+.vapp-card {
+    a:visited {
+        color: $clr-action-blue;
+    }
+
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+
+    .card-header {
+        border-bottom: none;
+        padding: $vcd-padding-0-75 $vcd-card-content-padding $vcd-padding-0-25 $vcd-card-content-padding;
+    }
+    .card-block {
+        font-size: .48rem;
+        line-height: .9rem;
+        padding: 0 $vcd-card-content-padding;
+    }
+    .card-footer {
+        padding-left: $vcd-card-content-padding;
+    }
+}
+
+.vapps-icon-tab {
+    > .nav {
+        justify-content: flex-end;
+        box-shadow: none;
+        .nav-link {
+            min-width: 1.8rem;
+            color: $clr-color-neutral-500;
+            &.active, &:hover{
+                box-shadow: none;
+                color: $clr-dark-gray;
+            }
+        }
+        .nav-item {
+            margin-right: 0;
+        }
+    }
+}
+
+.vapp-status {
+    font-weight: 600;
+    color: $clr-dark-midtone-gray;
+    &.vapp-status-danger {
+        color: $clr-red-light-midtone;
+    }
+
+    &.vapp-status-success {
+        color: $clr-green-dark-midtone;
+    }
+
+    &.vapp-status-warning {
+        color: $clr-yellow-light-midtone;
+    }
+
+    &.vapp-status-info {
+        color: $clr-blue;
+    }
+}
+
+.card-btn-link {
+    cursor: pointer;
+    display: inline-block;
+    -webkit-appearance: none!important;
+    border: none;
+    color: $clr-action-blue;
+    background: transparent;
+}
+
+.vapp-card-unit-details {
+    font-weight: 600;
+    white-space: nowrap;
+    display: flex;
+    .signpost-trigger {
+        vertical-align: text-top;
+    }
+    > span {
+        display: flex;
+    }
+}
+
+.vapp-card-date-owned,
+.vapp-card-vm-manage,
+.vapp-card-unit-details-container {
+    padding-top: $details-container-padding-top-bottom;
+    padding-bottom: $details-container-padding-top-bottom;
+    border-top: 1px solid $clr-card-border-color;
+    &.clr-row, > .clr-row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    > [class*="clr-col"], > .clr-row > [class*="clr-col"] {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: map-get($clr-grid-breakpoints, md)) {
+    vcd-vapps-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
+
+vcd-multiselect-component {
+    display: inline-block !important;
+    right: 0;
+    position: absolute;
+}
+
+.card_result_count_placeholder {
+    display: inline-block;
+}
+
+.batchOperationStartStatus {
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 450px;
+    position: absolute;
+    min-width: 400px;
+    left: 18rem;
+    top: -0.5rem;
+}
+
+.snapshot-signpost-dg-cell span {
+    max-width: 4rem;
+    display: inline-block !important;
+    vertical-align: middle;
+    margin-right: $vcd-padding-0-25;
+}

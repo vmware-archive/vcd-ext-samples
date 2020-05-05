@@ -1,0 +1,18 @@
+{
+  "name": "vcd-theme-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "build": "node build-theme"
+  },
+  "devDependencies": {
+    "bootstrap": "4.0.0-alpha.5",
+    "@clr/icons": "^2.2",
+    "@clr/ui": "^2.2",
+    "clean-css-cli": "4.1.11",
+    "node-sass": "4.12.0",
+    "@webcomponents/custom-elements": "^1.0.0",
+    "yargs": "^11.0.0"
+  }
+}

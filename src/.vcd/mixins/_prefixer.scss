@@ -1,0 +1,45 @@
+$all-vendors: (
+    'webkit','apple','khtml',
+    'moz','rim','xv',
+    'ms','o'
+);
+
+$using-vendors: (
+    'webkit', 'moz', 'ms', 'o'
+);
+
+/** Mixin for multiple declarations **/
+@mixin prefixes($declarations, $prefixes: ()) {
+    @each $property, $value in $declarations {
+        @each $prefix in $prefixes {
+            #{'-' + $prefix + '-' + $property}: $value;
+        }
+        #{$property}: $value;
+    }
+}
+
+/** Mixin for single property to be prefixed **/
+@mixin prefix($property, $value, $prefixes: ()) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+/** Mixin for multiple declarations with single prefix **/
+@mixin single-vendor-prefixes($declarations, $prefix, $includeOrigin: false) {
+    @each $property, $value in $declarations {
+        #{'-' + $prefix + '-' + $property}: $value;
+        @if $includeOrigin {
+            #{$property}: $value;
+        }
+    }
+}
+
+/** Mixin for single property with single prefix **/
+@mixin single-vendor-prefix($property, $value, $prefix, $includeOrigin: false) {
+    #{'-' + $prefix + '-' + $property}: $value;
+    @if $includeOrigin {
+        #{$property}: $value;
+    }
+}

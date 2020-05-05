@@ -1,0 +1,33 @@
+/**********
+  * Header
+  * Headers provide branding, navigation, search, and access to global application actions such as settings and
+  * notifications. There are five header colors in the dark theme.
+  *
+  * Usage: ../layout/nav/_header.clarity.scss
+  * -
+  */
+  $clr-header-bgColor: hsl(214, 20%, 31%);
+  $clr-header-default-bg-color: $clr-header-bgColor;
+  $clr-header-1-bg-color: $clr-header-bgColor;
+  $clr-header-2-bg-color: hsl(195, 65%, 24%);
+  $clr-header-3-bg-color: hsl(206, 63%, 27%);
+  $clr-header-4-bg-color: hsl(315, 27%, 28%);
+  $clr-header-5-bg-color: hsl(233, 26%, 33%);
+  $clr-header-6-bg-color: hsl(203, 30%, 8%);
+  // END Header overrides
+
+  /**********
+  * Vertical Nav
+  * This is a vertically-aligned navigational component.
+  *
+  * Usage: ../layout/vertical-nav/_vertical-nav.clarity.scss
+  */
+// $clr-vertical-nav-item-height: 1.5rem;
+$clr-vertical-nav-item-color: hsl(203, 16%, 72%);
+$clr-vertical-nav-item-active-color: hsl(0, 0%, 100%);
+$clr-vertical-nav-bg-color: hsl(201, 30%, 13%);
+$clr-vertical-nav-active-bg-color: hsl(203, 32%, 29%);
+$clr-vertical-nav-hover-bg-color: hsl(201, 31%, 23%);
+$clr-vertical-nav-icon-active-color: hsl(0, 0%, 100%);
+$clr-vertical-nav-toggle-icon-color: hsl(203, 16%, 72%);
+// END Vertical Nav

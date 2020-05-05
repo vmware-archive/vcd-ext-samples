@@ -1,0 +1,345 @@
+@import '../mixins/host_grid';
+@import "../variables/variables";
+@import '../mixins/ellipsis';
+
+$vcd-btn-menu-trigger-dot: $clr_baselineRem_4px;
+
+
+.clr-wizard {
+    clr-datagrid {
+        .spinner:not(.spinner-inline):not(.clr-treenode-spinner) {
+            position: static;
+        }        
+    }
+    .modal-dialog {
+        .modal-content-wrapper {
+            flex: 1 1 auto;
+        }
+    } 
+} 
+
+.stack-block {
+    .stack-block-content:first-of-type {
+        .btn { 
+            margin: 0;
+        }
+    }
+}
+
+@-webkit-keyframes fadeIn { 
+    from {opacity:0} 
+    to {opacity:1} 
+}
+@keyframes fadeIn {
+    from {opacity:0}
+    to {opacity:1}
+}
+.fadeIn {
+    animation-name:fadeIn
+}
+.animated {
+    animation-duration:1s;
+    animation-fill-mode:both
+}
+
+vcd-error-banner {
+    clr-alert {
+        .alert-item {
+            .alert-text {
+                max-height: 200px;
+                overflow-y: auto;
+            }
+        }
+    }
+}
+
+.main-title {
+    margin: 0;
+    font-size: 0.916667rem;
+    letter-spacing: normal;
+    line-height: 1rem;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.not-found-container {
+    text-align: center;
+    padding: $vcd-padding-2 0;
+    color: $clr-color-neutral-500;
+    font-weight: 400;
+    clr-icon {
+        opacity: .3;
+        margin-bottom: $vcd-padding-0-25;
+    }
+}
+
+.signpost-title {
+    margin-top: 0;
+    margin-bottom: $vcd-padding-0-5;
+    padding-bottom: $vcd-padding-0-25;
+    border-bottom: 1px solid $clr-card-border-color;
+    font-size: $clr-h4-font-size;
+    line-height: $clr-h4-line-height;
+    font-weight: $clr-h4-font-weight;
+}
+
+.signpost-list-item {
+    padding: $vcd-padding-0-25 0;
+    font-weight: $clr-font-weight-regular;
+}
+
+vcd-action-buttons {
+    .dropdown-menu  {
+        .dropdown-item {
+            line-height: .8rem;
+            &.dropdown-divider {
+                height: 0;
+                line-height: 0;
+                color: transparent;
+                text-indent: 100%;
+                padding: 0;
+                pointer-events: none;
+            }
+            &.expandable:before {
+                margin-top: 0.15rem;
+            }
+        }
+    }
+}
+
+vcd-advanced-sort {
+    .toggle-sort {
+        text-align: center;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        color: $clr-action-blue;
+        padding: $vcd-padding-0-25;
+        input[type=checkbox] {
+            opacity: 0;
+            border: none;
+            background-color: transparent;
+            position: absolute;
+            + clr-icon {
+                display: block;
+                transform: rotate(180deg);
+            }
+            &:checked + clr-icon {
+                transform: rotate(0deg);
+            }
+        }
+    }    
+}
+
+// These styles (tree dots button) are copied from clarity _sidenav.clarity.scss _responsive-nav.clarity.scss
+.header-actions-trigger {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0 0 $vcd-btn-menu-trigger-dot 0;
+    text-align: center;
+    white-space: nowrap;
+    color: $clr-near-white;
+    opacity: 0.65;
+    > span {
+        position: relative;
+        vertical-align: middle;
+        display: inline-block;
+        height: $vcd-btn-menu-trigger-dot;
+        width: $vcd-btn-menu-trigger-dot;
+        background: $clr-color-neutral-0;
+        border-radius: $vcd-btn-menu-trigger-dot;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            display: inline-block;
+            height: $vcd-btn-menu-trigger-dot;
+            width: $vcd-btn-menu-trigger-dot;
+            background: $clr-color-neutral-0;
+            border-radius: $vcd-btn-menu-trigger-dot;
+        }
+        &:before {
+            top: -0.333333rem;
+        }
+        &:after {
+            bottom: -0.333333rem;
+        }
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        content: '';
+        background: $clr-near-white;
+        opacity: 0.15;
+        height: 1.666667rem;
+        width: 1px;
+        top: 0.4166665rem;
+        left: 0;
+        left: 0;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    &:focus {
+        outline-offset: -0.208333rem;
+    }
+}
+
+// These styles (sidenav) are copied from clarity _sidenav.clarity.scss _responsive-nav.clarity.scss
+.header-actions-right {
+    display: inline-block;
+    position: relative;
+    .header-backdrop {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba($clr-color-neutral-1000, 0.85);
+        cursor: pointer;
+        z-index: 1038;
+    }
+    &.active {
+        .header-backdrop {
+            display: block;
+        }
+        .sidenav {
+            transform: translateX(0);
+            &:before, &:after {
+                display: block;
+            }
+        }
+        .header-actions-trigger {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: auto;
+            z-index: 1039;
+            transform: translateX(-15.5rem);
+            transition: transform 0.6s ease;
+            > span {
+                background: transparent;
+                &:before, &:after {
+                    height: 0.0833333rem;
+                    width: 1rem;
+                    left: -0.25rem;
+                    transform-origin: -3%;
+                }
+                &:before {
+                    top: -0.333333rem;
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    bottom: -0.333333rem;
+                    transform: rotate(-45deg);
+                }
+            }
+            &:after {
+                display: none;
+            }
+        }
+    } 
+    .sidenav {
+        position: fixed;
+        line-height: 1rem;
+        width: 15rem;
+        max-width: 15rem;
+        min-width: 9rem;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: auto;
+        background: $clr-nav-background-color;
+        border: none;
+        z-index: 1039;
+        height: 100vh;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+        transform: translateX(15rem);
+        overflow-x: hidden;
+        overflow-y: auto;
+        .nav-group {
+            color: $clr-sidenav-header-color;
+            font-size: 0.583333rem;
+            font-weight: 400;
+            letter-spacing: normal;
+            margin-top: 1rem;
+            width: 100%;
+            label {
+                cursor: pointer;
+                display: inline-block;
+                width: 100%;
+                padding: 0 0 0 1.333333rem;
+            }
+            .nav-link {
+                color: $clr-sidenav-header-color;
+                display: block;
+                padding: 8px $vcd-padding-0-5;
+                background-color: transparent;
+                border: none;
+                opacity: 1;
+                width: 100%;
+                text-align: left;
+                cursor: pointer;
+            }
+            label.username-role {
+                position: relative;
+                line-height: .8rem;
+                padding-left: 1.7rem;
+                span {
+                    display: block;
+                }
+                small {
+                    display: block;
+                }
+                &:after {
+                    position: absolute;
+                    left: 30px;
+                    top: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($clr-grid-breakpoints, md)) and (max-width: 1300px) {
+    .header {
+        .header-actions {
+            .nav-link {
+                padding-left: $vcd-padding-0-5;
+                padding-right: $vcd-padding-0-5;
+                @include ellipsisOverflow;
+            }
+        }
+        vcd-navigation-main-menu {
+            overflow: hidden;
+        }
+    }
+    .location-value {
+        @include ellipsisOverflow;
+    }
+}
+
+@media (max-width: map-get($clr-grid-breakpoints, sm)) {
+    .header-actions-right {
+        .sidenav {
+            width: 12rem;
+            max-width: 12rem;
+        }
+        &.active {
+            .header-actions-trigger {
+                transform: translateX(-12.5rem);
+            }
+        }
+    }
+}

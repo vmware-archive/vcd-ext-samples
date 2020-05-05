@@ -1,0 +1,6 @@
+/*
+    Converts hex color to rgba
+ */
+@function hex-to-rgba($hex, $opacity: 1) {
+    @return rgba($hex, $opacity);
+}

@@ -1,0 +1,169 @@
+@import "../mixins/flexbox";
+
+/*
+  General Form styles
+ */
+
+clr-datagrid.flex-grid {
+    .form-group {
+        position: static;
+        margin: 0 5px;
+
+        .select, .checkbox {
+            margin: 0;
+        }
+
+        form & > label:first-child,
+        &.read-only span:first-child {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .checkbox {
+            @include flexbox();
+            @include align-items(center);
+        }
+    }
+}
+
+.clr-form-vertical {
+    vcd-form-input, vcd-form-select, vcd-rest-form-combobox {
+        .clr-form-control {
+            flex-direction: column;
+            > .clr-control-label {
+                width: auto;
+                margin-top: 0;
+            }
+            > .clr-control-container {
+                display: block;
+                width: 100%;
+            }
+            vmw-combobox {
+                display: block;
+                width: 100%;
+                .clr-input {
+                    width: 100%; 
+                }
+            }
+        }
+    }
+}
+
+
+vcd-rest-form-combobox {
+    .dropdown {
+        display: flex;
+        width: 100%;
+        .dropdown-toggle {
+            display: block;
+            width: 100%;
+            @include custom-inputs($clr_baselineRem_1);
+            border-bottom: 1px solid $clr-color-neutral-500;
+            position: relative;
+            padding: 0 ($clr-forms-select-caret-size + $clr-forms-baseline * 2) 0 $clr-forms-baseline;
+            cursor: pointer;
+            font-size: $clr-forms-field-font-size;
+            transition: background-size 0.2s ease;
+            background: linear-gradient(to bottom, transparent 95%, $clr-action-blue 95%) no-repeat;
+            background-size: 0% 100%;
+            &.active {
+                border-bottom: 1px solid $clr-action-blue;
+                background-size: 100% 100%;
+                .clear-search {
+                    display: block;
+                }
+            }
+            &:disabled {
+                @include disabled-form-fields();
+            }
+            clr-icon[shape^='caret'] {
+                height: .5rem;
+                width: .5rem;
+                transform: translateY(0);
+                opacity: .5;
+            }
+        }
+        button.dropdown-toggle:not(.btn) {
+            text-align: left;
+            padding-left: .25rem;
+            border-bottom: 1px solid $clr-color-neutral-500;
+            &.active {
+                border-bottom: 1px solid $clr-action-blue;
+            }
+            clr-icon[shape^='caret'] {
+                right: 5px;
+                top: 6px;
+            }
+        }
+    }
+    .clr-control-container {
+        &.clr-error {
+            .search-entity-input .clr-input {
+                border-bottom-color: $clr-color-neutral-500;
+                &:not([readonly]):focus {
+                    border-bottom-color: $clr-action-blue;
+                    background: linear-gradient(to bottom, transparent 95%, $clr-action-blue 95%) no-repeat;
+                }
+            }
+        }
+    }
+    .dropdown-menu {
+        padding: 0;
+        width: 100%;
+        .search-entity-input {
+            margin: 0;
+            width: auto;
+            .clr-input {
+                width: 100%;
+            }
+        }
+        .dropdown-item {
+            line-height: .7rem;
+            padding: 0.16rem $vcd-padding-1;
+            small {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                opacity: .7;
+            }
+        }
+        vcd-loading-indicator {
+            .overlay {
+                margin: 0 !important;
+            }
+            .indicator-container__wrapper {
+                width: auto !important;
+            }
+        }
+    }
+    .dropdown-search-footer {
+        font-size: .46rem;
+        line-height: 1.2rem;
+        padding: 0 $vcd-padding-0-25 0 $vcd-padding-1;
+        color: $clr-color-neutral-600;
+        border-top: 1px solid $clr-card-border-color;
+    }
+    .dropdown-search-header {
+        padding: $vcd-padding-0-25 $vcd-padding-0-5;
+        border-bottom: 1px solid $clr-card-border-color;
+    }
+    .dropdown-list {
+        overflow-y: auto;
+        height: 9rem;
+    }
+    .not-found-container, vcd-loading-indicator {
+        height: 9rem;
+    }
+    .clear-search {
+        position: absolute;
+        right: 3px;
+        top: 5px;
+        z-index: 1;
+        cursor: pointer;
+        display: none;
+    }
+    .clr-input-wrapper {
+        position: relative;
+    }
+}

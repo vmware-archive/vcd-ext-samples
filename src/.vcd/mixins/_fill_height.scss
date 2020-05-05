@@ -1,0 +1,16 @@
+@import "./_flexbox.scss";
+
+/**
+ * Makes a container fill as much of its parent's height as possible.
+ * NOTE: Parent must be set as display: flex;
+ */
+@mixin fillHeight() {
+    @include flexbox();
+    @include flex(1 1 auto);
+    @include flex-direction(column);
+
+    // Temporary solution for grids and containers to fill the available height.
+    // Related to: https://jira.eng.vmware.com/browse/VDU-7133,
+    //             https://jira.eng.vmware.com/browse/VCDNET-7016
+    height: 100%;
+}

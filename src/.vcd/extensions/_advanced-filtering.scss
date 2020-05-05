@@ -1,0 +1,178 @@
+@import "../variables/variables";
+
+.filter-labels-container {
+    .label {
+        background-color: $clr-card-bg-color;
+        padding:  0 2px 0  $vcd-padding-0-25;
+        border-color: $clr-card-border-color;
+    }
+    clr-icon {
+        background-color: $clr-alert-info-bg-color;
+        margin-left: $vcd-padding-0-25;
+        padding: 2px;
+        border-radius: 50%;
+        &:hover {
+            cursor: pointer;
+            background-color: $clr-color-action-300;
+        }
+    }
+    .btn-link {
+        text-transform: none;
+    }
+    .label-value {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 7rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left: $vcd-padding-0-25;
+        line-height: 0.5rem;
+    }
+}
+
+vcd-vms-container,
+vcd-vapps-container,
+vcd-vapps-details-container {
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        .quick-advanced-filter-container {
+            display: flex;
+            > .btn {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+        vcd-advanced-sort {
+            margin-left: auto;
+            form {
+                > .clr-input, vcd-form-select {
+                    flex: 1 0 auto;
+                }
+            }
+        }
+    }
+    vcd-quick-filter {
+        display: block;
+        position: relative;
+        padding-right: $vcd-padding-0-5;
+        &:after {
+            content: "";
+            display: block;
+            height: 1rem;
+            width: 0;
+            border-right: 1px solid $clr-card-border-color;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        form {
+            > .clr-input,  vcd-form-input, vcd-form-select {
+                flex: 1 0 auto;
+            }
+        }
+    }
+}
+
+.card-result-count-labels {
+    margin-bottom: $vcd-padding-0-75;
+    min-height:  $vcd-padding-1;
+    vcd-advanced-filter-labels {
+        display: inline-block;
+        margin-left: $vcd-padding-1;
+        .btn {
+            margin: auto;
+        }
+    }
+}
+
+vcd-quick-filter, vcd-advanced-sort {
+    display: inline-block;
+    form {
+        display: flex;
+    }
+    div.clr-input {
+        padding-right: 0;
+    }
+    vcd-form-input {
+        div.clr-form-control {
+            margin-top: 0;
+        }
+        .clr-form-control + .clr-subtext {
+            display: none;
+        }
+    }
+    vcd-form-select {
+        div.clr-form-control {
+            margin-top: 0;
+        }
+        .clr-select-wrapper {
+            display: flex;
+        }
+    }
+}
+.date-range-form-control {
+    margin-top: 5px;
+}
+.date-range-container {
+    display: flex;
+    clr-date-container {
+        margin-top: 0;
+        .from-label {
+            width: 2rem;
+        }
+        .to-label {
+            width: 2rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media only screen and (min-width: map-get($clr-grid-breakpoints, md)) {
+    vcd-advanced-filter-modal {
+        min-height: 250px;
+        display: block;
+    }
+
+    vcd-vms-container,
+    vcd-vapps-container,
+    vcd-vapps-details-container {
+        .quick-advanced-filter-container vcd-ok-cancel-modal .modal-body {
+            overflow: visible;
+        }
+    }
+}
+
+@media only screen and (max-width: map-get($clr-grid-breakpoints, md)) {
+    vcd-advanced-filter-modal {
+        form > div {
+            padding-left: $vcd-padding-0-5;
+            padding-right: $vcd-padding-0-5;
+        }
+    }
+}
+
+@media only screen and (max-width: map-get($clr-grid-breakpoints, xl)) {
+    .quick-advanced-filter-container {
+        flex-wrap: wrap;
+    }
+}
+
+vcd-advanced-filter-modal {
+    vcd-form-combobox .clr-form-control {
+        // Needs important as the clr-form-control from clarity is overriding it to row.
+        flex-direction: column !important;
+        .clr-control-label {
+            margin-top: 0;
+        }
+        .clr-control-container {
+            width: 100%;
+        }
+        .combobox-container {
+            .carret {
+                width: 13px;
+                height: 13px;
+            }
+        }
+    }
+}

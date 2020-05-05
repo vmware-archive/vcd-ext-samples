@@ -1,0 +1,19 @@
+/**
+    Stack-view modifications:
+    - We aligned stack-view's title and action buttons vertically(flex-direction-column)
+        For that reason, we removed the default margin-top from the header when there is no
+        title and apply it to the .stack-title element(it is easier to add margin-top with css
+        when .stack-title element is not empty)
+ */
+
+clr-stack-header {
+    .stack-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+
+        .stack-title:not(:empty) {
+            margin-top: $clr-global-typography-margin-top;
+        }
+    }
+}
