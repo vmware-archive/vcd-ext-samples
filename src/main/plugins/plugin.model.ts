@@ -1,5 +1,5 @@
 import {EntityReference2, UiPluginMetadataResponse} from "@vcd/bindings/vcloud/rest/openapi/model";
-import {plugin} from "postcss";
+import { LinkType } from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 
 export type ApiPlugin = UiPluginMetadataResponse;
 
@@ -18,6 +18,15 @@ export interface PluginSpec {
     tenantScoped: boolean;
     providerScoped: boolean;
     resourcePath?: string;
+}
+
+export interface EntityReferences {
+    resultTotal: number;
+    pageCount: number;
+    page: number;
+    pageSize: number;
+    values: PluginTenantSpec[];
+    link?: LinkType[];
 }
 
 export interface PluginTenantSpec {
