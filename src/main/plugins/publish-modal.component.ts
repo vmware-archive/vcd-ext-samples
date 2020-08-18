@@ -27,6 +27,10 @@ export class PublishModalComponent {
     }
 
     get loading() {
+        if (!this.publishForm) {
+            return true;
+        }
+
         return this.publishForm.loading;
     }
 

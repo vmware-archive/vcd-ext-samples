@@ -1,5 +1,7 @@
 import {Injectable} from "@angular/core";
+import {QueryResultRecordsType} from "@vcd/bindings/vcloud/api/rest/schema_v1_5";
 import {VcdApiClient} from "@vcd/sdk/client";
+import {Query} from "@vcd/sdk/query";
 import {Observable} from "rxjs";
 import {
     ApiPlugin,
@@ -9,14 +11,15 @@ import {
     toApiPlugin,
     toApiPluginTenants,
     toPluginSpec, toPluginSpecs,
-    toPluginTenantSpecs
+    toPluginTenantSpecs,
+    EntityReferences
 } from "./plugin.model";
-import {OrganizationService} from "../common/services/organization.service";
+import {map} from "rxjs/operators";
 
 @Injectable()
 export class PluginService {
 
-    constructor(private client: VcdApiClient, private organizationService: OrganizationService) {
+    constructor(private client: VcdApiClient) {
     }
 
     public getPlugins(): Observable<PluginSpec[]> {
@@ -52,45 +55,67 @@ export class PluginService {
     }
 
     public getAllTenants(): Observable<PluginTenantSpec[]> {
-        return this.organizationService.getAllTenants()
-            .map((results) => toPluginTenantSpecs(results));
+        return this.client
+            .query<QueryResultRecordsType>(
+                Query.Builder
+                    .ofType("organization")
+                    .format("idrecords")
+                    .sort({field: "name", reverse: false})
+            )
+            .expand((pageResponse: QueryResultRecordsType) => (!this.client.hasNextPage(pageResponse)
+                ? Observable.empty()
+                : this.client.nextPage(pageResponse)))
+            .map((pageResponse: QueryResultRecordsType) => pageResponse.record as ApiPluginTenant[])
+            .reduce((accumulator: ApiPluginTenant[], next: ApiPluginTenant[]) => [...accumulator, ...next])
+            .map((results: ApiPluginTenant[]) => toPluginTenantSpecs(results));
     }
 
     public getPluginTenants(pluginSpec: PluginSpec): Observable<PluginTenantSpec[]> {
         return this.client
-            .get<ApiPluginTenant[]>(`cloudapi/extensions/ui/${pluginSpec.id}/tenants`)
-            .map(toPluginTenantSpecs);
+            .get<EntityReferences>(`cloudapi/extensions/ui/${pluginSpec.id}/tenants`)
+            .expand((res) => {
+                return (!this.client.hasNextPage(res)
+                ? Observable.empty()
+                : this.client.nextPage<EntityReferences>(res)
+                )
+            })
+            .reduce((accumulator: EntityReferences, next: EntityReferences) => {
+                accumulator.values = [...accumulator.values, ...next.values]
+
+                return accumulator
+            })
+            .map((results: EntityReferences) => results.values);
     }
 
-    public publishToTenants(pluginSpec: PluginSpec, pluginTenantSpecs: PluginTenantSpec[]) {
+    public publishToTenants(pluginSpec: PluginSpec, pluginTenantSpecs: PluginTenantSpec[]): Observable<PluginTenantSpec[]> {
         return this.client
-            .createSync<ApiPluginTenant[]>(
+            .createSync<EntityReferences>(
                 `cloudapi/extensions/ui/${pluginSpec.id}/tenants/publish`,
-                toApiPluginTenants(pluginTenantSpecs)
-            ).map(toPluginTenantSpecs);
+                toApiPluginTenants(pluginTenantSpecs) as any
+            ).map((record: EntityReferences) => record.values);
     }
 
     public publishToAllTenants(pluginSpec: PluginSpec) {
         return this.client
-            .createSync<ApiPluginTenant[]>(
+            .createSync<EntityReferences>(
                 `cloudapi/extensions/ui/${pluginSpec.id}/tenants/publishAll`,
                 null
-            ).map(toPluginTenantSpecs);
+            ).map((record: EntityReferences) => record.values);
     }
 
     public unpublishFrom(pluginSpec: PluginSpec, pluginTenantSpecs: PluginTenantSpec[]) {
         return this.client
-            .createSync<ApiPluginTenant[]>(
+            .createSync<EntityReferences>(
                 `cloudapi/extensions/ui/${pluginSpec.id}/tenants/unpublish`,
-                toApiPluginTenants(pluginTenantSpecs)
-            ).map(toPluginTenantSpecs);
+                toApiPluginTenants(pluginTenantSpecs) as any
+            ).map((record: EntityReferences) => record.values);
     }
 
     public unpublishFromAllTenants(pluginSpec: PluginSpec) {
         return this.client
-            .createSync<ApiPluginTenant[]>(
+            .createSync<EntityReferences>(
                 `cloudapi/extensions/ui/${pluginSpec.id}/tenants/unpublishAll`,
                 null
-            ).map(toPluginTenantSpecs);
+            ).map((record: EntityReferences) => record.values);
     }
 }
