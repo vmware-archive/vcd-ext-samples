@@ -10,6 +10,7 @@ export interface PublishPluginsOperationSpec {
     providerScoped: boolean;
     tenantScoped: boolean;
     tenants: PluginTenantSpec[];
+    publishToAll: boolean;
 }
 
 export interface PluginUploadOperationSpec {

@@ -81,7 +81,7 @@ export class PublishFormComponent {
                 tenants.push(this.tenantsById.get(selection.tenantId));
             }
         });
-        return {plugins, tenantScoped, providerScoped, tenants};
+        return {plugins, tenantScoped, providerScoped, tenants, publishToAll: this.allTenantsChecked};
     }
 
     get loading() {
