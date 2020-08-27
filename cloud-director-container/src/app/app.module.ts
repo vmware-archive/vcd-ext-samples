@@ -3,7 +3,7 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ClarityModule } from '@clr/angular';
+import { ClarityModule } from 'clarity-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
 import { CONTAINER_BRANDING } from '../environments/branding';
