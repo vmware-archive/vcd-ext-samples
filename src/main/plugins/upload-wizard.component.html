@@ -1,99 +1,94 @@
 <clr-wizard #wizard [(clrWizardOpen)]="opened" clrWizardSize="lg">
-    <clr-wizard-title>Upload Plugin</clr-wizard-title>
-
-    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
-    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
-    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
-    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
-
-    <clr-wizard-page [clrWizardPageNextDisabled]="!pluginBundle || !validPluginBundle">
-        <ng-template clrPageTitle>Select Plugin</ng-template>
-        <div *ngIf="loading" class="spinner spinner-sm"></div>
-        <clr-alert *ngIf="activityError" clrAlertType="danger">
-            <div class="alert-item">
-                <span class="alert-text">
-                    {{activityError}}
-                </span>
+        <clr-wizard-title>Upload Plugin</clr-wizard-title>
+    
+        <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+        <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+        <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+        <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+    
+        <clr-wizard-page [clrWizardPageNextDisabled]="!pluginBundle">
+            <ng-template clrPageTitle>Select Plugin</ng-template>
+            <div *ngIf="loading" class="spinner spinner-sm"></div>
+            <clr-alert *ngIf="activityError" clrAlertType="danger">
+                <div class="alert-item">
+                    <span class="alert-text">
+                        {{activityError}}
+                    </span>
+                </div>
+            </clr-alert>
+            <button id="button" class="btn btn-link" (click)="onSelectPluginClick()">Select Plugin File</button>
+            <section *ngIf="pluginBundle">
+                <dl>
+                    <dt>Name</dt>
+                    <dd>{{pluginBundle.manifest.name}}</dd>
+    
+                    <dt>Vendor</dt>
+                    <dd>{{pluginBundle.manifest.vendor}}</dd>
+    
+                    <dt>Description</dt>
+                    <dd>{{pluginBundle.manifest.description}}</dd>
+    
+                    <dt>Version</dt>
+                    <dd>{{pluginBundle.manifest.version}}</dd>
+    
+                    <dt>License</dt>
+                    <dd>{{pluginBundle.manifest.license}}</dd>
+    
+                    <dt>Link</dt>
+                    <dd>{{pluginBundle.manifest.link}}</dd>
+                </dl>
+            </section>
+        </clr-wizard-page>
+    
+        <clr-wizard-page (clrWizardPageNext)="onPublishFormFinished()">
+            <ng-template clrPageTitle>Select Scope &amp; Publishing</ng-template>
+            <vcd-ext-publish-form #publishForm>
+            </vcd-ext-publish-form>
+        </clr-wizard-page>
+    
+        <clr-wizard-page clrWizardPagePreventDefaultNext="true"
+                         [clrWizardPageNextDisabled]="uploading"
+                         (clrWizardPageFinish)="onWizardFinished()">
+            <ng-template clrPageTitle>Review &amp; Finish</ng-template>
+            <clr-alert *ngIf="activityError" clrAlertType="danger">
+                <div class="alert-item">
+                    <span class="alert-text">
+                        {{activityError}}
+                    </span>
+                </div>
+            </clr-alert>
+            <progress *ngIf="uploading" max="100" [value]="(uploadingProgress|async)?.percent">
+            </progress>
+            <div *ngIf="uploading" class="spinner spinner-sm">
             </div>
-        </clr-alert>
-        <button id="button" class="btn btn-link" (click)="onSelectPluginClick()">Select Plugin File</button>
-        <section *ngIf="pluginBundle">
-            <dl>
-                <dt>Validated?</dt>
-                <dd>
-                    <clr-icon *ngIf="validPluginBundle" shape="check"></clr-icon>
-                    <clr-icon *ngIf="!validPluginBundle" shape="times"></clr-icon>
-                </dd>
-
-                <dt>Name</dt>
-                <dd>{{pluginBundle.manifest.name}}</dd>
-
-                <dt>Vendor</dt>
-                <dd>{{pluginBundle.manifest.vendor}}</dd>
-
-                <dt>Description</dt>
-                <dd>{{pluginBundle.manifest.description}}</dd>
-
-                <dt>Version</dt>
-                <dd>{{pluginBundle.manifest.version}}</dd>
-
-                <dt>License</dt>
-                <dd>{{pluginBundle.manifest.license}}</dd>
-
-                <dt>Link</dt>
-                <dd>{{pluginBundle.manifest.link}}</dd>
-            </dl>
-        </section>
-    </clr-wizard-page>
-
-    <clr-wizard-page (clrWizardPageNext)="onPublishFormFinished()">
-        <ng-template clrPageTitle>Select Scope &amp; Publishing</ng-template>
-        <vcd-ext-publish-form #publishForm>
-        </vcd-ext-publish-form>
-    </clr-wizard-page>
-
-    <clr-wizard-page clrWizardPagePreventDefaultNext="true"
-                     [clrWizardPageNextDisabled]="uploading"
-                     (clrWizardPageFinish)="onWizardFinished()">
-        <ng-template clrPageTitle>Review &amp; Finish</ng-template>
-        <clr-alert *ngIf="activityError" clrAlertType="danger">
-            <div class="alert-item">
-                <span class="alert-text">
-                    {{activityError}}
-                </span>
-            </div>
-        </clr-alert>
-        <progress *ngIf="uploading" max="100" [value]="(uploadingProgress|async)?.percent">
-        </progress>
-        <div *ngIf="uploading" class="spinner spinner-sm">
-        </div>
-        <section *ngIf="pluginBundle && publishOperation">
-            <dl>
-                <dt>Plugin</dt>
-                <dd>{{pluginBundle.manifest.name}}</dd>
-
-                <dt>Version</dt>
-                <dd>{{pluginBundle.manifest.version}}</dd>
-
-                <dt>Provider Scoping</dt>
-                <dd>
-                    <clr-icon *ngIf="publishOperation.providerScoped" shape="check"></clr-icon>
-                    <clr-icon *ngIf="!publishOperation.providerScoped" shape="times"></clr-icon>
-                </dd>
-
-                <dt>Tenant Scoping</dt>
-                <dd>
-                    <clr-icon *ngIf="publishOperation.tenantScoped" shape="check"></clr-icon>
-                    <clr-icon *ngIf="!publishOperation.tenantScoped" shape="times"></clr-icon>
-                </dd>
-
-                <ng-container *ngIf="publishOperation.tenantScoped">
-                    <dt>Tenant Publishing</dt>
+            <section *ngIf="pluginBundle && publishOperation">
+                <dl>
+                    <dt>Plugin</dt>
+                    <dd>{{pluginBundle.manifest.name}}</dd>
+    
+                    <dt>Version</dt>
+                    <dd>{{pluginBundle.manifest.version}}</dd>
+    
+                    <dt>Provider Scoping</dt>
                     <dd>
-                        Publish to {{publishOperation.tenants.length}} tenant(s)
+                        <clr-icon *ngIf="publishOperation.providerScoped" shape="check"></clr-icon>
+                        <clr-icon *ngIf="!publishOperation.providerScoped" shape="times"></clr-icon>
                     </dd>
-                </ng-container>
-            </dl>
-        </section>
-    </clr-wizard-page>
-</clr-wizard>
+    
+                    <dt>Tenant Scoping</dt>
+                    <dd>
+                        <clr-icon *ngIf="publishOperation.tenantScoped" shape="check"></clr-icon>
+                        <clr-icon *ngIf="!publishOperation.tenantScoped" shape="times"></clr-icon>
+                    </dd>
+    
+                    <ng-container *ngIf="publishOperation.tenantScoped">
+                        <dt>Tenant Publishing</dt>
+                        <dd>
+                            Publish to {{publishOperation.tenants.length}} tenant(s)
+                        </dd>
+                    </ng-container>
+                </dl>
+            </section>
+        </clr-wizard-page>
+    </clr-wizard>
+    
