@@ -39,7 +39,7 @@ export class PluginOperationsService {
         return Observable.of(uploadState)
             .pipe(
                 flatMap((state) => this.createPlugin(state)),
-		flatMap((state) => this.publishToTenants(state)),
+                flatMap((state) => this.publishToTenants(state)),
                 flatMap((state) => this.transferPluginBundle(state, progressListener))
             );
     }
@@ -62,11 +62,12 @@ export class PluginOperationsService {
     }
 
     private publishToTenants(state: PluginUploadOperationSpec) {
-        return this.pluginService
-            .publishToTenants(state.plugin, state.tenants)
-            .pipe(
-                map((tenants) => ({...state, tenants}))
-            );
+        return (state.publishToAll ?
+            this.pluginService.publishToAllTenants(state.plugin) :
+            this.pluginService.publishToTenants(state.plugin, state.tenants)
+        ).pipe(
+            map((tenants) => ({...state, tenants}))
+        );
     }
 
     publishPlugins(publishState: PublishPluginsOperationSpec): Observable<PublishPluginsOperationSpec> {

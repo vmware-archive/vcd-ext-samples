@@ -16,4 +16,5 @@ export interface PluginUploadOperationSpec {
     plugin: PluginSpec;
     pluginBundle: PluginBundleSpec;
     tenants: PluginTenantSpec[];
+    publishToAll: boolean;
 }
