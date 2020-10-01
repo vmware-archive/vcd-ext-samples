@@ -53,6 +53,10 @@ export class PublishFormComponent {
             const oldValue = {...formGroup.value};
             formGroup.setValue({...oldValue, selected, indeterminate: false});
         }
+
+        if (selected && !this.form.dirty) {
+            this.form.markAsDirty();
+        }
     }
 
     isFilterMatching(tenantId: string) {
