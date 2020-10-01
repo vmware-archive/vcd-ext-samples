@@ -106,7 +106,8 @@ export class UploadWizardComponent {
         const upload: PluginUploadOperationSpec = {
             plugin,
             pluginBundle: this.pluginBundle,
-            tenants: this.publishOperation.tenants
+            tenants: this.publishOperation.tenants,
+            publishToAll: this.publishOperation.publishToAll
         };
         this.uploadingProgress = new Subject<TransferProgress>();
         this.activitySubscription = this.pluginOperationsService
