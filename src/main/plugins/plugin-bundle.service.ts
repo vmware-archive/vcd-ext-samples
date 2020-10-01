@@ -71,16 +71,4 @@ export class PluginBundleService {
            );
     }
 
-    validatePluginBundle(pluginBundle: PluginBundleSpec): boolean {
-        for (const filename of pluginBundle.filenames) {
-            const valid = /^(?!..\/)(((manifest|i18n|).(json)$)|((bundle).(js)$)|([0-9]|[a-z]+\/)([0-9]|[a-z]+).*[^exe]$)/gm
-                .test(filename);
-            if (!valid) {
-                return false;
-            }
-        }
-
-        return true;
-    }
-
 }

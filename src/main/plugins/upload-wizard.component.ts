@@ -24,7 +24,6 @@ export class UploadWizardComponent {
     uploaded = new EventEmitter<PluginUploadOperationSpec>();
 
     opened = false;
-    validPluginBundle = false;
     pluginBundle: PluginBundleSpec = null;
     publishOperation: PublishPluginsOperationSpec = null;
 
@@ -50,7 +49,6 @@ export class UploadWizardComponent {
     open() {
         this.wizard.reset();
         this.uploadingProgress = null;
-        this.validPluginBundle = false;
         this.activityError = null;
         this.pluginBundle = null;
         this.publishOperation = null;
@@ -69,7 +67,6 @@ export class UploadWizardComponent {
                 const providerScoped = result.manifest.scope.indexOf("service-provider") !== -1;
                 this.publishForm.reset([], {tenantScoped, providerScoped});
                 this.pluginBundle = result;
-                this.validPluginBundle = this.pluginBundleService.validatePluginBundle(result);
                 this.activitySubscription = null;
             }, (error) => {
                 console.error(error);
