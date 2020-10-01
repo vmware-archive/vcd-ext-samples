@@ -106,7 +106,13 @@ export class PluginOperationsService {
 
     private republishToTenants(state: PublishPluginsOperationSpec) {
         const actions = state.plugins
-            .map((plugin) => this.pluginService.publishToTenants(plugin, state.tenants));
+            .map((plugin) => {
+                if (state.publishToAll) {
+                    return this.pluginService.publishToAllTenants(plugin);
+                }
+
+                return this.pluginService.publishToTenants(plugin, state.tenants)
+            });
         return Observable.forkJoin(actions)
             .pipe(
                 map(() => state)
