@@ -31,5 +31,45 @@
         "name": "Custom Datacenters",
         "description": "Display custom information in the Datacenter Overview",
         "component": "DatacenterContainerComponent"
+    }, {
+        "urn": "vmware:vcloud:datacenter:sample",
+        "type": "navigation:datacenter:overview",
+        "name": "Custom Datacenters (New type)",
+        "description": "Display custom information in the Datacenter Overview",
+        "component": "DatacenterContainerComponent"
+    }, {
+        "urn": "urn:vmware:vcd:component-scope:primary-navigation",
+        "type": "navigation:primary",
+        "name": "Primary Navigation Extenson Point (New)",
+        "description": "Example of adding Primary Navigation Plugin",
+        "module": "SubnavPluginModule",
+        "route": "primary-plugin"
+    }, {
+        "urn": "urn:vmware:vcd:component-scope:applications",
+        "type": "navigation:applications",
+        "name": "Applicaton Extenson Point (New)",
+        "description": "Display custom information in the Applicaton Tab",
+        "component": "ApplicationComponent"
+    },
+    {
+        "urn": "urn:vmware:vcd:component-scope:datacenter-compute",
+        "type": "navigation:datacenter:compute",
+        "name": "Datacetner Compute Extenson Point (New)",
+        "description": "Display custom information in the Datacetner -> Compute section",
+        "component": "DatacenterComputeComponent"
+    },
+    {
+        "urn": "urn:vmware:vcd:component-scope:datacenter-network",
+        "type": "navigation:datacenter:network",
+        "name": "Datacetner Network Extenson Point (New)",
+        "description": "Display custom information in the Datacetner -> Network section",
+        "component": "DatacenterNetworkComponent"
+    },
+    {
+        "urn": "urn:vmware:vcd:component-scope:datacenter-storage",
+        "type": "navigation:datacenter:storage",
+        "name": "Datacetner Storage Extenson Point (New)",
+        "description": "Display custom information in the Datacetner -> Storage section",
+        "component": "DatacenterStorageComponent"
     }]
 }

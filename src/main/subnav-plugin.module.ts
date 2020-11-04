@@ -13,6 +13,12 @@ import { SubnavComponent } from "./subnav/subnav.component";
 import { VmBackupActionComponent } from "./actions/vm.backup.action.component";
 import { VappRestoreActionComponent } from "./actions/vapp.restore.action.component";
 import { DatacenterContainerComponent } from "./datacenter-overview/datacenter.container.component";
+import {
+    ApplicationComponent,
+    DatacenterComputeComponent,
+    DatacenterNetworkComponent,
+    DatacenterStorageComponent
+} from ".";
 
 const ROUTES: Routes = [
     { path: "", component: SubnavComponent, children: [
@@ -35,12 +41,20 @@ const ROUTES: Routes = [
         StatusComponent,
         SubnavComponent,
         VappRestoreActionComponent,
-        VmBackupActionComponent
+        VmBackupActionComponent,
+        ApplicationComponent,
+        DatacenterComputeComponent,
+        DatacenterNetworkComponent,
+        DatacenterStorageComponent,
     ],
     entryComponents: [
         DatacenterContainerComponent,
         VappRestoreActionComponent,
-        VmBackupActionComponent
+        VmBackupActionComponent,
+        ApplicationComponent,
+        DatacenterComputeComponent,
+        DatacenterNetworkComponent,
+        DatacenterStorageComponent,
     ],
     bootstrap: [SubnavComponent],
     exports: [],
