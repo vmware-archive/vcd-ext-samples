@@ -6,12 +6,9 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.vmware.vcloud</groupId>
-    <artifactId>object-extensibility-parent</artifactId>
-    <version>1.0.0</version>
-  </parent>
+  <groupId>com.vmware.vcloud</groupId>
   <artifactId>object-extensibility-app</artifactId>
+  <version>1.0.0</version>
   <name>${project.artifactId} :: Object Extension Sample App</name>
   <description>Sample App demonstrating object extensibility project</description>
   <packaging>jar</packaging>
@@ -19,15 +16,17 @@
      <dependency>
        <groupId>com.vmware.vcloud</groupId>
        <artifactId>vcd-extensibility-bindings-java</artifactId>
-       <version>${product.version}</version>
+       <version>9.1.0</version>
      </dependency>
     <dependency>
       <groupId>com.vmware.vcloud</groupId>
       <artifactId>object-extensibility-amqp</artifactId>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>com.vmware.vcloud</groupId>
-      <artifactId>rest-api-client</artifactId>
+      <artifactId>vcd-api-client-java</artifactId>
+      <version>0.11.0</version>
     </dependency>
   </dependencies>
   <build>
