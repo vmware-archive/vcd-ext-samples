@@ -17,8 +17,10 @@ import {
     ApplicationComponent,
     DatacenterComputeComponent,
     DatacenterNetworkComponent,
-    DatacenterStorageComponent
+    DatacenterStorageComponent,
+    VmCreateWizardExtensionPointComponent
 } from ".";
+import { VappCreateWizardExtensionPointComponent } from "./create-vapp";
 
 const ROUTES: Routes = [
     { path: "", component: SubnavComponent, children: [
@@ -46,6 +48,8 @@ const ROUTES: Routes = [
         DatacenterComputeComponent,
         DatacenterNetworkComponent,
         DatacenterStorageComponent,
+        VappCreateWizardExtensionPointComponent,
+        VmCreateWizardExtensionPointComponent,
     ],
     entryComponents: [
         DatacenterContainerComponent,
@@ -55,6 +59,8 @@ const ROUTES: Routes = [
         DatacenterComputeComponent,
         DatacenterNetworkComponent,
         DatacenterStorageComponent,
+        VappCreateWizardExtensionPointComponent,
+        VmCreateWizardExtensionPointComponent,
     ],
     bootstrap: [SubnavComponent],
     exports: [],
