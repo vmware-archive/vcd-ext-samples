@@ -1,0 +1,32 @@
+{
+    "urn": "vmware:vcloud:plugin:vmware:ticketing",
+    "name": "Ticketing plugin",
+    "containerVersion": "9.5.0",
+    "manifestVersion": "2.0.0",
+    "version": "0.0.1",
+    "scope": [
+        "service-provider",
+        "tenant"
+    ],
+    "permissions": [],
+    "description": "Ticketing Plugin",
+    "vendor": "vmware",
+    "license": "BSD-2-Clause",
+    "link": "http://example.com",
+    "extensionPoints": [
+        {
+            "urn": "urn:vmware:vcd:component-scope:primary-navigation",
+            "type": "navigation:primary",
+            "name": "%nav.label%",
+            "description": "%nav.description%",
+            "module": "TicketingPluginModule",
+            "route": "ticketing"
+        }
+    ],
+    "locales": {
+        "en": {
+            "nav.label": "Ticketing",
+            "nav.description": "A basic plugin project"
+        }
+    }
+}
