@@ -12,7 +12,7 @@ import {DefinedEntity} from "../api/models/DefinedEntityModel";
 import {TranslationService} from "@vcd/i18n";
 import {TicketingService} from "./ticketing.service";
 import {Pagination} from "../api/models/PaginationModel";
-import { LinkRelType } from "@vcd/sdk";
+import {LinkRelType} from "@vcd/sdk";
 import {TicketModalComponent} from "./ticket-modal/ticket-modal.component";
 import {DeleteModalComponent} from "./delete-modal/delete-modal.component";
 
@@ -52,7 +52,7 @@ export class TicketingComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
 
-        this._subscriptions.subscribe(this.translationService.translateAsync("ticketing.grid.id"), (a)=> {
+        this._subscriptions.subscribe(this.translationService.translateAsync("ticketing.grid.id"), (a) => {
             this.initGridColumns();
         });
     }
@@ -108,13 +108,17 @@ export class TicketingComponent implements OnInit, OnDestroy {
                 reverse: eventData.sortColumn.reverse
             };
         }
-
-        const tickets: Pagination<DefinedEntity<Ticket>> = await this.ticketingService.fetchTickets(
-            eventData.pagination.itemsPerPage,
-            eventData.pagination.pageNumber,
-            sort,
-            eventData.filters
-        );
+        let tickets: Pagination<DefinedEntity<Ticket>>;
+        try {
+            tickets = await this.ticketingService.fetchTickets(
+                eventData.pagination.itemsPerPage,
+                eventData.pagination.pageNumber,
+                sort,
+                eventData.filters
+            );
+        } catch (e) {
+            this.errorMessage = e.message || e.details || e;
+        }
 
         this.tickets = tickets.values;
 
@@ -124,7 +128,7 @@ export class TicketingComponent implements OnInit, OnDestroy {
         };
     }
 
-    public get actions(): ActionItem<DefinedEntity<Ticket>, any>[]{
+    public get actions(): ActionItem<DefinedEntity<Ticket>, any>[] {
         return [
             {
                 textKey: "ticketing.action.new",
@@ -141,7 +145,7 @@ export class TicketingComponent implements OnInit, OnDestroy {
                 textKey: "ticketing.action.delete",
                 handler: (selection) => {
 
-                    if(!selection) return;
+                    if (!selection) return;
 
                     const ticket = selection[0];
 
@@ -166,7 +170,7 @@ export class TicketingComponent implements OnInit, OnDestroy {
                 textKey: "ticketing.action.edit",
                 handler: (selection) => {
 
-                    if(!selection) return;
+                    if (!selection) return;
 
                     const ticket = selection[0];
 
@@ -181,25 +185,40 @@ export class TicketingComponent implements OnInit, OnDestroy {
         ];
     }
 
-    private async onCreateConfirm(ticket: Ticket){
+    private async onCreateConfirm(ticket: Ticket) {
         this.datagrid.isLoading = true;
-        await this.ticketingService.createTicket(ticket);
+        try {
+            await this.ticketingService.createTicket(ticket)
+        } catch (e) {
+            this.errorMessage = e.message || e.details || e;
+        } finally {
+            this.datagrid.isLoading = false;
+        }
         await this.refresh(this.previousGridState);
-        this.datagrid.isLoading = false;
+
     }
 
-    private async onEditConfirm(definedEntity: DefinedEntity<Ticket>){
+    private async onEditConfirm(definedEntity: DefinedEntity<Ticket>) {
         this.datagrid.isLoading = true;
-        await this.ticketingService.updateTicket(definedEntity);
-        this.refresh(this.previousGridState);
-        this.datagrid.isLoading = false;
+        try {
+            await this.ticketingService.updateTicket(definedEntity);
+        } catch (e) {
+            this.errorMessage = e.message || e.details || e;
+        } finally {
+            this.datagrid.isLoading = false;
+        }
+        await this.refresh(this.previousGridState);
     }
 
-    private async onDeleteConfirm(definedEntity: DefinedEntity<Ticket>){
+    private async onDeleteConfirm(definedEntity: DefinedEntity<Ticket>) {
         this.datagrid.isLoading = true;
-        await this.ticketingService.removeTicket(definedEntity.navigable);
-        this.previousGridState.pagination.pageNumber = 1;
-        this.refresh(this.previousGridState);
-        this.datagrid.isLoading = false;
+        try {
+            await this.ticketingService.removeTicket(definedEntity.navigable);
+        } catch (e) {
+            this.errorMessage = e.message || e.details || e;
+        } finally {
+            this.datagrid.isLoading = false;
+        }
+        await this.refresh(this.previousGridState);
     }
 }
