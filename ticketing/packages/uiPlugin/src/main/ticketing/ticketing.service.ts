@@ -45,7 +45,7 @@ export class TicketingService {
         },
         customFilters: string[]
     ) {
-        const tickets = await this.client.getTickets(page, pageSize);
+        const tickets = await this.client.getTickets(pageSize, page, sort, customFilters);
 
         tickets.values.forEach((defEntityTicket: DefinedEntity<Ticket>) => {
             this.mapDefinedEntityLinksToNavigable(defEntityTicket, tickets.link);

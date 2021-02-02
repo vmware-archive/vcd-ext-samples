@@ -62,27 +62,19 @@ export class TicketingComponent implements OnInit, OnDestroy {
         this.columns = [
             {
                 displayName: this.translationService.translate("ticketing.grid.id"),
-                renderer: (ticket) => ticket.id.split(":").pop(),
-                queryFieldName: "id",
-                filter: DatagridStringFilter(WildCardPosition.WRAP, ""),
+                renderer: (ticket) => ticket.id.split(":").pop()
             },
             {
                 displayName: this.translationService.translate("ticketing.grid.type"),
-                renderer: "entity.type",
-                queryFieldName: "entity.type",
-                filter: DatagridStringFilter(WildCardPosition.WRAP, ""),
+                renderer: "entity.type"
             },
             {
                 displayName: this.translationService.translate("ticketing.grid.description"),
-                renderer: "entity.description",
-                queryFieldName: "entity.description",
-                filter: DatagridStringFilter(WildCardPosition.WRAP, ""),
+                renderer: "entity.description"
             },
             {
                 displayName: this.translationService.translate("ticketing.grid.status"),
-                renderer: "entity.status",
-                queryFieldName: "entity.status",
-                filter: DatagridStringFilter(WildCardPosition.WRAP, ""),
+                renderer: "entity.status"
             },
         ];
     }
@@ -108,6 +100,8 @@ export class TicketingComponent implements OnInit, OnDestroy {
                 reverse: eventData.sortColumn.reverse
             };
         }
+
+        if (this.datagrid) this.datagrid.isLoading = true;
         let tickets: Pagination<DefinedEntity<Ticket>>;
         try {
             tickets = await this.ticketingService.fetchTickets(
@@ -118,6 +112,8 @@ export class TicketingComponent implements OnInit, OnDestroy {
             );
         } catch (e) {
             this.errorMessage = e.message || e.details || e;
+        }finally {
+            if (this.datagrid) this.datagrid.isLoading = false;
         }
 
         this.tickets = tickets.values;

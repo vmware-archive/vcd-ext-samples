@@ -9,8 +9,8 @@ import {LinkRelType} from "@vcd/angular-client/client/vcd.api.client";
 export const CLOUD_API = "cloudapi";
 export const CLOUD_API_VERSION = "1.0.0";
 export const CLOUD_API_ENDPOINT = `${CLOUD_API}/${CLOUD_API_VERSION}/`;
-export const SCALE_GROUP_TYPE_VERSION = "0.0.1";
-export const SCALE_GROUP_TYPE_ID = `urn:vcloud:type:vmware:ticket:${SCALE_GROUP_TYPE_VERSION}`;
+export const TICKET_TYPE_VERSION = "0.0.1";
+export const TICKET_TYPE_ID = `urn:vcloud:type:vmware:ticket:${TICKET_TYPE_VERSION}`;
 
 @Injectable()
 export class ApiClientService {
@@ -20,7 +20,7 @@ export class ApiClientService {
 
     public createTicket(ticket: Ticket): Promise<TaskType> {
         return this.client.createAsync(
-            CLOUD_API_ENDPOINT + `entityTypes/${SCALE_GROUP_TYPE_ID}`,
+            CLOUD_API_ENDPOINT + `entityTypes/${TICKET_TYPE_ID}`,
             {
                 name : ticket.type,
                 entity: ticket
@@ -51,13 +51,19 @@ export class ApiClientService {
             .toPromise() as Promise<DefinedEntity<Ticket>>;
     }
 
-    public getTickets(page: number, pageSize: number):
+    public getTickets(pageSize: number,
+                      page: number,
+                      sort: {
+                          field: string;
+                          reverse?: boolean;
+                      },
+                      customFilters: string[]):
         Promise<Pagination<DefinedEntity<Ticket>>> {
 
             return this.client.get(
             CLOUD_API_ENDPOINT +
                 // tslint:disable-next-line:max-line-length
-                `entities/types/vmware/ticket/${SCALE_GROUP_TYPE_VERSION}?pageSize=${pageSize}&page=${page}`)
+                `entities/types/vmware/ticket/${TICKET_TYPE_VERSION}?pageSize=${pageSize}&page=${page}`)
             .toPromise() as Promise<Pagination<DefinedEntity<Ticket>>>;
     }
 
