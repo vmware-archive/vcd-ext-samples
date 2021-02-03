@@ -1,0 +1,14 @@
+<clr-modal [(clrModalOpen)]="opened" [clrModalClosable]="false">
+    <h3 class="modal-title">{{config?.header}}</h3>
+    <div class="modal-body">
+        <p>{{config?.body}}</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline" (click)="onCancel()">
+            {{"ticketing.deleteModal.button.cancel" | translate}}
+        </button>
+        <button type="button"  class="btn btn-warning" (click)="onDelete()">
+            {{"ticketing.deleteModal.button.delete" | translate}}
+        </button>
+    </div>
+</clr-modal>
