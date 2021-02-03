@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# Maven
+target/
+
+# VSCode
+.vscode/
+
+# IntelliJ IDEA
+out/
+dist/
+.idea/
+*.iml
+node_modules/
+openapi-schemata/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# Sonar
+.sonarlint/
+
+lib/
+
+environment.runtime.json
+proxy.conf.runtime.json
