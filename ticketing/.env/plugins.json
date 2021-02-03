@@ -1,7 +1,0 @@
-[
-  {
-    "label": "TicketingPluginModule",
-    "root": "packages/uiPlugin/src",
-    "module": "main/ticketing.module#TicketingPluginModule"
-  }
-]
