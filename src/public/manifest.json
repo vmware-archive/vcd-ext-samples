@@ -80,29 +80,7 @@
         "component": "VappCreateWizardExtensionPointComponent",
         "run": "after", 
         "render": {
-            "after": ".power-on"
-        }
-    },
-    {
-        "urn": "vmware:vcloud:vapp:create:ovf",
-        "type": "create-vapp-ovf",
-        "name": "vApp Create Extension Point",
-        "description": "Example of vApp Create From OVF Extensibility",
-        "component": "VappCreateWizardExtensionPointComponent",
-        "run": "after",
-        "render": {
-            "after": ".upload-ovf"
-        }
-    },
-    {
-        "urn": "vmware:vcloud:vapp:create:template",
-        "type": "create-vapp-template",
-        "name": "vApp Create Extension Point",
-        "description": "Example of vApp Create From Tempalte Extensibility",
-        "component": "VappCreateWizardExtensionPointComponent",
-        "run": "after",
-        "render": {
-            "after": ".select-name-and-leases"
+            "after": ".vapp-name-extension-point"
         }
     },
     {
