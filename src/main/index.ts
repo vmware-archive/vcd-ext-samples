@@ -6,4 +6,6 @@ export { DatacenterComputeComponent } from './datacenter-compute/datacenter-comp
 export { DatacenterNetworkComponent } from './datacenter-network/datacenter-network.component';
 export { DatacenterStorageComponent } from './datacenter-storage/datacenter-storage.component';
 export { VmCreateWizardExtensionPointComponent } from './create-vm';
-export { VappCreateWizardExtensionPointComponent } from './create-vapp';
+export {
+    VappCreateWizardExtensionPointComponent,
+} from './create-vapp';
