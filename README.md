@@ -1,7 +1,14 @@
 # VCD UI Theme Generator #
-This is a utility for creating new themes (CSS files) that are compatible with the VMware CCloud Director user interfaces by leveraging the theme support built into [Clarity](https://github.com/vmware/clarity).
+    This is a utility for creating new themes (CSS files) that are compatible with the VMware Cloud Director user interfaces by leveraging the theme support built into [Clarity](https://github.com/vmware/clarity).
 
-> **Note: This version of theme generator creates themes that are compatible with VMware Cloud Director version 10.1.**
+## Support Matrix ##
+> **Note: This version of theme generator creates themes that are compatible with VMware Cloud Director version 10.1, 10.2, 10.3.**
+
+| VMware Cloud Director Version | Clarity Version |
+|-------------------------------|-----------------|
+| 10.1                          | ^2.2.0          |
+| 10.2                          | ^3.1.3          |
+| 10.3                          | ^5.0.1          |
 
 ## Overview ##
 The goal of this utility is to provide an easy way for providers to brand their VCD user interface.  The most common ways to promote a visual brand are through the use of a color palette and through images/logos.  Using variables in a visual framework to define colors, and overriding those variables is a popular solution for customization in many UI libraries today, and it is a technique that the Clarity library has now adopted.
@@ -9,6 +16,13 @@ The goal of this utility is to provide an easy way for providers to brand their 
 By leveraging a tool (this tool) that can process the Sass Clarity definitions alongside variable overrides and selector overrides in a specific way, providers can quickly and easily create a drop in replacement for the default vCD style sheet.
 
 ## Getting Started ##
+### Prepare NPM Dependencies ###
+Depending on your Cloud Director version do the following steps:
+1. Open `./package.json`
+2. Change the clarity version based on your Cloud Director version, ex. 10.1 supports Clarity 2.2.0.
+3. Delete `./package-lock.json` and `node_modules` (if exists).
+4. Proceed with the **Install** step.
+
 ### Install ###
 ```bash
 git clone -b theme-generator/10.1 --single-branch https://github.com/vmware-samples/vcd-ext-samples.git theme-generator
