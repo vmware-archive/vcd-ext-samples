@@ -78,7 +78,6 @@
         "name": "vApp Create Extension Point",
         "description": "Example of vApp Create Extensibility",
         "component": "VappCreateWizardExtensionPointComponent",
-        "run": "after", 
         "render": {
             "after": ".vapp-name-extension-point"
         }
@@ -89,9 +88,18 @@
         "name": "VM Create Extension Point",
         "description": "Example of VM Create Extensibility",
         "component": "VmCreateWizardExtensionPointComponent",
-        "run": "after",
         "render": {
             "after": ".vm-description"
+        }
+    },
+    {
+        "urn": "vmware:vcloud:org:create",
+        "type": "create-org",
+        "name": "Org Create Extension Point",
+        "description": "Example of Org Create Extensibility",
+        "component": "OrgCreateWizardExtensionPointComponent",
+        "render": {
+            "after": ".description"
         }
     }]
 }
