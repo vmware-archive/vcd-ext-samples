@@ -9,3 +9,4 @@ export { VmCreateWizardExtensionPointComponent } from './create-vm';
 export {
     VappCreateWizardExtensionPointComponent,
 } from './create-vapp';
+export { OrgCreateWizardExtensionPointComponent } from './create-org';

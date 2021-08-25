@@ -1,6 +1,7 @@
 import { CommonModule } from "@angular/common";
 import { Inject, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { Store } from "@ngrx/store";
 import { VcdApiClient, VcdSdkModule } from "@vcd/sdk";
 import { ExtensionNavRegistration, EXTENSION_ROUTE } from "@vcd/sdk/common";
@@ -22,6 +23,7 @@ import {
 } from ".";
 import { VappCreateWizardExtensionPointComponent } from "./create-vapp";
 import { ModalWizardExtensionPointService } from "./services/modal-wizard-ext-point.service";
+import { OrgCreateWizardExtensionPointComponent } from "./create-org";
 
 const ROUTES: Routes = [
     { path: "", component: SubnavComponent, children: [
@@ -36,6 +38,8 @@ const ROUTES: Routes = [
         ClarityModule,
         CommonModule,
         VcdSdkModule,
+        FormsModule,
+        ReactiveFormsModule,
         RouterModule.forChild(ROUTES)
     ],
     declarations: [
@@ -51,6 +55,7 @@ const ROUTES: Routes = [
         DatacenterStorageComponent,
         VappCreateWizardExtensionPointComponent,
         VmCreateWizardExtensionPointComponent,
+        OrgCreateWizardExtensionPointComponent,
     ],
     entryComponents: [
         DatacenterContainerComponent,
@@ -62,6 +67,7 @@ const ROUTES: Routes = [
         DatacenterStorageComponent,
         VappCreateWizardExtensionPointComponent,
         VmCreateWizardExtensionPointComponent,
+        OrgCreateWizardExtensionPointComponent,
     ],
     bootstrap: [SubnavComponent],
     exports: [],
