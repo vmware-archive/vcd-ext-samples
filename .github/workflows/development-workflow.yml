@@ -17,7 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Generate provenance files
     if: github.ref != 'refs/heads/main' && github.event_name != 'pull_request'
-    needs: [dependencies, build]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
