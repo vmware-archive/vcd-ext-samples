@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "BSD-2-Clause",
   "scripts": {
-    "build": "node build-theme"
+    "build": "node build-theme",
+    "gen-dependencies": "node .github/workflows/generate-dependencies.js"
   },
   "devDependencies": {
     "bootstrap": "4.0.0-alpha.5",
