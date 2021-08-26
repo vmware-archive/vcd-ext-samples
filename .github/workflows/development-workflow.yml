@@ -24,7 +24,7 @@ jobs:
           node-version: 12.x
       - run: npm run gen-dependencies
       - run: |
-          if (( $(git status | grep modified | wc -l | xargs) > 0))
+          if (( $(git status | grep provenance.json | wc -l | xargs) > 0))
           then
             echo "Commiting provenance files"
             git config --global user.name "ilesev-vmw"
