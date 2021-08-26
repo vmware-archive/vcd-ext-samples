@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rimraf dist",
     "lint-fix": "tslint --fix \"src/**/*.ts\" || exit 0",
-    "build": "webpack"
+    "build": "webpack",
+    "gen-dependencies": "node .github/workflows/generate-dependencies.js"
   },
   "license": "BSD-3-Clause",
   "dependencies": {
