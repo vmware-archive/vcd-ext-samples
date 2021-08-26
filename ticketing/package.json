@@ -76,6 +76,7 @@
     "package": "vcd-ext pack",
     "publish": "lerna publish",
     "deploy": "vcd-ext deploy",
-    "ng:serve": "ng serve"
+    "ng:serve": "ng serve",
+    "gen-dependencies": "node ../.github/workflows/generate-dependencies.js"
   }
 }
