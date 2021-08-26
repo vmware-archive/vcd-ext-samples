@@ -26,6 +26,7 @@ jobs:
       - run: |
           if (( $(git status | grep modified | wc -l | xargs) > 0))
           then
+            echo "Commiting provenance files"
             git config --global user.name "ilesev-vmw"
             git config --global user.email "ilesev@vmware.com"
 
