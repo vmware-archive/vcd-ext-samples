@@ -5,7 +5,7 @@ on:
   push:
   pull_request:
     branches:
-      - customize-portal
+      - developer-container/9.5
   release:
     types: [released]
 
