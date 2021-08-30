@@ -1,0 +1,3214 @@
+{
+  "id": "http://vmware.com/schemas/software_provenance-0.2.0.json",
+  "root": "0.0.1",
+  "all-components": {
+    "name": "uiPlugin",
+    "version": "0.0.1",
+    "source_repositories": [
+      {
+        "content": "source",
+        "host": "github.com",
+        "protocol": "git",
+        "paths": [
+          "/vmware/vcd-ext-sdk/tree/main/r/work/vcd-ext-samples/vcd-ext-samples/ticketing/packages/uiPlugin"
+        ],
+        "branch": "main"
+      }
+    ],
+    "components": {},
+    "artifact_repositories": [
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@angular-devkit/architect/-/architect-0.901.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@angular-devkit/core/-/core-9.1.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@angular-devkit/schematics/-/schematics-9.1.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@angular/cli/-/cli-9.1.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@babel/code-frame/-/code-frame-7.12.11.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@babel/helper-validator-identifier/-/helper-validator-identifier-7.12.11.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@babel/highlight/-/highlight-7.10.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@cloudflare/json-schema-walker/-/json-schema-walker-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@nodelib/fs.scandir/-/fs.scandir-2.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@nodelib/fs.stat/-/fs.stat-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@nodelib/fs.walk/-/fs.walk-1.2.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/command/-/command-1.8.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/config/-/config-1.17.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/errors/-/errors-1.3.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/linewrap/-/linewrap-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/parser/-/parser-3.8.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@oclif/plugin-help/-/plugin-help-2.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@schematics/angular/-/angular-9.1.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@schematics/update/-/update-0.901.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/bluebird/-/bluebird-3.5.33.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/caseless/-/caseless-0.12.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/glob/-/glob-7.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/json-schema/-/json-schema-7.0.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/minimatch/-/minimatch-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/mqtt/-/mqtt-2.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/node/-/node-14.14.22.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/paho-mqtt/-/paho-mqtt-1.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/request/-/request-2.48.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@types/tough-cookie/-/tough-cookie-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/care-package/-/care-package-0.0.1-alpha.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/care-package-def/-/care-package-def-0.0.1-alpha.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/care-package-plugin-abstract/-/care-package-plugin-abstract-0.0.1-alpha.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/care-package-plugin-types/-/care-package-plugin-types-0.0.1-alpha.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/care-package-plugin-uiplugins/-/care-package-plugin-uiplugins-0.0.1-alpha.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/ext-cli/-/ext-cli-0.0.12-alpha.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/ext-compiler/-/ext-compiler-0.0.3-alpha.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/node-client/-/node-client-0.0.5-alpha.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@vcd/plugin-builders/-/plugin-builders-0.12.1-alpha.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/JSONStream/-/JSONStream-1.3.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/adm-zip/-/adm-zip-0.4.16.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/agent-base/-/agent-base-4.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/agentkeepalive/-/agentkeepalive-3.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ajv/-/ajv-6.12.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ansi-colors/-/ansi-colors-4.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ansi-escapes/-/ansi-escapes-4.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ansi-regex/-/ansi-regex-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ansi-styles/-/ansi-styles-4.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/aproba/-/aproba-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/argparse/-/argparse-1.0.10.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/arr-diff/-/arr-diff-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/arr-flatten/-/arr-flatten-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/arr-union/-/arr-union-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/array-differ/-/array-differ-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/array-union/-/array-union-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/array-uniq/-/array-uniq-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/array-unique/-/array-unique-0.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/arrify/-/arrify-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/asap/-/asap-2.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/asn1/-/asn1-0.2.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/assert-plus/-/assert-plus-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/assign-symbols/-/assign-symbols-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/async/-/async-2.6.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/async-limiter/-/async-limiter-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/asynckit/-/asynckit-0.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/atob/-/atob-2.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/aws-sign2/-/aws-sign2-0.7.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/aws4/-/aws4-1.11.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/axios/-/axios-0.21.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/balanced-match/-/balanced-match-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/base/-/base-0.11.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/base64-js/-/base64-js-1.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/binaryextensions/-/binaryextensions-2.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/bl/-/bl-4.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/bluebird/-/bluebird-3.7.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/brace-expansion/-/brace-expansion-1.1.11.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/braces/-/braces-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/buffer/-/buffer-5.7.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/buffer-crc32/-/buffer-crc32-0.2.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/buffer-from/-/buffer-from-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/builtins/-/builtins-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cacache/-/cacache-12.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cache-base/-/cache-base-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/call-bind/-/call-bind-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/call-me-maybe/-/call-me-maybe-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/callback-stream/-/callback-stream-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/camelcase/-/camelcase-6.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/caseless/-/caseless-0.12.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/chalk/-/chalk-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/chardet/-/chardet-0.7.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/chownr/-/chownr-1.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/class-utils/-/class-utils-0.3.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/clean-stack/-/clean-stack-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cli-cursor/-/cli-cursor-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cli-spinners/-/cli-spinners-2.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cli-table/-/cli-table-0.3.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cli-width/-/cli-width-2.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/clone/-/clone-1.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/clone-buffer/-/clone-buffer-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/clone-deep/-/clone-deep-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/clone-stats/-/clone-stats-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cloneable-readable/-/cloneable-readable-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/collection-visit/-/collection-visit-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/color-convert/-/color-convert-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/color-name/-/color-name-1.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/combined-stream/-/combined-stream-1.0.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/commander/-/commander-6.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/commist/-/commist-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/commondir/-/commondir-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/component-emitter/-/component-emitter-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/concat-map/-/concat-map-0.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/concat-stream/-/concat-stream-1.6.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/copy-concurrently/-/copy-concurrently-1.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/copy-descriptor/-/copy-descriptor-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/core-util-is/-/core-util-is-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/create-error-class/-/create-error-class-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cross-spawn/-/cross-spawn-6.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/cyclist/-/cyclist-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/d/-/d-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/dargs/-/dargs-6.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/dashdash/-/dashdash-1.14.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/dateformat/-/dateformat-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/debug/-/debug-4.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/debuglog/-/debuglog-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/deep-extend/-/deep-extend-0.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/defaults/-/defaults-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/define-properties/-/define-properties-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/define-property/-/define-property-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/delayed-stream/-/delayed-stream-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/dezalgo/-/dezalgo-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/diff/-/diff-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/dir-glob/-/dir-glob-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/download-stats/-/download-stats-0.3.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/duplexer3/-/duplexer3-0.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/duplexify/-/duplexify-3.7.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/editions/-/editions-2.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ejs/-/ejs-3.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/emoji-regex/-/emoji-regex-8.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/encoding/-/encoding-0.1.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/end-of-stream/-/end-of-stream-1.4.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/err-code/-/err-code-1.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/errlop/-/errlop-2.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/error/-/error-7.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/error-ex/-/error-ex-1.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es-abstract/-/es-abstract-1.18.0-next.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es-to-primitive/-/es-to-primitive-1.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es5-ext/-/es5-ext-0.10.53.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-iterator/-/es6-iterator-2.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-map/-/es6-map-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-promise/-/es6-promise-4.2.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-promisify/-/es6-promisify-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-set/-/es6-set-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/es6-symbol/-/es6-symbol-3.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/esprima/-/esprima-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/event-emitter/-/event-emitter-0.3.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/execa/-/execa-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/expand-brackets/-/expand-brackets-2.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ext/-/ext-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/extend/-/extend-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/extend-shallow/-/extend-shallow-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/external-editor/-/external-editor-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/extglob/-/extglob-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/extsprintf/-/extsprintf-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fast-glob/-/fast-glob-3.2.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fastq/-/fastq-1.10.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/figgy-pudding/-/figgy-pudding-3.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/figures/-/figures-3.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/filelist/-/filelist-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fill-range/-/fill-range-7.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/find-up/-/find-up-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/first-chunk-stream/-/first-chunk-stream-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/flush-write-stream/-/flush-write-stream-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/follow-redirects/-/follow-redirects-1.13.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/for-in/-/for-in-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/forever-agent/-/forever-agent-0.6.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/form-data/-/form-data-2.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fragment-cache/-/fragment-cache-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/from2/-/from2-2.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fs-extra/-/fs-extra-8.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fs-minipass/-/fs-minipass-1.2.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fs-write-stream-atomic/-/fs-write-stream-atomic-1.0.10.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/fs.realpath/-/fs.realpath-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/function-bind/-/function-bind-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/generate-function/-/generate-function-2.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/generate-object-property/-/generate-object-property-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/genfun/-/genfun-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/get-intrinsic/-/get-intrinsic-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/get-stream/-/get-stream-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/get-value/-/get-value-2.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/getpass/-/getpass-0.1.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/gh-got/-/gh-got-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/github-username/-/github-username-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/glob/-/glob-7.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/glob-parent/-/glob-parent-5.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/glob-stream/-/glob-stream-6.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/glob-to-regexp/-/glob-to-regexp-0.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/globby/-/globby-11.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/got/-/got-6.7.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/graceful-fs/-/graceful-fs-4.2.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/grouped-queue/-/grouped-queue-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/har-schema/-/har-schema-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/har-validator/-/har-validator-5.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/has/-/has-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/has-flag/-/has-flag-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/has-symbols/-/has-symbols-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/has-value/-/has-value-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/has-values/-/has-values-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/help-me/-/help-me-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/hosted-git-info/-/hosted-git-info-3.0.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/http-cache-semantics/-/http-cache-semantics-3.8.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/http-proxy-agent/-/http-proxy-agent-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/http-signature/-/http-signature-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/human-signals/-/human-signals-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/humanize-ms/-/humanize-ms-1.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/iconv-lite/-/iconv-lite-0.6.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ieee754/-/ieee754-1.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/iferr/-/iferr-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ignore/-/ignore-5.1.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ignore-walk/-/ignore-walk-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/imurmurhash/-/imurmurhash-0.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/indent-string/-/indent-string-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/infer-owner/-/infer-owner-1.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/inflight/-/inflight-1.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/inherits/-/inherits-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ini/-/ini-1.3.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/inquirer/-/inquirer-7.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/interpret/-/interpret-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ip/-/ip-1.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-absolute/-/is-absolute-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-accessor-descriptor/-/is-accessor-descriptor-0.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-arrayish/-/is-arrayish-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-buffer/-/is-buffer-1.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-callable/-/is-callable-1.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-core-module/-/is-core-module-2.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-data-descriptor/-/is-data-descriptor-0.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-date-object/-/is-date-object-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-descriptor/-/is-descriptor-0.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-docker/-/is-docker-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-extendable/-/is-extendable-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-extglob/-/is-extglob-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-glob/-/is-glob-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-interactive/-/is-interactive-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-my-ip-valid/-/is-my-ip-valid-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-my-json-valid/-/is-my-json-valid-2.20.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-negated-glob/-/is-negated-glob-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-negative-zero/-/is-negative-zero-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-number/-/is-number-7.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-plain-obj/-/is-plain-obj-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-plain-object/-/is-plain-object-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-property/-/is-property-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-redirect/-/is-redirect-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-regex/-/is-regex-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-relative/-/is-relative-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-retry-allowed/-/is-retry-allowed-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-scoped/-/is-scoped-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-stream/-/is-stream-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-symbol/-/is-symbol-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-typedarray/-/is-typedarray-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-unc-path/-/is-unc-path-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-utf8/-/is-utf8-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-windows/-/is-windows-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/is-wsl/-/is-wsl-2.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/isarray/-/isarray-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/isbinaryfile/-/isbinaryfile-4.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/isexe/-/isexe-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/isobject/-/isobject-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/isstream/-/isstream-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/istextorbinary/-/istextorbinary-2.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jake/-/jake-10.8.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/js-tokens/-/js-tokens-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/js-yaml/-/js-yaml-3.14.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsbn/-/jsbn-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-schema/-/json-schema-0.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsonfile/-/jsonfile-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsonify/-/jsonify-0.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsonparse/-/jsonparse-1.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsonpointer/-/jsonpointer-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/jsprim/-/jsprim-1.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/kind-of/-/kind-of-6.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lazy-cache/-/lazy-cache-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/leven/-/leven-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lines-and-columns/-/lines-and-columns-1.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/locate-path/-/locate-path-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lodash/-/lodash-4.17.20.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lodash.template/-/lodash.template-4.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lodash.templatesettings/-/lodash.templatesettings-4.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/log-symbols/-/log-symbols-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lowercase-keys/-/lowercase-keys-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/lru-cache/-/lru-cache-6.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/magic-string/-/magic-string-0.25.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/make-dir/-/make-dir-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/make-fetch-happen/-/make-fetch-happen-5.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/map-cache/-/map-cache-0.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/map-visit/-/map-visit-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mem-fs/-/mem-fs-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mem-fs-editor/-/mem-fs-editor-7.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/merge-stream/-/merge-stream-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/merge2/-/merge2-1.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/micromatch/-/micromatch-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mime-db/-/mime-db-1.45.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mime-types/-/mime-types-2.1.28.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mimic-fn/-/mimic-fn-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/minimatch/-/minimatch-3.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/minimist/-/minimist-1.2.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/minipass/-/minipass-2.9.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/minizlib/-/minizlib-1.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mississippi/-/mississippi-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mixin-deep/-/mixin-deep-1.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mkdirp/-/mkdirp-0.5.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/moment/-/moment-2.29.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/move-concurrently/-/move-concurrently-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mqtt/-/mqtt-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mqtt-packet/-/mqtt-packet-6.7.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ms/-/ms-2.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/multimatch/-/multimatch-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/mute-stream/-/mute-stream-0.0.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/nanomatch/-/nanomatch-1.2.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/next-tick/-/next-tick-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/nice-try/-/nice-try-1.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/node-fetch/-/node-fetch-2.6.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/node-fetch-npm/-/node-fetch-npm-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/normalize-package-data/-/normalize-package-data-2.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-api/-/npm-api-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-bundled/-/npm-bundled-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-install-checks/-/npm-install-checks-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-package-arg/-/npm-package-arg-8.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-packlist/-/npm-packlist-1.4.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-pick-manifest/-/npm-pick-manifest-6.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-registry-fetch/-/npm-registry-fetch-4.0.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/npm-run-path/-/npm-run-path-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/oauth-sign/-/oauth-sign-0.9.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object-copy/-/object-copy-0.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object-inspect/-/object-inspect-1.9.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object-keys/-/object-keys-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object-visit/-/object-visit-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object.assign/-/object.assign-4.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object.getownpropertydescriptors/-/object.getownpropertydescriptors-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/object.pick/-/object.pick-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/once/-/once-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/onetime/-/onetime-5.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/open/-/open-7.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ora/-/ora-4.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ordered-read-streams/-/ordered-read-streams-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/os-homedir/-/os-homedir-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/os-tmpdir/-/os-tmpdir-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/osenv/-/osenv-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/p-finally/-/p-finally-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/p-limit/-/p-limit-2.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/p-locate/-/p-locate-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/p-try/-/p-try-2.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pacote/-/pacote-9.5.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/paged-request/-/paged-request-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/paho-mqtt/-/paho-mqtt-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/parallel-transform/-/parallel-transform-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/parse-json/-/parse-json-5.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pascalcase/-/pascalcase-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-dirname/-/path-dirname-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-exists/-/path-exists-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-key/-/path-key-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-parse/-/path-parse-1.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/path-type/-/path-type-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/performance-now/-/performance-now-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/picomatch/-/picomatch-2.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pify/-/pify-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/prepend-http/-/prepend-http-1.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pretty-bytes/-/pretty-bytes-5.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/promise-inflight/-/promise-inflight-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/promise-retry/-/promise-retry-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/protoduck/-/protoduck-5.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/psl/-/psl-1.8.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pump/-/pump-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/pumpify/-/pumpify-1.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/punycode/-/punycode-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/qs/-/qs-6.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/read-chunk/-/read-chunk-3.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/read-package-json/-/read-package-json-2.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/read-package-tree/-/read-package-tree-5.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/read-pkg/-/read-pkg-5.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/read-pkg-up/-/read-pkg-up-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/readable-stream/-/readable-stream-2.3.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/readdir-scoped-modules/-/readdir-scoped-modules-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/rechoir/-/rechoir-0.6.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/regex-not/-/regex-not-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/reinterval/-/reinterval-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/repeat-element/-/repeat-element-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/repeat-string/-/repeat-string-1.6.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/replace-ext/-/replace-ext-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/request/-/request-2.88.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/resolve/-/resolve-1.19.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/resolve-url/-/resolve-url-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/restore-cursor/-/restore-cursor-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ret/-/ret-0.1.15.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/retry/-/retry-0.10.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/reusify/-/reusify-1.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/rimraf/-/rimraf-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/run-async/-/run-async-2.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/run-parallel/-/run-parallel-1.1.10.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/run-queue/-/run-queue-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/rxjs/-/rxjs-6.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/rxjs-compat/-/rxjs-compat-6.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/safe-buffer/-/safe-buffer-5.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/safe-regex/-/safe-regex-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/safer-buffer/-/safer-buffer-2.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/scoped-regex/-/scoped-regex-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/semver/-/semver-7.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/semver-intersect/-/semver-intersect-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/set-getter/-/set-getter-0.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/set-value/-/set-value-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/shallow-clone/-/shallow-clone-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/shebang-command/-/shebang-command-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/shebang-regex/-/shebang-regex-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/shelljs/-/shelljs-0.8.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/signal-exit/-/signal-exit-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/slash/-/slash-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/smart-buffer/-/smart-buffer-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/snapdragon/-/snapdragon-0.8.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/snapdragon-node/-/snapdragon-node-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/snapdragon-util/-/snapdragon-util-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/socks/-/socks-2.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/socks-proxy-agent/-/socks-proxy-agent-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/source-list-map/-/source-list-map-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/source-map/-/source-map-0.7.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/source-map-resolve/-/source-map-resolve-0.5.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/source-map-url/-/source-map-url-0.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/spdx-correct/-/spdx-correct-3.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/spdx-exceptions/-/spdx-exceptions-2.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/spdx-license-ids/-/spdx-license-ids-3.0.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/split-string/-/split-string-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/split2/-/split2-3.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/sprintf-js/-/sprintf-js-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/sshpk/-/sshpk-1.16.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ssri/-/ssri-6.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/static-extend/-/static-extend-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/stream-each/-/stream-each-1.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/stream-shift/-/stream-shift-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/string-template/-/string-template-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/string-width/-/string-width-4.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/string.prototype.trimend/-/string.prototype.trimend-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/string.prototype.trimstart/-/string.prototype.trimstart-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/string_decoder/-/string_decoder-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/strip-ansi/-/strip-ansi-6.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/strip-bom/-/strip-bom-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/strip-bom-buf/-/strip-bom-buf-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/strip-bom-stream/-/strip-bom-stream-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/strip-final-newline/-/strip-final-newline-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/supports-color/-/supports-color-7.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/symbol-observable/-/symbol-observable-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tar/-/tar-4.4.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/text-table/-/text-table-0.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/textextensions/-/textextensions-2.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/through/-/through-2.3.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/through2/-/through2-2.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/through2-filter/-/through2-filter-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/timed-out/-/timed-out-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tmp/-/tmp-0.0.33.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/to-absolute-glob/-/to-absolute-glob-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/to-object-path/-/to-object-path-0.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/to-regex/-/to-regex-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/to-regex-range/-/to-regex-range-5.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tough-cookie/-/tough-cookie-2.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ts-json-schema-generator/-/ts-json-schema-generator-0.76.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tslib/-/tslib-1.14.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tunnel-agent/-/tunnel-agent-0.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/tweetnacl/-/tweetnacl-0.14.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/type/-/type-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/type-fest/-/type-fest-0.11.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/typedarray/-/typedarray-0.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/typescript/-/typescript-4.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ultron/-/ultron-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unc-path-regex/-/unc-path-regex-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/union-value/-/union-value-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unique-filename/-/unique-filename-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unique-slug/-/unique-slug-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unique-stream/-/unique-stream-2.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/universal-analytics/-/universal-analytics-0.4.20.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/universalify/-/universalify-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unset-value/-/unset-value-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/untildify/-/untildify-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/unzip-response/-/unzip-response-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/uri-js/-/uri-js-4.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/urix/-/urix-0.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/url-parse-lax/-/url-parse-lax-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/use/-/use-3.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/util-deprecate/-/util-deprecate-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/util-promisify/-/util-promisify-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/uuid/-/uuid-7.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/validate-npm-package-name/-/validate-npm-package-name-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/verror/-/verror-1.10.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/vinyl/-/vinyl-2.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/vinyl-file/-/vinyl-file-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/wcwidth/-/wcwidth-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/webpack-sources/-/webpack-sources-1.4.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/websocket-stream/-/websocket-stream-5.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/which/-/which-1.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/widest-line/-/widest-line-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/with-open-file/-/with-open-file-0.1.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/wrap-ansi/-/wrap-ansi-7.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/wrappy/-/wrappy-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/ws/-/ws-3.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/xtend/-/xtend-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/y18n/-/y18n-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/yallist/-/yallist-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/yazl/-/yazl-2.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/yeoman-environment/-/yeoman-environment-2.10.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/yeoman-generator/-/yeoman-generator-4.12.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "build-artifactory.eng.vmware.com",
+        "path": "/api/npm/cloud-director-solutions-npm/zip-webpack-plugin/-/zip-webpack-plugin-3.0.0.tgz"
+      }
+    ]
+  }
+}
