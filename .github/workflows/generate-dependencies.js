@@ -3,7 +3,7 @@ const path = require('path');
 
 const ignoredFolders = ['.github', '.gradle', '.idea', '.git', 'node_modules', 'lib', 'src', 'tests'];
 const generatedFileName = 'provenance.json';
-const projectName = 'vcd-ext-sdk/';
+const projectName = 'vcd-ext-samples/';
 
 function extractDependencies(currentDir, components) {
     try {
@@ -81,7 +81,7 @@ function generateResult(name, version, currentDir) {
                     host: "github.com",
                     protocol: "git",
                     paths: [
-                        "/vmware/vcd-ext-sdk/tree/main/" + dir
+                        "/vmware/vcd-ext-samplse/tree/customize-portal/" + dir
                     ],
                     branch: 'main'
                 },
