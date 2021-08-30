@@ -1,0 +1,1690 @@
+{
+  "id": "http://vmware.com/schemas/software_provenance-0.2.0.json",
+  "root": "1.0.0-alpha",
+  "all-components": {
+    "name": "vcd-development-workspace",
+    "version": "1.0.0-alpha",
+    "source_repositories": [
+      {
+        "content": "source",
+        "host": "github.com",
+        "protocol": "git",
+        "paths": [
+          "/vmware/vcd-ext-sdk/tree/main/r/work/vcd-ext-samples/vcd-ext-samples/"
+        ],
+        "branch": "main"
+      }
+    ],
+    "components": {},
+    "artifact_repositories": [
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@angular-devkit/architect/-/architect-0.8.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@angular-devkit/core/-/core-0.8.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@angular-devkit/schematics/-/schematics-0.8.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@angular/cli/-/cli-6.2.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@schematics/angular/-/angular-0.8.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@schematics/update/-/update-0.8.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/@yarnpkg/lockfile/-/lockfile-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/JSONStream/-/JSONStream-1.3.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/agent-base/-/agent-base-4.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/agentkeepalive/-/agentkeepalive-3.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ajv/-/ajv-6.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ansi-regex/-/ansi-regex-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/anymatch/-/anymatch-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/aproba/-/aproba-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/are-we-there-yet/-/are-we-there-yet-1.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/arr-diff/-/arr-diff-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/arr-flatten/-/arr-flatten-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/arr-union/-/arr-union-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/array-unique/-/array-unique-0.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/asn1/-/asn1-0.2.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/assert-plus/-/assert-plus-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/assign-symbols/-/assign-symbols-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/async-each/-/async-each-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/asynckit/-/asynckit-0.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/atob/-/atob-2.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/aws-sign2/-/aws-sign2-0.7.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/aws4/-/aws4-1.9.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/balanced-match/-/balanced-match-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/base/-/base-0.11.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/binary-extensions/-/binary-extensions-1.13.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/bindings/-/bindings-1.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/bluebird/-/bluebird-3.7.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/brace-expansion/-/brace-expansion-1.1.11.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/braces/-/braces-2.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/buffer-from/-/buffer-from-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/builtins/-/builtins-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/cacache/-/cacache-11.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/cache-base/-/cache-base-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/camelcase/-/camelcase-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/caseless/-/caseless-0.12.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/chokidar/-/chokidar-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/chownr/-/chownr-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/class-utils/-/class-utils-0.3.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/code-point-at/-/code-point-at-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/collection-visit/-/collection-visit-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/combined-stream/-/combined-stream-1.0.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/component-emitter/-/component-emitter-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/concat-map/-/concat-map-0.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/concat-stream/-/concat-stream-1.6.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/console-control-strings/-/console-control-strings-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/copy-concurrently/-/copy-concurrently-1.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/copy-descriptor/-/copy-descriptor-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/core-util-is/-/core-util-is-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/cyclist/-/cyclist-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/dashdash/-/dashdash-1.14.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/debug/-/debug-2.6.9.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/define-property/-/define-property-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/delayed-stream/-/delayed-stream-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/delegates/-/delegates-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/duplexify/-/duplexify-3.7.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ecc-jsbn/-/ecc-jsbn-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/encoding/-/encoding-0.1.12.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/end-of-stream/-/end-of-stream-1.4.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/err-code/-/err-code-1.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/es6-promise/-/es6-promise-4.2.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/es6-promisify/-/es6-promisify-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/expand-brackets/-/expand-brackets-2.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/extend/-/extend-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/extend-shallow/-/extend-shallow-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/extglob/-/extglob-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/extsprintf/-/extsprintf-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/figgy-pudding/-/figgy-pudding-3.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fill-range/-/fill-range-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/flush-write-stream/-/flush-write-stream-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/for-in/-/for-in-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/forever-agent/-/forever-agent-0.6.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/form-data/-/form-data-2.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fragment-cache/-/fragment-cache-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/from2/-/from2-2.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fs-minipass/-/fs-minipass-1.2.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fs-write-stream-atomic/-/fs-write-stream-atomic-1.0.10.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fs.realpath/-/fs.realpath-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/fsevents/-/fsevents-1.2.11.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/gauge/-/gauge-2.7.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/genfun/-/genfun-5.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/get-stream/-/get-stream-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/get-value/-/get-value-2.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/getpass/-/getpass-0.1.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/glob/-/glob-7.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/glob-parent/-/glob-parent-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/graceful-fs/-/graceful-fs-4.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/har-schema/-/har-schema-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/har-validator/-/har-validator-5.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/has-unicode/-/has-unicode-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/has-value/-/has-value-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/has-values/-/has-values-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/hosted-git-info/-/hosted-git-info-2.8.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/http-cache-semantics/-/http-cache-semantics-3.8.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/http-proxy-agent/-/http-proxy-agent-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/http-signature/-/http-signature-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/humanize-ms/-/humanize-ms-1.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/iconv-lite/-/iconv-lite-0.4.24.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/iferr/-/iferr-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ignore-walk/-/ignore-walk-3.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/imurmurhash/-/imurmurhash-0.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/inflight/-/inflight-1.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/inherits/-/inherits-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ini/-/ini-1.3.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ip/-/ip-1.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-accessor-descriptor/-/is-accessor-descriptor-0.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-binary-path/-/is-binary-path-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-buffer/-/is-buffer-1.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-data-descriptor/-/is-data-descriptor-0.1.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-descriptor/-/is-descriptor-0.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-extendable/-/is-extendable-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-extglob/-/is-extglob-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-fullwidth-code-point/-/is-fullwidth-code-point-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-glob/-/is-glob-4.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-number/-/is-number-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-plain-object/-/is-plain-object-2.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-typedarray/-/is-typedarray-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-windows/-/is-windows-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/is-wsl/-/is-wsl-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/isarray/-/isarray-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/isexe/-/isexe-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/isobject/-/isobject-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/isstream/-/isstream-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/jsbn/-/jsbn-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/json-schema/-/json-schema-0.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/jsonparse/-/jsonparse-1.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/jsprim/-/jsprim-1.4.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/kind-of/-/kind-of-6.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/lru-cache/-/lru-cache-4.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/make-fetch-happen/-/make-fetch-happen-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/map-cache/-/map-cache-0.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/map-visit/-/map-visit-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/micromatch/-/micromatch-3.1.10.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/mime-db/-/mime-db-1.43.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/mime-types/-/mime-types-2.1.26.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/minimatch/-/minimatch-3.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/minimist/-/minimist-0.0.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/minipass/-/minipass-2.9.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/minizlib/-/minizlib-1.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/mississippi/-/mississippi-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/mixin-deep/-/mixin-deep-1.3.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/mkdirp/-/mkdirp-0.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/move-concurrently/-/move-concurrently-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ms/-/ms-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/nan/-/nan-2.14.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/nanomatch/-/nanomatch-1.2.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/node-fetch-npm/-/node-fetch-npm-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/normalize-package-data/-/normalize-package-data-2.5.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/normalize-path/-/normalize-path-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-bundled/-/npm-bundled-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-package-arg/-/npm-package-arg-6.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-packlist/-/npm-packlist-1.4.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-pick-manifest/-/npm-pick-manifest-2.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-registry-client/-/npm-registry-client-8.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npm-registry-fetch/-/npm-registry-fetch-3.9.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/npmlog/-/npmlog-4.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/number-is-nan/-/number-is-nan-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/oauth-sign/-/oauth-sign-0.9.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/object-assign/-/object-assign-4.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/object-copy/-/object-copy-0.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/object-visit/-/object-visit-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/object.pick/-/object.pick-1.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/once/-/once-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/opn/-/opn-5.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/os-homedir/-/os-homedir-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/os-tmpdir/-/os-tmpdir-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/osenv/-/osenv-0.1.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/pacote/-/pacote-9.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/parallel-transform/-/parallel-transform-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/pascalcase/-/pascalcase-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/path-dirname/-/path-dirname-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/path-is-absolute/-/path-is-absolute-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/path-parse/-/path-parse-1.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/performance-now/-/performance-now-2.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/posix-character-classes/-/posix-character-classes-0.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/process-nextick-args/-/process-nextick-args-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/promise-inflight/-/promise-inflight-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/promise-retry/-/promise-retry-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/protoduck/-/protoduck-5.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/pseudomap/-/pseudomap-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/psl/-/psl-1.7.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/pump/-/pump-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/pumpify/-/pumpify-1.5.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/punycode/-/punycode-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/qs/-/qs-6.5.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/readable-stream/-/readable-stream-2.3.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/readdirp/-/readdirp-2.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/regex-not/-/regex-not-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/repeat-element/-/repeat-element-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/repeat-string/-/repeat-string-1.6.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/request/-/request-2.88.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/resolve/-/resolve-1.15.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/resolve-url/-/resolve-url-0.2.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ret/-/ret-0.1.15.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/retry/-/retry-0.10.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/rimraf/-/rimraf-2.7.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/run-queue/-/run-queue-1.0.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/rxjs/-/rxjs-6.2.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/safe-buffer/-/safe-buffer-5.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/safe-regex/-/safe-regex-1.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/safer-buffer/-/safer-buffer-2.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/semver/-/semver-5.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/semver-intersect/-/semver-intersect-1.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/set-blocking/-/set-blocking-2.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/set-value/-/set-value-2.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/signal-exit/-/signal-exit-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/slide/-/slide-1.1.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/smart-buffer/-/smart-buffer-4.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/snapdragon/-/snapdragon-0.8.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/snapdragon-node/-/snapdragon-node-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/snapdragon-util/-/snapdragon-util-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/socks/-/socks-2.3.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/socks-proxy-agent/-/socks-proxy-agent-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/source-map/-/source-map-0.5.7.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/source-map-resolve/-/source-map-resolve-0.5.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/source-map-url/-/source-map-url-0.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/spdx-correct/-/spdx-correct-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/spdx-exceptions/-/spdx-exceptions-2.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/spdx-expression-parse/-/spdx-expression-parse-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/split-string/-/split-string-3.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/sshpk/-/sshpk-1.16.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/ssri/-/ssri-5.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/static-extend/-/static-extend-0.1.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/stream-each/-/stream-each-1.2.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/stream-shift/-/stream-shift-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/string-width/-/string-width-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/string_decoder/-/string_decoder-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/strip-ansi/-/strip-ansi-3.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/symbol-observable/-/symbol-observable-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/tar/-/tar-4.4.13.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/through/-/through-2.3.8.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/through2/-/through2-2.0.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/to-object-path/-/to-object-path-0.3.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/to-regex/-/to-regex-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/to-regex-range/-/to-regex-range-2.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/tough-cookie/-/tough-cookie-2.4.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/tslib/-/tslib-1.10.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/tunnel-agent/-/tunnel-agent-0.6.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/tweetnacl/-/tweetnacl-0.14.5.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/typedarray/-/typedarray-0.0.6.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/typescript/-/typescript-2.9.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/union-value/-/union-value-1.0.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/unique-filename/-/unique-filename-1.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/unique-slug/-/unique-slug-2.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/unset-value/-/unset-value-1.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/upath/-/upath-1.2.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/uri-js/-/uri-js-3.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/urix/-/urix-0.1.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/use/-/use-3.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/util-deprecate/-/util-deprecate-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/uuid/-/uuid-3.4.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/validate-npm-package-name/-/validate-npm-package-name-3.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/verror/-/verror-1.10.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/which/-/which-1.3.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/wide-align/-/wide-align-1.1.3.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/wrappy/-/wrappy-1.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/xtend/-/xtend-4.0.2.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/y18n/-/y18n-4.0.0.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/yallist/-/yallist-3.1.1.tgz"
+      },
+      {
+        "content": "binary",
+        "protocol": "HTTPS",
+        "host": "registry.npmjs.org",
+        "path": "/yargs-parser/-/yargs-parser-10.1.0.tgz"
+      }
+    ]
+  }
+}
