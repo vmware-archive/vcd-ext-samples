@@ -1,10 +1,8 @@
 import {CommonModule} from "@angular/common";
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {Store} from "@ngrx/store";
 import {VcdApiClient, VcdSdkModule} from "@vcd/sdk";
 import {EXTENSION_ASSET_URL} from "@vcd/sdk";
-import {PluginModule} from "@vcd/sdk";
 import {I18nModule, TranslationService} from "@vcd/i18n";
 import {ClarityModule} from "@clr/angular";
 import {TicketingComponent} from "./ticketing/ticketing.component";
@@ -43,9 +41,8 @@ const ROUTES: Routes = [
         TicketingService
     ]
 })
-export class TicketingPluginModule extends PluginModule {
-    constructor(appStore: Store<any>, translationService: TranslationService) {
-        super(appStore);
+export class TicketingPluginModule {
+    constructor( translationService: TranslationService) {
         translationService.registerTranslations();
     }
 }
