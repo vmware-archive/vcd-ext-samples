@@ -20,9 +20,7 @@ export class TicketingService {
 
         const task: TaskType = await this.client.createTicket(ticket);
         await this.client.resolveTicket(task.owner.id);
-        const newTicketId = task.owner.id;
-
-        return newTicketId;
+        return task.owner.id;
     }
 
     /**

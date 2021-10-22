@@ -1,12 +1,11 @@
 {
-    "urn": "vmware:vcloud:plugin:vmware:ticketing",
+    "urn": "vmware:vcloud:plugin:ticketing",
     "name": "Ticketing plugin",
     "containerVersion": "9.5.0",
     "manifestVersion": "2.0.0",
     "version": "0.0.1",
     "scope": [
-        "service-provider",
-        "tenant"
+        "service-provider"
     ],
     "permissions": [],
     "description": "Ticketing Plugin",
@@ -15,7 +14,7 @@
     "link": "http://example.com",
     "extensionPoints": [
         {
-            "urn": "urn:vmware:vcd:component-scope:primary-navigation",
+            "urn": "vmware:vcloud:plugin:ticketing:primary-navigation",
             "type": "navigation:primary",
             "name": "%nav.label%",
             "description": "%nav.description%",
