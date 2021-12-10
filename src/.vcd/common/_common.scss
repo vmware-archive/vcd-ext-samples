@@ -268,6 +268,11 @@ vcd-advanced-sort {
         transform: translateX(15rem);
         overflow-x: hidden;
         overflow-y: auto;
+
+        .nav-list {
+            display: block;
+        }
+        
         .nav-group {
             color: $clr-sidenav-header-color;
             font-size: 0.583333rem;
