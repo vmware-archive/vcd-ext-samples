@@ -13,6 +13,22 @@
           "builder": "@vcd/plugin-builders:plugin-builder",
           "options": {
             "modulePath": "src/main/ticketing.module.ts#TicketingPluginModule",
+            "ignoreDefaultExternals": true,
+            "externalLibs": [
+              "@angular/common$",
+              "@angular/common/http$",
+              "@angular/core$",
+              "@angular/forms$",
+              "@angular/platform-browser$",
+              "@angular/router$",
+              "@clr/angular$",
+              "@ngrx/store$",
+              "^@vcd\/common$",
+              "^@vcd-ui\/common$",
+              "rxjs$",
+              "rxjs/internal-compatibility$",
+              "rxjs/operators$"
+            ],
             "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/plugin.main.ts",
