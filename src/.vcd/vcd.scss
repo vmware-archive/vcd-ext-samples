@@ -179,6 +179,8 @@ $horizontalPadding: ($clr-datagrid-fixed-column-size - 1.25rem) / 2;
 
 .table {
     .table-expandable-caret {
+        // Uncomment if you want to build theme for VMware Cloud Director 10.2 or 10.3
+        // padding: calc(0.125rem - #{$clr-table-borderwidth}) $horizontalPadding 0.125rem;
         padding: calc(0.125rem - #{$clr-default-borderwidth}) $horizontalPadding 0.125rem;
         text-align: center;
 
