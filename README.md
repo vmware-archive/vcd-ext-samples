@@ -37,6 +37,7 @@ The theme generator contains a sample base theme, which is Clarity's unmodified 
 ```bash
 npm run build -- --theme=base --optimize
 ```
+> Note: For release 10.2 and 10.3 replace the usage of `clr-default-borderwidth` with `clr-table-borderwidth` in `src/.vcd/vcd.scss`
 
 This will produce a `base.css` file in the `target/` folder.  Any number of themes can be managed as directories under the `src/` folder.  A folder with valid Sass content can be used as the `--theme` parameter value in the above build command.
 
