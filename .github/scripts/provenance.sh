@@ -18,7 +18,7 @@ chmod +x $SRP_HOME/srp
 $SRP_HOME/srp --version
 
 # Release Version
-export BUILD_VERSION="$(cat lerna.json | jq -r .version)"
+export BUILD_VERSION="0.0.1"
 
 export GITHUB_REPOSITORY=$(echo $GITHUB_REPOSITORY | tr / %2F)
 export GITHUB_REF=$(echo $GITHUB_REF | tr / %2F)
