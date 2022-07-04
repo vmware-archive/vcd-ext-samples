@@ -5,7 +5,7 @@ on:
   push:
   pull_request:
     branches:
-      - main
+      - master
   release:
     types: [released]
 
@@ -16,7 +16,7 @@ jobs:
   submit-provenance:
     runs-on: ubuntu-latest
     name: Submit Provenance
-    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    if: github.ref == 'refs/heads/master' && github.event_name != 'pull_request'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
