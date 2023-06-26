@@ -1,7 +1,7 @@
 
 
 # Extensibility Samples for vCloud Director
-
+> **ATTENTION:** This repository soon will be Archived, please refer to our new central point repository for Cloud Director Extensibility [Cloud Director Extension Standard Library](https://github.com/vmware/cloud-director-extension-standard-library)
 ## Overview
 This repository contains example plugins for integrating with, and extending vCloud Director capabilities.
 
